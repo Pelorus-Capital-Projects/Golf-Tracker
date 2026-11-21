@@ -156,6 +156,8 @@ nav.tabs button.on::before{content:"";position:absolute;top:0;left:28%;right:28%
   opacity:0;pointer-events:none;transition:all .18s;z-index:90;max-width:90vw;text-align:center
 }
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast.act{pointer-events:auto;display:flex;align-items:center;gap:10px;padding:6px 6px 6px 16px;text-align:left}
+.tundo{flex:none;border:0;border-radius:999px;background:var(--gold);color:#1a1a1a;font-weight:800;font-size:15px;min-height:38px;padding:0 16px}
 .modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.4)}
 .modal.show{display:flex}
 .modal .box{background:var(--surface);border-radius:18px;padding:18px;max-width:400px;width:100%}
@@ -380,7 +382,7 @@ body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
    Data is stored on this device (localStorage) and can be
    backed up to / restored from a JSON file.
    ========================================================= */
-const APP_VERSION = '2.1.0';
+const APP_VERSION = '2.2.0';
 const SCHEMA = 4;
 const APP_ID = 'golf-range-tracker';
 const KEY = 'pcp-golf-range-tracker';           // unique key: other apps share this github.io site
@@ -733,6 +735,7 @@ function photoIdsIn(d){ const ids = new Set(); (d && d.rounds || []).forEach(r =
 async function prunePhotos(){
   // keep photos used now or by the undo-restore copy
   const used = photoIdsIn(data);
+  if(undoState && undoState.kind === 'round'){ try { photoIdsIn({rounds:[JSON.parse(undoState.json)]}).forEach(i => used.add(i)); } catch(_){} }
   try { const prev = JSON.parse(localStorage.getItem(PREV_KEY) || 'null'); photoIdsIn(prev).forEach(i => used.add(i)); } catch(_){}
   for(const k of Array.from(photoCache.keys())) if(!used.has(k)) await photoDel(k);
 }
@@ -1095,12 +1098,14 @@ function holedOut(r){
   const i = holeInfo(r, r.cur), list = holeList(r), last = list.indexOf(r.cur) === list.length - 1;
   const msg = `Hole ${r.cur}: ${i.score}${i.par ? ' (' + fmtToPar(i.score - i.par) + ')' : ''}`;
   setTimeout(() => {
-    toast(last ? msg + ' — last hole' : msg + ` — on to hole ${list[list.indexOf(r.cur) + 1]}`, 2200);
+    if(activeRound() !== r || !holeInfo(r, r.cur).holed) return;   // undone before we moved on
+    if(undoState) undoState.undone = `Back on hole ${r.cur}`;
+    toast(last ? msg + ' — last hole' : msg + ` — on to hole ${list[list.indexOf(r.cur) + 1]}`, 5000, true);
     if(last){ rememberPars(r); save(false); openRoundSheet(r.id, 'finish'); }
     else moveHole(1);
   }, 450);
 }
-function logShot(ctx, shot){
+function logShot(ctx, shot, note = ''){
   const s = ctxTarget(ctx); if(!s) return;
   shot.t = Date.now();
   s.shots.push(shot);
@@ -1108,7 +1113,7 @@ function logShot(ctx, shot){
   const ok = save();
   resetToggles();
   render();
-  if(ok) toast(`${CLUB[shot.c].short}: ${shotLabel(shot)} — saved`);
+  if(ok) toast(`${CLUB[shot.c].short}: ${shotLabel(shot)} — saved${note}`, 5000, true);
 }
 
 /* ---------- STATS ---------- */
@@ -1631,7 +1636,8 @@ function openRoundSheet(id, mode){
     <div class="cards3" id="cardTiles">${cardTilesHTML(id ? r : null)}</div>
     <div class="note" style="margin-top:6px">Take a photo, pick one from Photos, or choose a scan (PDF) from Files.</div>
     ${photoStoreError ? '<div class="note" style="color:var(--danger)">Photo storage is not available in this browser, so scorecard photos can\'t be saved here.</div>' : ''}
-    <button class="btn primary block" style="margin-top:14px" data-action="saveRound">${mode === 'edit' ? 'Save changes' : 'Save round'}</button>`);
+    <button class="btn primary block" style="margin-top:14px" data-action="saveRound">${mode === 'edit' ? 'Save changes' : 'Save round'}</button>
+    ${mode === 'finish' ? `<button class="btn ghost block" style="margin-top:6px;color:var(--danger)" data-action="deleteRound" data-id="${r.id}">Delete this round</button>` : ''}`);
 }
 function refreshCardTiles(){
   const rs = ui.roundSheet; if(!rs) return;
@@ -1672,6 +1678,7 @@ async function saveRoundSheet(){
 }
 async function saveRoundSheetInner(){
   const rs = ui.roundSheet; if(!rs) return;
+  expireUndo();
   const f = readRoundForm();
   const sTxt = $('#rScore').value.trim();
   const score = sTxt ? parseInt(sTxt, 10) : null;
@@ -1858,6 +1865,7 @@ function readBackupObject(obj){
   return null;
 }
 async function handleRestoreFile(file){
+  expireUndo();
   let text;
   try { text = await file.text(); } catch(e){ return alertBox('Could not read that file.'); }
   let obj; try { obj = JSON.parse(text); } catch(e){ return alertBox('That is not a Golf Tracker backup file (could not read it).'); }
@@ -1940,9 +1948,34 @@ function confirmBox(title, msg, yes, danger){
   return choose(title, msg, [{id:'yes', label:yes, cls: danger ? 'danger' : 'primary'}, {id:'no', label:'Cancel', cls:'ghost'}]).then(v => v === 'yes');
 }
 let toastTimer;
-function toast(msg, ms = 1700){
-  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), ms);
+function toast(msg, ms = 1700, withUndo = false){
+  // a toast with an Undo button keeps the last change undoable until it fades
+  const t = $('#toast'), act = withUndo && !!undoState;
+  if(!act) expireUndo();
+  t.innerHTML = `<span>${esc(msg)}</span>${act ? '<button class="tundo" data-action="undoLast">Undo</button>' : ''}`;
+  t.classList.toggle('act', act); t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.classList.remove('show', 'act'); expireUndo(); }, act ? Math.max(ms, 5000) : ms);
+}
+/* ---------- one-step undo: a copy of the session or round from just before the last change ---------- */
+let undoState = null;
+const listOf = kind => kind === 'round' ? data.rounds : data.sessions;
+function remember(kind, obj, opts = {}){
+  if(!obj) return;
+  expireUndo();
+  undoState = Object.assign({kind, id: obj.id, json: JSON.stringify(obj), index: listOf(kind).indexOf(obj)}, opts);
+}
+function expireUndo(){
+  const u = undoState; undoState = null;
+  if(u && u.prune) prunePhotos();     // a deleted round's photos are only removed once Undo is gone
+}
+function undoLast(){
+  const u = undoState; if(!u) return;
+  undoState = null;
+  const list = listOf(u.kind), obj = JSON.parse(u.json), i = list.findIndex(x => x.id === u.id);
+  if(i >= 0) list[i] = obj; else list.splice(Math.max(0, Math.min(u.index, list.length)), 0, obj);
+  ui.roundSheet = null; ui.edit = null; closeSheet();
+  resetToggles(); save(); render();
+  toast(u.undone || 'Undone');
 }
 
 /* ---------- forgotten session / round check ---------- */
@@ -1992,6 +2025,7 @@ document.addEventListener('visibilitychange', updateWakeLock);
 const actions = {
   tab: el => { ui.tab = el.dataset.tab; closeSheet(); $('#viewer').classList.remove('show'); render(); window.scrollTo(0, 0); },
   start: () => {
+    expireUndo();
     const now = Date.now();
     data.sessions.push({id:uid(), startedAt:now, endedAt:null, updatedAt:now, shots:[]});
     save(); render(); toast('Session started');
@@ -2003,8 +2037,15 @@ const actions = {
       if(!del) return;
       data.sessions = data.sessions.filter(x => x !== s); save(false); render(); return;
     }
-    const ok = await confirmBox('End this session?', `${s.shots.length} shots logged. You can reopen it from History if needed.`, 'End session');
-    if(!ok) return;
+    const v = await choose('End this session?', `${plural(s.shots.length, 'shot')} logged. Keep it in your stats, or delete it if it was a test or a mistake.`,
+      [{id:'yes', label:'End and keep', cls:'primary'}, {id:'del', label:'Delete session', cls:'danger'}, {id:'no', label:'Keep going', cls:'ghost'}]);
+    if(v === 'del'){
+      remember('session', s, {undone:'Session restored'});
+      data.sessions = data.sessions.filter(x => x !== s); save(); render(); toast('Session deleted', 8000, true);
+      return;
+    }
+    if(v !== 'yes') return;
+    expireUndo();
     s.endedAt = Date.now(); s.updatedAt = s.endedAt;
     save(); render();
     const b = await choose('Session saved ✓', 'Back up now so it\'s safe off this phone too?', [{id:'yes', label:'Back up now', cls:'primary'}, {id:'no', label:'Later', cls:'ghost'}]);
@@ -2024,16 +2065,19 @@ const actions = {
     if(ctx === 'round' && ui.gir) sh.g = ui.gir;
     if(!addDist(sh)) return;
     const r = ctx === 'round' ? activeRound() : null;
+    remember(ctx === 'round' ? 'round' : 'session', ctxTarget(ctx), {undone:'Shot undone'});
+    let note = '';
     if(r && r.mode === 'holes'){
       sh.h = r.cur;
-      if(sh.r === 'water'){ r.pen[r.cur] = (r.pen[r.cur] || 0) + 1; setTimeout(() => toast('Water: 1 penalty stroke added'), 1800); }
+      if(sh.r === 'water'){ r.pen[r.cur] = (r.pen[r.cur] || 0) + 1; note = ' · +1 penalty'; }
     }
-    logShot(ctx, sh);
+    logShot(ctx, sh, note);
   },
   putt: el => {
     const ctx = el.dataset.ctx || 'range'; const c = ctxClub(ctx); if(!c) return;
     const pt = {c:c.id, s:el.dataset.r}; if(!addDist(pt)) return;
     const r = ctx === 'round' ? activeRound() : null;
+    remember(ctx === 'round' ? 'round' : 'session', ctxTarget(ctx), {undone:'Putt undone'});
     if(r && r.mode === 'holes') pt.h = r.cur;
     logShot(ctx, pt);
     if(r && r.mode === 'holes' && pt.s === 'holed') holedOut(r);
@@ -2058,12 +2102,11 @@ const actions = {
   },
   eDelete: async () => {
     const e = ui.edit; if(!e) return;
-    const ok = await confirmBox('Delete this shot?', 'It will be removed from this session and your stats.', 'Delete shot', true);
-    if(!ok) return;
     const f = findShot(e.ctx, e.t); if(!f){ closeSheet(); return; }
+    remember(e.ctx === 'round' ? 'round' : 'session', f.s, {undone:'Shot restored'});
     waterPenalty(f.s, f.shot.h, f.shot.r, null);
     f.s.shots.splice(f.i, 1); f.s.updatedAt = Date.now();
-    ui.edit = null; save(); closeSheet(); render(); toast('Shot deleted');
+    ui.edit = null; save(); closeSheet(); render(); toast('Shot deleted', 5000, true);
   },
   distStep: el => {
     const inp = $('#distIn'); const c = ctxClub('round'); if(!inp || !c) return;
@@ -2096,6 +2139,7 @@ const actions = {
   pen: el => { const r = activeRound(); if(!r) return; const v = Math.max(0, (r.pen[r.cur] || 0) + (+el.dataset.d)); if(v) r.pen[r.cur] = v; else delete r.pen[r.cur]; save(); render(); },
   undo: el => {
     const s = ctxTarget(el.dataset.ctx || 'range'); if(!s || !s.shots.length) return;
+    remember(el.dataset.ctx === 'round' ? 'round' : 'session', s, {undone:'Shot put back'});
     let x;
     if(s.mode === 'holes'){
       const k = s.shots.map(y => y.h).lastIndexOf(s.cur); if(k < 0) return;
@@ -2103,9 +2147,10 @@ const actions = {
       if(x.r === 'water' && s.pen[s.cur]){ s.pen[s.cur]--; if(!s.pen[s.cur]) delete s.pen[s.cur]; }
     } else x = s.shots.pop();
     s.updatedAt = Date.now(); save(); render();
-    toast(`Removed ${CLUB[x.c].short}: ${shotLabel(x)}`);
+    toast(`Removed ${CLUB[x.c].short}: ${shotLabel(x)}`, 5000, true);
   },
   closeSheet: () => closeSheet(),
+  undoLast: () => undoLast(),
   statsView: el => { ui.statsView = el.dataset.v; render(); },
   histFilter: el => { ui.histFilter = el.dataset.f; render(); },
   historyCourse: () => { ui.histFilter = 'course'; ui.tab = 'history'; render(); window.scrollTo(0, 0); },
@@ -2115,6 +2160,7 @@ const actions = {
   rdStart: el => { keepRdCourse(); ui.rd.start = +el.dataset.v === 10 ? 10 : 1; render(); },
   beginRound: () => {
     if(activeRound()) return;
+    expireUndo();
     keepRdCourse();
     const rd = ui.rd || {holes:18, start:1, course:''}, now = Date.now(), course = (rd.course || '').trim();
     const known = data.courses[courseKey(course)];
@@ -2165,16 +2211,19 @@ const actions = {
   },
   closeViewer: () => { $('#viewer').classList.remove('show'); const i = $('#viewerImg'); i.removeAttribute('src'); i.classList.remove('pdfimg'); $('#viewerPdf').hidden = true; $('#viewerNoPrev').hidden = true; ui.viewerUrl = null; },
   reopenRound: el => {
+    expireUndo();
     const r = data.rounds.find(x => x.id === el.dataset.id); if(!r || activeRound()) return;
     r.endedAt = null; r.updatedAt = Date.now(); save(); closeSheet(); ui.tab = 'rounds'; render(); toast('Round reopened');
   },
   deleteRound: async el => {
     const r = data.rounds.find(x => x.id === el.dataset.id); if(!r) return;
-    const ok = await confirmBox('Delete this round?', `${esc(r.course || 'Round')}, ${fmtISO(r.date)}: ${plural(r.shots.length, 'shot')} and its scorecard photos. This can't be undone unless you have a backup.`, 'Delete round', true);
+    const thru = r.mode === 'holes' ? roundTotals(r).thru : 0;
+    const what = [thru ? plural(thru, 'hole') : '', plural(r.shots.length, 'shot'), CARD_SIDES.some(k => r.photos[k]) ? 'scorecard' : ''].filter(Boolean).join(', ');
+    const ok = await confirmBox(r.endedAt ? 'Delete this round?' : 'Delete the round in progress?', `${esc(r.course || r.holes + '-hole round')}, ${fmtISO(r.date)}: ${what}. You can undo straight after.`, 'Delete round', true);
     if(!ok) return;
+    remember('round', r, {prune:true, undone:'Round restored'});
     data.rounds = data.rounds.filter(x => x !== r);
-    save(); closeSheet(); render(); toast('Round deleted');
-    prunePhotos();
+    ui.roundSheet = null; save(); closeSheet(); render(); toast('Round deleted', 8000, true);
   },
   editProfile: () => openProfileSheet(),
   pickPhoto: () => { const i = $('#photoInput'); i.value = ''; i.click(); },
@@ -2277,14 +2326,16 @@ const actions = {
   openClub: el => { ui.openClub = ui.openClub === el.dataset.club ? null : el.dataset.club; render(); },
   openSession: el => openSessionSheet(el.dataset.id),
   reopen: el => {
+    expireUndo();
     const s = data.sessions.find(x => x.id === el.dataset.id); if(!s || activeSession()) return;
     s.endedAt = null; s.updatedAt = Date.now(); save(); closeSheet(); ui.tab = 'range'; render(); toast('Session reopened');
   },
   deleteSession: async el => {
     const s = data.sessions.find(x => x.id === el.dataset.id); if(!s) return;
-    const ok = await confirmBox('Delete this session?', `${fmtDate(s.startedAt)} — ${s.shots.length} shots. This can't be undone unless you have a backup.`, 'Delete session', true);
+    const ok = await confirmBox('Delete this session?', `${fmtDate(s.startedAt)} — ${plural(s.shots.length, 'shot')}. You can undo straight after.`, 'Delete session', true);
     if(!ok) return;
-    data.sessions = data.sessions.filter(x => x !== s); save(); closeSheet(); render(); toast('Session deleted');
+    remember('session', s, {undone:'Session restored'});
+    data.sessions = data.sessions.filter(x => x !== s); save(); closeSheet(); render(); toast('Session deleted', 8000, true);
   },
   backup: () => doBackup(false),
   backupDownload: () => doBackup(true),
@@ -2301,6 +2352,7 @@ const actions = {
   awake: el => { data.settings.keepAwake = el.dataset.v === '1'; save(false); render(); },
   hideTip: () => { data.settings.hideHomeTip = true; save(false); render(); },
   clearAll: async () => {
+    expireUndo();
     const ok = await confirmBox('Delete all data?', 'Every session and round on this device will be removed. Download a backup first if you might want it back.', 'Delete everything', true);
     if(!ok) return;
     try { localStorage.setItem(PREV_KEY, JSON.stringify(data)); } catch(_){}
