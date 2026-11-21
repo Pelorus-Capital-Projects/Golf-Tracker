@@ -1,6 +1,6 @@
 # Golf Tracker
 
-Range sessions and rounds in one app: ball flight per club, hole-by-hole scoring with par 3/4/5, putts, fairways, greens in regulation, distances, and scorecard photos or scans.
+Range sessions and rounds in one app: ball flight per club, hole-by-hole scoring with par 3/4/5, putts, fairways, greens in regulation, distances, scorecard photos or scans, and photos and videos from each round.
 
 **Open the app:** https://pelorus-capital-projects.github.io/Golf-Tracker/
 
@@ -10,6 +10,6 @@ Range sessions and rounds in one app: ball flight per club, hole-by-hole scoring
 3. Open it from the **Golf** icon from then on. The Home Screen app keeps its own data, so log rounds there, not in a Safari tab.
 
 ## Keep your data safe
-Everything is stored on the phone only. Use **Settings → Backup** regularly and save the file to Files or Dropbox. **Restore** brings it back on a new phone.
+Everything is stored on the phone only. Use **Settings → Backup** regularly and save the file to Files or Dropbox. **Restore** brings it back on a new phone. Backups include scorecards and round photos; round videos are not included (too big), so keep the originals in your Photos app.
 
 Single-file web app (`index.html`), no server, no tracking.
