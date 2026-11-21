@@ -1,0 +1,2626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Golf">
+<meta name="theme-color" content="#006747">
+<title>Golf Tracker</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAABmJLR0QA/wD/AP+gvaeTAAAPZUlEQVR4nO3deXAT1x3A8dVly5ck36d8EwgMNuaKCZ4WSDChE+wAdQpD6ykpkHSGpBwBcsxkmMy0IWZwmpQ/EqBhEoaBxgmJTRrAKYakTrANjLGJAYPv+wLL8m1Jq/7x5EWVtbK9u7LePv2+fz3ZD63EfrySVtKuxGw2UxBkL6mrbwCEb4ADYg1wQKwBDog1wAGxBjgg1gAHxBrggFgDHBBrgANiDXBArAEOiDXAAbEGOCDWAAfEGuCAWAMcEGtyoa7IbDbXdLd19/f5Kr1mhUR6KTyEumZo0oYNYw+6WgdGhoP91InBERKJRJCrFQBHh773/UtfnC4r6u7vQz/xlCvS5y7an56VljiP//VDDiquqcopzCu8c3PUaEA/CfZTb1m66sCaF8NU/jyvXMLzM6QFlSXZJw/3DQ/auWqJZOeKjNysHXKpjM8iILsZadOevGNHrxbYXYNqL5/Pt+7LSErlswheOAoqSzZ8/K6Jph3M2ZiSdmbbGwqZYI9fEEVRBpNx84lDX5UXO5gjk0rPvfIOHx/ccXTqe+cc3K4bGkAXNyW2b5/XMks99GhEkd8QcqQ8Vm+wgNiQsvzstjfBh1CZaPr3n75/9sYP6KJKYdyb0pAZ2xWgNDzo8z5eFXW2JtzyK6X33YPHIzSB3BbEHcfuvE/+fvlrNP7k11U75rVY/7Za55N+fnFTvxJdBB9CZTAZN51471z5T+hitN9I4bobszX/97B+rCrq5R8sz/Z2PbP+g6yXuS2L40tZs9l8uqwIjTclttvIoChqtmbwSmZZtN8Iuniu/KdNJ94zmIzcFgehJsq4kllmI4OiqB3zWjYltqPx6bIizn//HHHU9rQzr022zW21OydeNQw+BMyujHjVsN3JzErp7u+r7WnntkSOOLr0Omb8xAS5TOBDqKYlw2alWK+sacURh4+nkhk/GlE4mAk++DddGTYrxXplTSuOOJ4IjfKUWxaf3xDieDL44JOJprNPHp6WDOuV4iGXzwqJ5LZojji8FB7pcxeh8ZHy2Gqdj+P54INbBpPxxeN/ZV61TlFGtc7nSHksGq+Zu9jbw5Pb0rm/8bY/PQvtw9cb5KsLFtf2eTueH68a/nF9Wdz4HQMfk2bzaKL1HSnKuD6pjMYBr7XfLkI7mSQSyf70LM43gDuOtMR5O1dkoHHzgHJl/pJJfcT4Dl954Tr4mEoTZVzJvJ6gHnL8rxoHvFZ+s6Re74Uu7lyRweftLV5v2edm7diYkobG4EPABJGxMSUtN2sHn5vBC4dcKvvX9rc2L1mBLoIPQbJ5BspNxoaU5We2vcHzLU++H/aRSaWntu4HH0Jl874JZxmCvFkhwCfBwIdQYSVDsI8Jgg/+4SZDyM+Qgg8+YShD4A8Ygw9u4SlD+E+fg4/phq0Mp3w1AXxMPZxlOOt7K+BjKmEuw4lfagIfjsNfhnO/8QY+2BKFDKd/HRJ8TEwsMmbiu7LgwzoRyZihL1KDD5S4ZMzct+zBh+hkzOghGNzZhxhlzPTxOdzTh0hluODgLe7mQ7wyXHNkH/fxIWoZLjvskzv4ELsMVx4TjGwfBMhw8QHjSPVBhgzXH02QPB/EyHA9DsJ8kCQDCxzE+CBMBi44CPBBngyMcIjaB5Ey8MIhUh+kysAOh+h8ECwDRxwi8kG2DExxiMIH8TLwxYG5D3eQgTUObH24iQzccWDow31kiAAHVj7cSoYA51uZsUw0/YeTOWeuX0UXhV0xJpru1Pe26x9RFBWhDgzx08iktn827iZDTDgE91HX055fca2goqS6s6VT30tb/T/IpNJQP//ZYVHrkp7KTF4WHxTuhjJEhkMoH/MjY81m8y9tjVNc6PzIOLlUWt5cy2ehopMhPhxC+eCc+8gQJQ4BfXjI6JURj9KjH2p9RsJ9RsO9RymKah/ybB/0bB5UFjYFXmkLGDM9fvLhVjLEioO/j+VhuteSG5+L7lEpHL1+0RvkFxqDPqyMudahcTcZIsbB2UfbkPJWt9/a6O5pnXu1uN0/xm9Y6zvieBpJMsSNg7MPJ0WYDHHsBHMQt/1jzog8GaLHgYkPImWQgMPlPkiVQQgOF/ogWIbon5DaNPH5afH6UubcYYLXNqRMO7eUVBkURZFzT5jtx72OZrSru3lAebfXd1IcfWPyr+tCP7od0zbgSVFUuM/oX5IbNsR3Od4FQlHU7Ye+jIykqFjCZJCGA/kYM5nQeHmYbk10j4PJBlpyuDwupzyub+zx/0PnsMfWy/N3/dd4YGH9vpR6uYR1y5oe1bMsTHetQ0NRFGWWECaDnOccTLXd7VVtDWj8apKjt9Z6RxVrzi9+u3SWtQymvjH5WyWz1hQs1o2yrnKJhHp1fhMaV7bW1/d08L75eEUajvyKa2jgKaPXxrBuNgy05LcXF1xpDWB+skCbkJ36bHbqs8lR8cwPi1oDMi8stH57xabfxHR7yGibRRMTaVvC85UlaLAy8pGDJw2Hy+OKxmXMDY/+NHvPU3FzmN+W1N976bPcux1NFEX92Ob/QUXMgYX1dq9H7WFcEdFb2BxIUdT5ytJdz6wX+g65MtK2HNWdLWiwWvuQbU7fmDynPA6N54ZH/7Qv11oGRVGpcXN+3p/7ZFg0unioPB6dptVuq7U944tuFuIeYBRROEw03dWvQ+NoX9aT835ZG8o8z/g0e4/G23fiHI237z+zd6OxblR+ro71lOzMu3Gdep2JpvndA7wiCkenvpdZPWHeY2zTjv4SgwYLtAk22wzrlsU/mRRp2cD8ozKGbVqEzygaGGkTQ5OMiMLR1vf4oSTSh3X3BtqfQVGU9XNPuy3QJqBB66CSbU6E96jdG0BAROGQWH1Gw8F+X2bSpHuHabNlOyRhn2n9Cwk1nQ+JYB9ROMJVj1+atjn4Wx/fqFS01Dm+QmZChO8o25z2Ic/HN0AdwDZNjBGFI1Tlz3zfpH3Qk23aq0mWPVcVLXUl9ffYpv1ce+d2q2V/2i72/Wmt4wuSS2Uhfhqutx3HiMIhk0qZ1dM0wLrl2JjQqfG07AJ56bNc3dDAxDm9QwN/OvUBGvt7Gl6I62K7tuZ+y9sroSo7X4USdUTdGYqimJ0T3zcHss1RKYwHUiyPF3c7mp7O2XOt7q71hJ9r7zyds/teh2W/xZsL6/08WPenfd9iWdCcMK0Q9wCjSNtDui7pqaLqWxRFFbUG6kblzBbCptdTGv7TEni5JXDcx+6kyDj04uVWSy3zaEJR1LPah7sXNNi9ErQ/7Yc2//FFpzrhDrky0rYcLyx4Gg0MtORicxDbNLnE/OWaW89EPX7lWdlaf6r08qnSy9YyVmsf5qXfcvDG7L8bgpl3XjIAB+bFBobOH99z9VFljIPXqhpP48V1Nw+l3re7dfH3NOQsu//d8zfZtj0URZnN1Ee3LTvHkqPi44LCBLgDOEXaw4qJpuXjzwqvdWgutQQ9p2V9b1YuMR9YWP/n+c3f1IV8WBHTOqSkKCrCe2RXcuP6uC4HzzNQF5uDSjvVaGw2mw0mI2Ef6SDtY4I234UvXl8W7cf6JgvPiP+YIDkPK3aPkuA8GWgb4/Lj4zo1QnBwO34G/3A4frLzIgGHq2SgCPYhehyulYEi1Ye4ceAgA0WkDxHj4CajbUj5XWPwdF+iXW4JbOqf5KhA5PkQ60tZnkdwWxamey2pcW10j9rhzgzdqPxCU/CHlTGlnWo4eIs4EuTYfuiwTysieldre7S+I5FWh31qHfRsHlAWNgddbQ0w0I8/v+NuPsSHQygZ3HIrHyJ7ziGIjPmRccwnh6dSsjZhoTYRjV1+fO2ZTExbDmGPFFvf05Ffce3b26V325u7+nVG2sT8E7lUFqrSzAnTrktKzUxeFhsY6tTjJ2ObaHA49RjCtNncqe9Fnx2PUAeGqvylE44n54Y+xIEDk6NLu5sPETznwEQGVudvmJlwx4GPDJRb+cAaB24yUO7jA18ceMpAuYkPTHHgLAPlDj5wxIG/DBTxPrDDIRYZKLJ94IVDXDJQBPvACIcYZaBI9YELDvHKQBHpAwscYpeBIs+H63GQIQNFmA8X4yBJBookH67EQZ4MFDE+XIaDVBkoMny4BgfZMlAE+HABDneQgRK7j5nG4T4yUKL2MaM43E0GSrw+Zg6He8pAidTHDOFwZxkoMfqYCRwgAyU6H07HATKsE5cP5+IAGRMTkQ8n4gAZbInFh7NwgAzHicKHU3CAjKmEvw/hcYCMqYe5D4FxgIzphrMPIXGADG5h60MwHCCDT3j6EAYHyOAfhj4EwAEyhAo3H3xxgAxhw8oHLxxG2vS7438DGcImk0o/++PrG1KWo4ucfWw+ccj6KHgc4oVjT96xr8qL0RhkCJhCJj+77U2ePr4qL96Td4zPzeCOo7im6ujVAjQGGYIniI+jVwuKa6o43wbuOHIK89CRCFUK4/cZNyaVUaf3+tXXJJ/0SvAm+lhVsKRusoMwx/gOX3j+pkphRGeeyynM43wDOOIYNowV3rmJxntTGmZrBh3Pr9N7rcxf2tRvOUs0yJhiCpn8i+1vM89Pm/qVK/OXTupjtmZwb4rlBKiX7twYGhvltnSOOO53towaDWicGct6Km8UyOCTzfPTKfpgVsqY0figq5XbojniGBwdYcYBSoODmSCDfzaPL1PxYb1SrFfWtOKII0SlYcb3dT5s00CGUE3Xh/VKsV5Z04ojjoSg8GA/y/l2T9yJtDsHZAjbtHwwKyXYT50QFM5tiRxxSCSSLUtXofHZmvBjVVE2E6p1PiBD8Oz6qJ6w5T5WFXW2xgJiy9JVkgkH+Z9i3A+M36nvnXNwu25oAF3clNi+fV7LLPXQoxFFfkPIkfJYvcFCAWQIm83x+VUK496UhszYrgCl4UGf93ErGSql992DxyM0gdwWxOusCQWVJRs+ftdE0w7mbExJO7PtDZAhbAaTcfOJQ8zuabvJpNJzr7yTkZTKeSl8T6lRUFmSffJw37Cd/RwSiWTniozcrB1yqYzPIiC7GWnTnrxjR68W2F2Dai+fz7fu4yNDmPOtdOh737/0xemyou7+PvQTT7kife6i/elZaYnzeF455LjimqqcwrzCOzeZ3U7BfuotS1cdWPNimMqf55ULdjIes9lc093W3d/nq/SaFRLppfAQ5GqhqTRsGHvQ1TowMhzsp04MjuD8DNQmcZypCXJJrj/UJIRtgANiDXBArAEOiDXAAbEGOCDWAAfEGuCAWAMcEGuAA2INcECsAQ6INcABsQY4INYAB8Qa4IBYAxwQa/8DGX7v3Fd7JvoAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABmJLR0QA/wD/AP+gvaeTAAACO0lEQVRIiWP8//8/Ay0BE01Np68FT96/yVjaPe/YTkqMm3dsZ8bS7ifv3yCE/sNA9tK+tydZF66Satqy6D9ZoGnLooWrpN6eZM1e2gcXRPjAUF5ry0PROPVnit8rmrcuJtXtzVsXK36viFN/tuWhqKG8FhYf/P//v2vnioWrpP5fZFixVqJp8wLi3d65YzlcY/OWhchSDGhKybADj+lYLCDVDvymY7eAeDsImo7TAmLsIMZ0fBbgt4NI0////8+Ivyzq3rVS/GNRnPqzlXcklj1PFub8w8DA8PEnu7/IHIjgbfbOGu84PCYQsADZjlff2cQ4fzEwMLz4zi7B+ZMY09HzAS4QNL3+xXG23xcY62er1M5S+X2B8eUJNv+p1cToJaqw42f7Ic71q/m0soXlckvLZS1nlMU4fwlx/CFGLwsxiiCAkZHhHyRhQLgMjFSz4ONP9hff2GtM7raejPr3n6HW9O6r72xvfxCll3Akd+1cIfGpGCWSv7FLcP1ceUfiFltHrU88RRbATV95R2L5i2Qhjj+MDIyffnP4Cs2CCBK2A08CwJObiC+vcFpAMK8SaQd2C4gsCYixA4sFxJczxNiBbgFJphNjB4oFZJhO0A6EBXOO7IAoWryanIZF05ZFi1dL/b/IsHCV1JwjO+DiiLLo/MNrPvKvF92Uus/ZUesdiz/7YIJa79j7nB2Lbkr5yL8+//Aalnzw+N3r9CVdc4/uwOFEosDcozvSl3Q9fvcaLkK4qKAQDP3GLwDYXNFn77+o1QAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMTYgMjE2Ij48cmVjdCB3aWR0aD0iMjE2IiBoZWlnaHQ9IjIxNiIgZmlsbD0iI2ZmZiIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGcgc3Ryb2tlPSIjMDA2NzQ3IiBzdHJva2Utd2lkdGg9IjE5Ij48bGluZSB4MT0iMzIiIHkxPSIzMiIgeDI9IjEwOCIgeTI9IjEwOCIvPjxsaW5lIHgxPSIxODQiIHkxPSIzMiIgeDI9IjEwOCIgeTI9IjEwOCIvPjxsaW5lIHgxPSIzMiIgeTE9IjE4NCIgeDI9IjEwOCIgeTI9IjEwOCIvPjxsaW5lIHgxPSIxODQiIHkxPSIxODQiIHgyPSIxMDgiIHkyPSIxMDgiLz48Y2lyY2xlIGN4PSIxMDgiIGN5PSIxMDgiIHI9IjE2Ii8+PC9nPjxnIHN0cm9rZT0iI0ZGRDEwMCIgc3Ryb2tlLXdpZHRoPSIxMSI+PGxpbmUgeDE9IjMyIiB5MT0iMzIiIHgyPSIxMDgiIHkyPSIxMDgiLz48bGluZSB4MT0iMTg0IiB5MT0iMzIiIHgyPSIxMDgiIHkyPSIxMDgiLz48bGluZSB4MT0iMzIiIHkxPSIxODQiIHgyPSIxMDgiIHkyPSIxMDgiLz48bGluZSB4MT0iMTg0IiB5MT0iMTg0IiB4Mj0iMTA4IiB5Mj0iMTA4Ii8+PGNpcmNsZSBjeD0iMTA4IiBjeT0iMTA4IiByPSIxNiIvPjwvZz48L2c+PGNpcmNsZSBjeD0iMTA4IiBjeT0iMTA4IiByPSIxMC41IiBmaWxsPSIjMDA2NzQ3Ii8+PGNpcmNsZSBjeD0iMTA4IiBjeT0iMTA4IiByPSI2LjUiIGZpbGw9IiNmZmYiLz48L3N2Zz4=">
+<style>
+:root{
+  color-scheme: light;
+  --page:#ffffff; --surface:#ffffff; --surface2:#f1f5f2;
+  --ink:#0f1a14; --ink2:#46524b; --muted:#6b756f; --line:#e2e9e4; --ring:rgba(0,103,71,.16);
+  --accent:#006747; --accent-ink:#ffffff; --accent-soft:#e3efe9; --accent-dark:#004d35;
+  --gold:#ffd100; --gold-ink:#003d2a; --gold-soft:#fff5c2;
+  --danger:#b42318; --danger-soft:#fbe9e7; --warn-soft:#fff5c2; --warn-ink:#4d3d00;
+  --hook:#003922; --draw:#00673d; --straight:#3a9742; --fade:#9eb919; --slice:#ffd100;
+  --hook-ink:#ffffff; --draw-ink:#ffffff; --straight-ink:#0f1a14; --fade-ink:#0f1a14; --slice-ink:#0f1a14;
+  --radius:14px;
+  --tabs-h:64px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:var(--page); color:var(--ink);
+  font-size:16px; line-height:1.4;
+  -webkit-text-size-adjust:100%;
+  -webkit-tap-highlight-color: transparent;
+}
+button{font:inherit;color:inherit;touch-action:manipulation;cursor:pointer}
+.wrap{max-width:560px;margin:0 auto;padding:0 14px}
+header.top{
+  position:sticky;top:0;z-index:20;background:var(--accent);color:#fff;
+  padding:calc(env(safe-area-inset-top) + 10px) 0 10px;
+  border-bottom:3px solid var(--gold);
+}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:21px;letter-spacing:.005em}
+.brand small{display:block;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:12px;color:rgba(255,255,255,.82);letter-spacing:0}
+.pill{font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--gold);color:var(--gold-ink);white-space:nowrap}
+.pill.bad{background:#fff;color:var(--danger)}
+main{padding:14px 0 calc(var(--tabs-h) + env(safe-area-inset-bottom) + 24px)}
+h2{font-size:20px;margin:4px 0 10px;letter-spacing:-.01em}
+h3{font-size:16px;margin:0 0 6px}
+.card{background:var(--surface);border:1px solid var(--ring);box-shadow:0 1px 2px rgba(0,61,42,.05);border-radius:var(--radius);padding:14px;margin-bottom:12px}
+.muted{color:var(--muted)}
+.ink2{color:var(--ink2)}
+.small{font-size:13px}
+.row{display:flex;align-items:center;gap:10px}
+.between{justify-content:space-between}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid var(--ring);background:var(--surface);border-radius:12px;
+  padding:12px 16px;font-weight:600;min-height:46px
+}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.danger{color:var(--danger)}
+.btn.block{width:100%}
+.btn.big{min-height:64px;font-size:20px;border-radius:16px}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--ink2);padding:8px 10px;min-height:40px}
+.btn:disabled{opacity:.45}
+.btn:active{transform:scale(.985)}
+.banner{border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
+.banner.warn{background:var(--warn-soft);color:var(--warn-ink)}
+.banner.bad{background:var(--danger-soft);color:var(--danger)}
+.banner .x{margin-left:auto;background:none;border:0;font-size:18px;line-height:1;padding:0 2px;color:inherit;opacity:.7}
+
+/* club grid */
+.clubs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.club{
+  position:relative;border:1px solid var(--ring);background:var(--surface);border-radius:12px;
+  min-height:52px;padding:6px 2px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-weight:700;font-size:15px
+}
+.club .n{font-size:11px;font-weight:600;color:var(--muted);margin-top:1px}
+.club.sel{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.club.sel .n{color:var(--gold);opacity:1}
+
+/* segmented bar */
+.seg{display:flex;gap:2px;height:28px;border-radius:4px;overflow:hidden;background:transparent;margin:8px 0 6px}
+.seg.empty{background:var(--surface2);border-radius:4px}
+.seg-part{display:flex;align-items:center;padding-left:6px;font-size:12px;font-weight:700;min-width:0;border-radius:4px}
+.seg-part span{white-space:nowrap}
+.s-hook{background:var(--hook);color:var(--hook-ink)}
+.s-draw{background:var(--draw);color:var(--draw-ink)}
+.s-straight{background:var(--straight);color:var(--straight-ink)}
+.s-fade{background:var(--fade);color:var(--fade-ink)}
+.s-slice{background:var(--slice);color:var(--slice-ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--ink2)}
+.legend .k{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block;flex:none}
+.sw.hook{background:var(--hook)}.sw.draw{background:var(--draw)}.sw.straight{background:var(--straight)}.sw.fade{background:var(--fade)}.sw.slice{background:var(--slice)}
+.legend b{color:var(--ink);font-weight:600}
+.dir{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.dir div{background:var(--surface2);border-radius:10px;padding:6px 8px;text-align:center}
+.dir .v{font-weight:700;font-size:18px}
+.dir .l{font-size:12px;color:var(--muted)}
+.strike{font-size:13px;color:var(--ink2);margin-top:8px}
+.strike b{color:var(--ink)}
+.note{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* recent balls */
+.recent{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:0;font:inherit;font-size:12px;padding:4px 8px;border-radius:999px;background:var(--surface2);color:var(--ink2);display:inline-flex;align-items:center;gap:5px}
+
+/* sheet */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:50;display:none}
+.overlay.show{display:block}
+.sheet{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--surface);
+  border-radius:20px 20px 0 0;padding:14px 14px calc(env(safe-area-inset-bottom) + 16px);
+  transform:translateY(105%);transition:transform .18s ease-out, visibility 0s linear .18s;max-height:92vh;overflow:auto;
+  box-shadow:0 -6px 30px rgba(0,0,0,.18);visibility:hidden
+}
+.sheet.show{transform:none;visibility:visible;transition:transform .18s ease-out, visibility 0s}
+.sheet .inner{max-width:560px;margin:0 auto}
+.grabber{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
+.seglabel{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 6px}
+.strikes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.sbtn{border:1px solid var(--ring);background:var(--surface2);border-radius:12px;min-height:48px;font-weight:600}
+.sbtn.on{background:#fff;color:var(--accent);border:2px solid var(--accent);font-weight:700}
+.sbtn.on::before{content:"✓ "}
+.shapes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.shape{
+  border:0;border-radius:14px;min-height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  font-weight:700;font-size:14px;padding:6px 2px
+}
+.shape svg{width:34px;height:46px}
+.putts{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,auto);gap:6px}
+.putt{border:1px solid var(--ring);background:var(--surface2);border-radius:14px;min-height:76px;font-weight:700;font-size:15px}
+.putt.holed{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+
+/* tabs */
+nav.tabs{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom)
+}
+nav.tabs .wrap{display:grid;grid-template-columns:repeat(5,1fr);height:var(--tabs-h);padding:0}
+nav.tabs button{background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;font-weight:600;color:var(--muted)}
+nav.tabs button svg{width:22px;height:22px}
+nav.tabs button{position:relative}
+nav.tabs button.on{color:var(--accent)}
+nav.tabs button.on::before{content:"";position:absolute;top:0;left:28%;right:28%;height:3px;border-radius:0 0 3px 3px;background:var(--gold)}
+
+/* toast + modal */
+#toast{z-index:110 !important;
+  position:fixed;left:50%;top:calc(env(safe-area-inset-top) + 64px);transform:translateX(-50%) translateY(-12px);
+  background:var(--accent-dark);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;border:2px solid var(--gold);
+  opacity:0;pointer-events:none;transition:all .18s;z-index:90;max-width:90vw;text-align:center
+}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.4)}
+.modal.show{display:flex}
+.modal .box{background:var(--surface);border-radius:18px;padding:18px;max-width:400px;width:100%}
+.modal .box p{margin:6px 0 14px;color:var(--ink2)}
+.modal .btns{display:flex;flex-direction:column;gap:8px}
+
+/* stats */
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.fbtn{border:1px solid var(--ring);background:var(--surface);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:600}
+.fbtn.on{background:var(--accent);color:#fff;border-color:transparent}
+.stat-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.stat-head .n{font-size:13px;color:var(--muted);white-space:nowrap}
+.club-card{cursor:pointer}
+.tbl{width:100%;border-collapse:collapse;font-size:11px;margin-top:10px;font-variant-numeric:tabular-nums}
+.tbl th,.tbl td{padding:5px 2px;text-align:right;border-bottom:1px solid var(--line)}
+.tbl th:first-child,.tbl td:first-child{text-align:left;white-space:nowrap}
+.tbl th{font-weight:600;color:var(--muted)}
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.overview .card{margin:0;padding:10px;text-align:center}
+.overview .v{font-size:24px;font-weight:700}
+.overview .l{font-size:12px;color:var(--muted)}
+.putt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+.putt-grid div{background:var(--surface2);border-radius:10px;padding:6px 2px;text-align:center}
+.putt-grid .v{font-weight:700}
+.putt-grid .l{font-size:11px;color:var(--muted)}
+.list-item{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:12px 14px;margin-bottom:8px}
+.list-item .t{font-weight:600}
+.list-item .s{font-size:13px;color:var(--muted)}
+.badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--gold);color:var(--gold-ink)}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.toggle:last-child{border-bottom:0}
+.seg2{display:inline-flex;background:var(--surface2);border-radius:10px;padding:3px}
+.seg2 button{border:0;background:none;padding:7px 12px;border-radius:8px;font-weight:600;font-size:14px}
+.seg2 button.on{background:var(--accent);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.empty-state{text-align:center;padding:26px 10px;color:var(--muted)}
+.plus{color:var(--gold);font-weight:800}
+.avatar{flex:none;border-radius:50%;border:2px solid var(--gold);background:#fff;color:var(--accent);display:inline-flex;align-items:center;justify-content:center;overflow:hidden;padding:0;font-weight:700}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar svg{width:62%;height:62%}
+.hav{width:42px;height:42px;font-size:15px}
+.av64{width:64px;height:64px;font-size:22px}
+.av96{width:96px;height:96px;font-size:32px;border-width:3px}
+.brand small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lines{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.toggles{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.clubs.compact{grid-template-columns:repeat(7,1fr);gap:4px}
+.clubs.compact .club{min-height:42px;font-size:14px;padding:2px}
+.clubs.compact .club .n{display:none}
+.holebar{padding:8px 10px}
+.hhead{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.hmid{display:flex;align-items:center;gap:4px;flex-wrap:nowrap}
+.hnav{min-width:46px;min-height:42px;font-size:24px;padding:0}
+.hnum{font-size:20px;font-weight:800;color:var(--accent);white-space:nowrap}
+.hrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:6px}
+.hcell{background:var(--surface2);border-radius:10px;padding:3px 5px 5px;display:flex;flex-direction:column;align-items:center;gap:1px}
+.hctl{display:flex;align-items:center;justify-content:space-between;width:100%;gap:2px}
+.hcell.strong{background:var(--accent-soft, #e3efe8)}
+.hcell.strong .hval{font-size:22px;color:var(--accent)}
+.hl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pchip{min-width:34px;min-height:36px;border-radius:9px;border:1px solid var(--ring);background:#fff;font-weight:700;padding:0 6px}
+.pchip.on{background:var(--accent);color:#fff;border-color:transparent}
+.hval{min-width:22px;text-align:center;font-size:18px}
+.linkmini{border:0;background:none;color:var(--accent);text-decoration:underline;font-size:11px;font-weight:700;padding:0;text-transform:none}
+.hstrip{display:flex;gap:4px;overflow-x:auto;margin-top:6px;padding-bottom:2px}
+.hchip{flex:none;width:34px;border-radius:8px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;align-items:center;padding:2px 0;font-size:10px;color:var(--muted)}
+.hchip b{font-size:14px;color:var(--ink)}
+.hchip.cur{border:2px solid var(--gold)}
+.hchip.under b{color:var(--accent)}
+.hchip.bogey{background:var(--gold-soft)}
+.hchip.dbl{background:#fde3d8}
+.sc-tbl td.under{color:var(--accent);font-weight:700}
+.sc-tbl td.over{color:var(--danger)}
+.sc-tbl tr.tot td{font-weight:700;border-top:2px solid var(--line);background:var(--surface2)}
+.sc-tbl{font-size:13px}
+.sc-tbl th,.sc-tbl td{text-align:center;padding:5px 2px}
+.sc-tbl .tp{font-size:11px;font-weight:600;color:var(--muted);margin-left:3px}
+.sc-tbl.edit td{padding:3px 2px}
+.sc-tbl tr.curh td{background:var(--gold-soft)}
+.pmini{display:inline-flex;gap:3px}
+.pmini button{width:30px;height:32px;border-radius:8px;border:1px solid var(--ring);background:#fff;font-weight:700;font-size:14px;padding:0}
+.pmini button.on{background:var(--accent);color:#fff;border-color:transparent}
+.hjump{min-width:36px;height:32px;border-radius:8px;border:1px solid var(--line);background:#fff;font-weight:700;color:var(--accent);padding:0}
+.toggles .sbtn{font-size:14px;padding:2px;min-height:46px}
+.toggles .sbtn.on{background:var(--accent-soft)}
+.toggles .sbtn.on::before{content:none}
+.opt{text-transform:none;letter-spacing:0;font-weight:500}
+.logger .shape{min-height:92px}
+.holebar + .clubs + .logger{padding:10px 12px}
+.holebar + .clubs + .logger .seglabel{margin:8px 0 4px}
+.holebar + .clubs + .logger .shape{min-height:80px}
+.holebar + .clubs{margin-top:0}
+.logger .seglabel{margin:12px 0 6px}
+.results{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.results .sbtn{grid-column:span 2;font-size:15px;padding:4px 2px;min-height:44px}
+.results.five{grid-template-columns:repeat(5,1fr);gap:5px}
+.results.five .sbtn{grid-column:auto;font-size:14px;min-height:46px}
+.results.five .sbtn.on::before{content:none}
+.results.five .sbtn.on{background:var(--accent-soft)}
+.tiles.four{grid-template-columns:repeat(4,1fr);gap:6px}
+.trend{margin-top:10px}
+.trend svg{width:100%;height:46px;display:block;background:var(--surface2);border-radius:10px}
+.tile .up{color:var(--accent);font-size:14px}
+.tile .down{color:var(--danger);font-size:14px}
+.cpick{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;margin-bottom:2px}
+.cpick .club{flex:none;min-width:52px}
+.cpick .club.ret{opacity:.65}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.mt{background:var(--surface2);border-radius:10px;padding:8px 8px 7px;min-width:0}
+.mv{font-size:20px;font-weight:800;line-height:1.1}
+.ml{font-size:12px;color:var(--muted);font-weight:600;margin-top:1px}
+.mbar{height:5px;border-radius:3px;background:#dfe7e2;margin-top:6px;overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.ms{font-size:11px;color:var(--ink2);margin-top:4px;line-height:1.3}
+.kind{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2px 6px;border-radius:6px;vertical-align:2px}
+.kind.range{background:var(--accent-soft);color:var(--accent)}
+.kind.course{background:var(--gold);color:var(--gold-ink)}
+body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
+.lock{position:fixed;inset:0;z-index:100;background:#fff;overflow:auto;padding:calc(env(safe-area-inset-top) + 28px) 20px calc(env(safe-area-inset-bottom) + 28px)}
+.lock[hidden]{display:none}
+.lock .inner{max-width:400px;margin:0 auto}
+.lock .logo{width:84px;height:84px;border-radius:20px;display:block;margin:0 auto 12px;box-shadow:0 2px 10px rgba(0,61,42,.18);border:2px solid var(--gold)}
+.lock h1{font-family:Georgia,"Times New Roman",serif;text-align:center;color:var(--accent);margin:0 0 4px;font-size:28px}
+.lock .sub{text-align:center;color:var(--ink2);margin:0 0 20px}
+.codes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.codes code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:17px;font-weight:700;letter-spacing:.06em;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 4px;text-align:center;color:var(--ink)}
+.check{display:flex;gap:10px;align-items:center;font-size:15px;margin:12px 0}
+.check input{width:22px;height:22px;accent-color:var(--accent);flex:none}
+.linkbtn{background:none;border:0;color:var(--accent);font-weight:600;padding:10px 0;text-decoration:underline;display:block;margin:0 auto}
+.err{color:var(--danger);font-size:14px;min-height:20px;margin:2px 0 6px}
+.overview.four{grid-template-columns:repeat(4,1fr);gap:6px}
+.overview.four .card{padding:8px 4px}
+.overview.four .v{font-size:20px}
+.overview.four .l{font-size:11px;line-height:1.2}
+.distbox{display:inline-flex;align-items:center;gap:4px;border:2px solid var(--line);border-radius:10px;padding:0 8px;background:var(--surface2);height:44px}
+.distbox:focus-within{border-color:var(--accent)}
+.distbox input{width:56px;border:0;background:transparent;font:inherit;font-size:17px;font-weight:700;text-align:right;color:var(--ink);padding:0;outline:none}
+.distbox span{font-weight:600;color:var(--muted)}
+.tbl.dist{font-size:13px}
+.dstep{display:flex;align-items:center;gap:3px;flex:none}
+.dstep input{width:52px;height:38px;border:2px solid var(--line);border-radius:9px;background:var(--surface2);font:inherit;font-size:16px;font-weight:800;text-align:center;color:var(--ink);padding:0}
+.dstep input:focus{border-color:var(--accent);outline:none}
+.dstep input::placeholder{color:var(--muted);font-weight:600}
+.dclear{border:0;background:none;color:var(--muted);font-size:20px;padding:0 2px;min-width:22px}
+.tiles.four .v{font-size:20px}
+.sheet .sbtn{min-height:44px}
+.sheet .seglabel{margin:10px 0 5px}
+.sheet .shape{min-height:96px}
+.results .sbtn.wide{grid-column:span 3}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cards3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.sc-tile{position:relative}
+.sc-tile .addtxt{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:14px}
+.sc-tile .addtxt small{font-size:11px;font-weight:500}
+.pdfbadge{position:absolute;right:4px;bottom:4px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;padding:2px 5px;border-radius:5px;letter-spacing:.04em}
+.pdfph{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;background:#fff;color:var(--accent)}
+.pdfph + .pdfbadge{display:none}
+.pdfph b{font-size:18px}.pdfph small{font-size:11px;color:var(--muted)}
+.vpdf{position:fixed;left:0;right:0;bottom:0;padding:14px 16px calc(env(safe-area-inset-bottom) + 14px);background:rgba(0,0,0,.75);display:flex;flex-direction:column;gap:8px;align-items:center}
+.vpdf[hidden]{display:none}
+#viewerImg[hidden]{display:none}
+.vnoprev{color:#ccc;text-align:center;padding:calc(env(safe-area-inset-top) + 140px) 24px 0;font-size:15px}
+.vpdfmsg{color:#fff;font-size:14px}
+.sc{display:flex;flex-direction:column;gap:6px}
+.sc-tile{aspect-ratio:4/3;border-radius:12px;border:2px dashed var(--line);background:var(--surface2);display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--muted);font-weight:600;font-size:14px;padding:0;width:100%}
+.sc-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.sc-tile.has{border:2px solid var(--gold)}
+.sc .lbl{font-size:13px;font-weight:600;color:var(--ink2)}
+.viewer{position:fixed;inset:0;z-index:95;background:#000;display:none;overflow:auto;-webkit-overflow-scrolling:touch}
+.viewer.show{display:block}
+.viewer img{width:100%;height:auto;display:block;margin:calc(env(safe-area-inset-top) + 56px) 0 40px}
+.vclose{position:fixed;top:calc(env(safe-area-inset-top) + 10px);right:14px;width:40px;height:40px;border-radius:50%;border:2px solid var(--gold);background:var(--accent);color:#fff;font-size:24px;line-height:1}
+.rtag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--gold);color:var(--gold-ink);margin-left:6px}
+.strike .lbl{color:var(--ink);font-weight:600}
+.seg2.block{display:flex}
+.seg2.block button{flex:1}
+.holes2 button{min-height:48px;font-size:17px;font-weight:700}
+.startcard .field input{font-size:16px}
+.pname{font-size:18px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.tile{background:var(--surface2);border-radius:10px;padding:8px 4px;text-align:center}
+.tile .v{font-size:22px;font-weight:700}
+.tile .l{font-size:12px;color:var(--muted)}
+.field{display:block;margin-bottom:10px;min-width:0}
+.field span{display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:4px}
+.field span .opt,.field span span{display:inline;margin:0}
+.field input,.field select{width:100%;min-width:0;font:inherit;font-size:16px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);-webkit-appearance:none;appearance:none;min-height:46px}
+.field2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bag-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 0}
+.bag-row:last-child{border-bottom:0}
+.cbadge{flex:none;width:46px;height:38px;border-radius:9px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.bi{flex:1;min-width:0;display:flex;flex-direction:column}
+.bi b{font-weight:600}
+.bag-row.retired{opacity:.6}
+.tag{font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px;background:var(--surface2);color:var(--muted);margin-left:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="lock" id="lock" hidden></div>
+<header class="top"><div class="wrap">
+  <button class="avatar hav" id="headAvatar" data-action="editProfile" aria-label="Golfer profile"></button>
+  <div class="brand" style="flex:1;min-width:0">Golf Tracker<small id="subtitle">Range &amp; course</small></div>
+  <div id="savePill" class="pill">Saved</div>
+</div></header>
+
+<main><div class="wrap" id="view"></div></main>
+
+<nav class="tabs"><div class="wrap" id="tabs"></div></nav>
+
+<div class="overlay" id="overlay" data-action="closeSheet"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="inner" id="sheetInner"></div></div>
+<div class="modal" id="modal"><div class="box" id="modalBox"></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="restoreInput" style="display:none">
+<input type="file" id="photoInput" accept="image/*" style="display:none">
+<input type="file" id="cardInput" accept="image/*,application/pdf,.pdf" style="display:none">
+<div class="viewer" id="viewer" data-action="closeViewer"><img id="viewerImg" alt="Scorecard"><div id="viewerNoPrev" class="vnoprev" hidden>This phone can't show a preview of this scan here. Open it below to see every page.</div><div id="viewerPdf" class="vpdf" hidden><div class="vpdfmsg">Scanned scorecard (PDF)</div><button class="btn primary" data-action="openPdf">Open or save the full PDF</button></div><button class="vclose" data-action="closeViewer" aria-label="Close">×</button></div>
+
+<script>
+'use strict';
+/* =========================================================
+   Golf Tracker — single-file web app (range sessions and rounds)
+   Data is stored on this device (localStorage) and can be
+   backed up to / restored from a JSON file.
+   ========================================================= */
+const APP_VERSION = '2.1.0';
+const SCHEMA = 4;
+const APP_ID = 'golf-range-tracker';
+const KEY = 'pcp-golf-range-tracker';           // unique key: other apps share this github.io site
+const PREV_KEY = KEY + ':before-restore';
+
+const CLUB_TYPES = [
+  {id:'driver', label:'Driver',       group:'woods'},
+  {id:'wood',   label:'Fairway wood', group:'woods'},
+  {id:'hybrid', label:'Hybrid',       group:'woods'},
+  {id:'iron',   label:'Iron',         group:'irons'},
+  {id:'wedge',  label:'Wedge',        group:'wedges'},
+  {id:'putter', label:'Putter',       group:'putter'},
+];
+const TYPE = Object.fromEntries(CLUB_TYPES.map(t => [t.id, t]));
+const TYPE_ORDER = CLUB_TYPES.map(t => t.id);
+const DEFAULT_BAG = [
+  {id:'DR', short:'Dr',   name:'Driver',         make:'TaylorMade',     model:'Qi',   type:'driver'},
+  {id:'3W', short:'3W',   name:'3 Wood',         make:'TaylorMade',     model:'Qi4D', type:'wood'},
+  {id:'3H', short:'3H',   name:'3 Hybrid',       make:'TaylorMade',     model:'Qi4D', type:'hybrid'},
+  {id:'4i', short:'4i',   name:'4 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'5i', short:'5i',   name:'5 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'6i', short:'6i',   name:'6 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'7i', short:'7i',   name:'7 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'8i', short:'8i',   name:'8 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'9i', short:'9i',   name:'9 Iron',         make:'TaylorMade',     model:'Qi',   type:'iron'},
+  {id:'PW', short:'PW',   name:'Pitching Wedge', make:'TaylorMade',     model:'Qi',   type:'wedge'},
+  {id:'AW', short:'AW',   name:'Approach Wedge', make:'TaylorMade',     model:'Qi',   type:'wedge'},
+  {id:'SW', short:'SW',   name:'Sand Wedge',     make:'TaylorMade',     model:'Qi',   type:'wedge'},
+  {id:'60', short:'60°',  name:'60° Wedge',      make:'TaylorMade',     model:'MG5',  type:'wedge'},
+  {id:'PT', short:'Putt', name:'Putter',         make:'Scotty Cameron', model:'',     type:'putter'},
+];
+const GROUPS = [
+  {id:'woods',  name:'Driver, woods & hybrids'},
+  {id:'irons',  name:'Irons'},
+  {id:'wedges', name:'Wedges'},
+];
+let CLUB = {};                                   // id -> club, rebuilt from data.bag
+function indexBag(){ CLUB = Object.fromEntries(data.bag.map(c => [c.id, c])); }
+const activeClubs = () => data.bag.filter(c => !c.retired);
+const isPutt = cid => !!(CLUB[cid] && CLUB[cid].type === 'putter');
+const groupOf = cid => CLUB[cid] ? TYPE[CLUB[cid].type].group : null;
+const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
+const makeModel = c => [c.make, c.model].filter(Boolean).join(' ');
+const fmtHcp = v => v === null || v === undefined ? '–' : (v < 0 ? '+' + Math.abs(v).toFixed(1) : v.toFixed(1));
+const SHAPES = ['hook','draw','straight','fade','slice'];
+const SHAPE_LABEL = {hook:'Hook', draw:'Draw', straight:'Straight', fade:'Fade', slice:'Slice'};
+const STRIKES = ['clean','chunk','thin','topped'];
+const STRIKE_LABEL = {clean:'Clean', chunk:'Chunk', thin:'Thin', topped:'Topped'};
+const LINES = ['pull','push'];
+const LINE_LABEL = {pull:'Pull', push:'Push'};
+const RESULTS = ['fairway','green','left','right','bunker','water'];
+const RESULT_LABEL = {fairway:'Fairway', green:'Green', left:'Missed left', right:'Missed right', bunker:'Bunker', water:'Water'};
+const RESULT_SHORT = {fairway:'Fairway', green:'Green', left:'Left', right:'Right', bunker:'Bunker', water:'Water'};
+const GIR_LABEL = {y:'GIR', n:'No GIR'};
+const PUTTS = ['holed','left','right','short','long'];
+const PUTT_LABEL = {holed:'Holed', left:'Missed left', right:'Missed right', short:'Short', long:'Long'};
+const PUTT_SHORT = {holed:'Holed', left:'Left', right:'Right', short:'Short', long:'Long'};
+
+/* ---------- utilities ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+const fmtDate = ts => new Date(ts).toLocaleDateString('en-GB', {weekday:'short', day:'numeric', month:'short', year:'numeric'});
+const fmtDay = ts => new Date(ts).toLocaleDateString('en-GB', {day:'numeric', month:'short'});
+const fmtTime = ts => new Date(ts).toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit'});
+function ago(ts){
+  if(!ts) return 'never';
+  const m = Math.round((Date.now() - ts) / 60000);
+  if(m < 1) return 'just now';
+  if(m < 60) return m + ' min ago';
+  const h = Math.round(m / 60);
+  if(h < 24) return h + ' h ago';
+  const d = Math.round(h / 24);
+  return d === 1 ? '1 day ago' : d + ' days ago';
+}
+
+/* ---------- data ---------- */
+function emptyData(){
+  return {
+    app: APP_ID, schema: SCHEMA,
+    settings: {hand:'R', keepAwake:true, lastClub:'7i', lastRoundClub:'DR', hideHomeTip:false, lastHoles:18},
+    profile: {name:'', surname:'', photo:'', homeCourse:'', handicap:null, handicapHistory:[], bestScore:null, bestScoreCourse:'', bestScoreDate:''},
+    bag: DEFAULT_BAG.map(c => Object.assign({retired:false, addedAt:0, retiredAt:null}, c)),
+    meta: {createdAt: Date.now(), updatedAt: Date.now(), lastBackupAt: 0, changesSinceBackup: 0},
+    sessions: [],
+    rounds: [],
+    courses: {}
+  };
+}
+function normaliseBag(list){
+  const seen = new Set(), out = [];
+  (Array.isArray(list) ? list : []).forEach(c => {
+    if(!c || !c.id || seen.has(String(c.id))) return;
+    seen.add(String(c.id));
+    out.push({id:String(c.id), short:String(c.short || c.id).slice(0, 5), name:String(c.name || c.id),
+      make:String(c.make || ''), model:String(c.model || ''), type: TYPE[c.type] ? c.type : 'iron',
+      retired:!!c.retired, addedAt:+c.addedAt || 0, retiredAt:c.retiredAt ? +c.retiredAt : null});
+  });
+  return out;
+}
+function normaliseProfile(p0, base){
+  const p = Object.assign({}, base, p0 && typeof p0 === 'object' ? p0 : {});
+  ['name','surname','photo','homeCourse','bestScoreCourse','bestScoreDate'].forEach(k => p[k] = typeof p[k] === 'string' ? p[k] : '');
+  if(p.photo && !/^data:image\/(jpeg|png|webp);base64,/.test(p.photo)) p.photo = '';
+  p.handicap = typeof p.handicap === 'number' && isFinite(p.handicap) ? p.handicap : null;
+  p.bestScore = Number.isInteger(p.bestScore) ? p.bestScore : null;
+  p.handicapHistory = Array.isArray(p.handicapHistory) ? p.handicapHistory.filter(h => h && typeof h.v === 'number' && h.d) : [];
+  return p;
+}
+function normalise(d){
+  const base = emptyData();
+  if(!d || typeof d !== 'object') return base;
+  // v1 backups have no bag: they get the default bag, whose ids match their shots
+  const bag = Array.isArray(d.bag) && d.bag.length ? normaliseBag(d.bag) : base.bag;
+  const map = Object.fromEntries(bag.map(c => [c.id, c]));
+  const out = {
+    app: APP_ID, schema: SCHEMA,
+    settings: Object.assign({}, base.settings, d.settings || {}),
+    profile: normaliseProfile(d.profile, base.profile),
+    bag,
+    meta: Object.assign({}, base.meta, d.meta || {}),
+    sessions: [],
+    rounds: [],
+    courses: {}
+  };
+  const cleanMap = (m, ok) => { const o = {}; if(m && typeof m === 'object') Object.keys(m).forEach(k => { const h = +k, v = m[k]; if(h >= 1 && h <= 18 && ok(v)) o[h] = v; }); return o; };
+  if(d.courses && typeof d.courses === 'object') Object.keys(d.courses).forEach(k => {
+    const c = d.courses[k]; if(c && typeof c.name === 'string') out.courses[k] = {name:c.name, par:cleanMap(c.par, v => [3, 4, 5, 6].includes(v))};
+  });
+  const normShots = (list, t0, allowResult) => {
+    const shots = [];
+    (Array.isArray(list) ? list : []).forEach(x => {
+      if(!x || !x.c) return;
+      let c = map[x.c];
+      if(!c){   // shot for a club missing from the bag: keep it under a retired placeholder
+        c = {id:String(x.c), short:String(x.c).slice(0, 5), name:'Club ' + x.c, make:'', model:'',
+             type: PUTTS.includes(x.s) ? 'putter' : 'iron', retired:true, addedAt:0, retiredAt:null};
+        bag.push(c); map[c.id] = c;
+      }
+      const dist = allowResult && typeof x.d === 'number' && x.d > 0 && x.d <= 450 ? Math.round(x.d * 10) / 10 : null;
+      if(c.type === 'putter'){ if(PUTTS.includes(x.s)){ const pt = {c:c.id, s:x.s, t:x.t || t0}; if(dist) pt.d = dist; if(allowResult && Number.isInteger(x.h) && x.h >= 1 && x.h <= 18) pt.h = x.h; shots.push(pt); } }
+      else if(SHAPES.includes(x.s) && STRIKES.includes(x.k || 'clean')){
+        const sh = {c:c.id, s:x.s, k:x.k || 'clean', t:x.t || t0};
+        if(LINES.includes(x.l)) sh.l = x.l;
+        if(allowResult && RESULTS.includes(x.r)) sh.r = x.r;
+        if(allowResult && (x.g === 'y' || x.g === 'n')) sh.g = x.g;
+        if(dist) sh.d = dist;
+        if(allowResult && Number.isInteger(x.h) && x.h >= 1 && x.h <= 18) sh.h = x.h;
+        shots.push(sh);
+      }
+    });
+    return shots;
+  };
+  (Array.isArray(d.sessions) ? d.sessions : []).forEach(s => {
+    if(!s || !s.id || !s.startedAt) return;
+    const shots = normShots(s.shots, s.startedAt, false);
+    out.sessions.push({id:String(s.id), startedAt:+s.startedAt, endedAt:s.endedAt ? +s.endedAt : null, updatedAt:+(s.updatedAt || s.startedAt), shots});
+  });
+  out.sessions.sort((a, b) => a.startedAt - b.startedAt);
+  (Array.isArray(d.rounds) ? d.rounds : []).forEach(r => {
+    if(!r || !r.id) return;
+    const t0 = +r.startedAt || Date.now();
+    const ph = r.photos && typeof r.photos === 'object' ? r.photos : {};
+    out.rounds.push({
+      id:String(r.id), startedAt:t0, endedAt:r.endedAt ? +r.endedAt : null, updatedAt:+(r.updatedAt || t0),
+      date: /^\d{4}-\d{2}-\d{2}$/.test(r.date) ? r.date : isoDay(t0),
+      course: typeof r.course === 'string' ? r.course : '', holes: r.holes === 9 ? 9 : 18,
+      score: Number.isInteger(r.score) ? r.score : null,
+      photos: {cover: typeof ph.cover === 'string' ? ph.cover : null, front: typeof ph.front === 'string' ? ph.front : null, back: typeof ph.back === 'string' ? ph.back : null},
+      shots: normShots(r.shots, t0, true),
+      mode: r.mode === 'holes' ? 'holes' : null,
+      start: r.start === 10 ? 10 : 1,
+      cur: Number.isInteger(r.cur) && r.cur >= 1 && r.cur <= 18 ? r.cur : (r.start === 10 ? 10 : 1),
+      par: cleanMap(r.par, v => [3, 4, 5, 6].includes(v)),
+      pen: cleanMap(r.pen, v => Number.isInteger(v) && v > 0 && v < 10),
+      adj: cleanMap(r.adj, v => Number.isInteger(v) && v !== 0 && Math.abs(v) < 21),
+      padj: cleanMap(r.padj, v => Number.isInteger(v) && v !== 0 && Math.abs(v) < 11)
+    });
+    // older versions stored a fixed manual score per hole: turn it into extra strokes on top of the logged shots
+    const nr = out.rounds[out.rounds.length - 1];
+    Object.entries(cleanMap(r.hs, v => Number.isInteger(v) && v > 0 && v < 21)).forEach(([h, v]) => {
+      const d = v - nr.shots.filter(x => x.h === +h).length - (nr.pen[h] || 0);
+      if(d) nr.adj[h] = d; else delete nr.adj[h];
+    });
+  });
+  out.rounds.sort((a, b) => a.startedAt - b.startedAt);
+  out.rounds.filter(r => !r.endedAt).slice(0, -1).forEach(r => r.endedAt = r.shots.length ? r.shots[r.shots.length - 1].t : r.startedAt);
+  // only one open session allowed: close any older open ones
+  const open = out.sessions.filter(s => !s.endedAt);
+  open.slice(0, -1).forEach(s => s.endedAt = s.shots.length ? s.shots[s.shots.length - 1].t : s.startedAt);
+  const lc = map[out.settings.lastClub];
+  if(!lc || lc.retired){ const first = bag.find(c => !c.retired); out.settings.lastClub = first ? first.id : ''; }
+  const rc = map[out.settings.lastRoundClub];
+  if(!rc || rc.retired){ const first = bag.find(c => !c.retired); out.settings.lastRoundClub = first ? first.id : ''; }
+  return out;
+}
+
+let data;
+let loadError = null;
+function load(){
+  let raw = null;
+  try { raw = localStorage.getItem(KEY); } catch(e){ loadError = 'This browser is blocking storage, so nothing can be saved. Turn off Private Browsing.'; }
+  if(raw){
+    try { data = normalise(JSON.parse(raw)); }
+    catch(e){
+      try { localStorage.setItem(KEY + ':corrupt-' + Date.now(), raw); } catch(_){}
+      loadError = 'Saved data could not be read. A copy was kept — restore your latest backup.';
+      data = emptyData();
+    }
+  } else data = emptyData();
+  indexBag();
+}
+
+let saveState = {ok:true, at:0};
+function save(countsAsChange = true){
+  data.meta.updatedAt = Date.now();
+  if(countsAsChange) data.meta.changesSinceBackup = (data.meta.changesSinceBackup || 0) + 1;
+  indexBag();
+  const json = JSON.stringify(data);
+  try {
+    localStorage.setItem(KEY, json);
+    const check = localStorage.getItem(KEY);
+    saveState = {ok: check === json, at: Date.now()};
+  } catch(e){
+    saveState = {ok:false, at:Date.now(), err:e && e.name};
+  }
+  renderPill();
+  if(!saveState.ok) toast('Not saved! Download a backup now.', 3500);
+  askPersist();
+  return saveState.ok;
+}
+let persistAsked = false;
+function askPersist(){
+  if(persistAsked) return; persistAsked = true;
+  try { if(navigator.storage && navigator.storage.persist) navigator.storage.persist().then(v => { storagePersisted = v; }).catch(()=>{}); } catch(_){}
+}
+let storagePersisted = null;
+function renderPill(){
+  const p = $('#savePill');
+  if(!saveState.ok){ p.textContent = '⚠ Not saved'; p.className = 'pill bad'; return; }
+  p.className = 'pill';
+  p.textContent = saveState.at ? 'Saved ✓ ' + fmtTime(saveState.at) : 'Saved on device';
+}
+
+const activeSession = () => data.sessions.find(s => !s.endedAt) || null;
+const activeRound = () => data.rounds.find(r => !r.endedAt) || null;
+const ctxTarget = ctx => ctx === 'round' ? activeRound() : activeSession();
+const ctxClubKey = ctx => ctx === 'round' ? 'lastRoundClub' : 'lastClub';
+function ctxClub(ctx){
+  let c = CLUB[data.settings[ctxClubKey(ctx)]];
+  if(!c || c.retired) c = activeClubs()[0];
+  return c || null;
+}
+function holeList(r){ const st = r.start || 1; return Array.from({length:r.holes}, (_, i) => ((st - 1 + i) % 18) + 1); }
+const courseKey = name => (name || '').trim().toLowerCase();
+function holeInfo(r, h){
+  const shots = r.shots.filter(x => x.h === h);
+  const pen = r.pen[h] || 0, par = r.par[h] || null, adj = r.adj[h] || 0;
+  // strokes = logged shots + penalties + strokes added with the + button; putts = logged putts + putts added with +
+  const total = shots.length + pen + adj;
+  const score = total > 0 ? total : null;
+  const putts = Math.max(0, shots.filter(x => isPutt(x.c)).length + (r.padj[h] || 0));
+  // fairway: tee shot on a par 4/5 marked with a result
+  let fir = null;
+  if(par >= 4 && shots.length && !isPutt(shots[0].c) && shots[0].r) fir = shots[0].r === 'fairway';
+  // green in regulation: strokes taken before the first putt (incl. penalties) <= par - 2
+  let gir = null;
+  if(par){
+    if(putts && score !== null) gir = (score - putts) <= par - 2;
+    else { const gi = shots.findIndex(x => x.r === 'green'); if(gi >= 0) gir = (gi + 1 + pen) <= par - 2; }
+  }
+  return {h, par, shots, putts, pen, adj, score, fir, gir, holed: shots.some(x => isPutt(x.c) && x.s === 'holed')};
+}
+function roundTotals(r){
+  let score = 0, par = 0, thru = 0;
+  holeList(r).forEach(h => { const i = holeInfo(r, h); if(i.score !== null){ score += i.score; thru++; if(i.par) par += i.par; } });
+  return {score, toPar: score - par, thru};
+}
+const fmtToPar = n => n === 0 ? 'E' : (n > 0 ? '+' + n : String(n));
+function ensurePar(r, h){
+  if(!r.par[h]){ r.par[h] = 4; }
+}
+function rememberPars(r){
+  const k = courseKey(r.course); if(!k) return;
+  data.courses[k] = {name:r.course.trim(), par:Object.assign({}, (data.courses[k] || {}).par || {}, r.par)};
+}
+function isoDay(ts){ const d = new Date(ts), p = n => String(n).padStart(2, '0'); return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`; }
+const fmtISO = iso => fmtDate(new Date(iso + 'T12:00:00').getTime());
+
+/* ---------- scorecard photos: IndexedDB (big quota) + in-memory cache ---------- */
+const CARD_SIDES = ['cover', 'front', 'back'];
+const CARD_LABEL = {cover:'Cover', front:'Front', back:'Back'};
+const MAX_SCAN_MB = 15;
+const isPdfUrl = u => typeof u === 'string' && u.startsWith('data:application/pdf');
+function dataUrlToBlob(u){
+  const i = u.indexOf(','), bin = atob(u.slice(i + 1)), a = new Uint8Array(bin.length);
+  for(let k = 0; k < bin.length; k++) a[k] = bin.charCodeAt(k);
+  return new Blob([a], {type: u.slice(5, u.indexOf(';'))});
+}
+const blobUrls = new Map();
+function blobUrlFor(u){
+  // PDFs are shown from a blob: URL so the page HTML stays small
+  let b = blobUrls.get(u);
+  if(!b){ b = URL.createObjectURL(dataUrlToBlob(u)); blobUrls.set(u, b); }
+  return b;
+}
+function cardMedia(u, alt){
+  if(!isPdfUrl(u)) return `<img src="${u}" alt="${esc(alt)}">`;
+  // Safari draws the first page of a PDF in an <img>; other browsers fall back to a PDF label
+  return `<img class="pdfimg" src="${blobUrlFor(u)}" alt="${esc(alt)}"><span class="pdfbadge">PDF</span>`;
+}
+document.addEventListener('error', e => {
+  const t = e.target;
+  if(t && t.id === 'viewerImg'){ if(t.classList.contains('pdfimg')){ t.hidden = true; $('#viewerNoPrev').hidden = false; } return; }
+  if(t && t.classList && t.classList.contains('pdfimg')){ const d = document.createElement('span'); d.className = 'pdfph'; d.innerHTML = '<b>PDF</b><small>scan</small>'; t.replaceWith(d); }
+}, true);
+const IDB_NAME = KEY + '-photos', IDB_STORE = 'photos';
+const photoCache = new Map();
+let photosLoaded = false, photoStoreError = false, idbPromise = null;
+function idbOpen(){
+  if(!idbPromise) idbPromise = new Promise((res, rej) => {
+    const r = indexedDB.open(IDB_NAME, 1);
+    r.onupgradeneeded = () => r.result.createObjectStore(IDB_STORE);
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+  return idbPromise;
+}
+function idbReq(mode, fn){
+  return idbOpen().then(db => new Promise((res, rej) => {
+    const tx = db.transaction(IDB_STORE, mode); let out;
+    const rq = fn(tx.objectStore(IDB_STORE)); if(rq) rq.onsuccess = () => { out = rq.result; };
+    tx.oncomplete = () => res(out); tx.onerror = tx.onabort = () => rej(tx.error);
+  }));
+}
+async function photoPut(id, url){
+  await idbReq('readwrite', st => st.put(url, id));
+  const back = await idbReq('readonly', st => st.get(id));       // read back to be sure it stuck
+  if(back !== url) throw new Error('verify failed');
+  photoCache.set(id, url);
+}
+async function photoDel(id){ if(!id) return; photoCache.delete(id); try { await idbReq('readwrite', st => st.delete(id)); } catch(_){} }
+async function photoLoadAll(){
+  const keys = await idbReq('readonly', st => st.getAllKeys());
+  const vals = await idbReq('readonly', st => st.getAll());
+  (keys || []).forEach((k, i) => photoCache.set(k, vals[i]));
+  photosLoaded = true;
+}
+function photoIdsIn(d){ const ids = new Set(); (d && d.rounds || []).forEach(r => { if(r.photos) CARD_SIDES.forEach(k => { if(r.photos[k]) ids.add(r.photos[k]); }); }); return ids; }
+async function prunePhotos(){
+  // keep photos used now or by the undo-restore copy
+  const used = photoIdsIn(data);
+  try { const prev = JSON.parse(localStorage.getItem(PREV_KEY) || 'null'); photoIdsIn(prev).forEach(i => used.add(i)); } catch(_){}
+  for(const k of Array.from(photoCache.keys())) if(!used.has(k)) await photoDel(k);
+}
+
+/* ---------- ui state ---------- */
+const ui = {tab:'range', source:'all', strike:'clean', line:null, period:'all', cleanOnly:false, openClub:null, statsView:'flight'};
+
+function shapeOrder(){ return data.settings.hand === 'L' ? SHAPES.slice().reverse() : SHAPES; }
+function leftShapes(){ return data.settings.hand === 'L' ? ['fade','slice'] : ['hook','draw']; }
+function rightShapes(){ return data.settings.hand === 'L' ? ['hook','draw'] : ['fade','slice']; }
+
+/* ---------- tallies ---------- */
+function tally(shots, cleanOnly){
+  const t = {balls:0, shapeN:0, shape:{}, strike:{}, putt:{}, putts:0, line:{pull:0, push:0}, res:{}, resN:0, gir:{y:0, n:0}, girN:0, dN:0, dSum:0, dMax:0, pdN:0, pdSum:0, pdMax:0};
+  RESULTS.forEach(r => t.res[r] = 0);
+  SHAPES.forEach(s => t.shape[s] = 0); STRIKES.forEach(s => t.strike[s] = 0); PUTTS.forEach(s => t.putt[s] = 0);
+  shots.forEach(x => {
+    if(isPutt(x.c)){ t.putts++; t.putt[x.s]++; if(x.d){ t.pdN++; t.pdSum += x.d; t.pdMax = Math.max(t.pdMax, x.d); } return; }
+    if(x.d){ t.dN++; t.dSum += x.d; t.dMax = Math.max(t.dMax, x.d); }
+    t.balls++; t.strike[x.k]++;
+    if(x.r){ t.resN++; t.res[x.r]++; }
+    if(x.g){ t.girN++; t.gir[x.g]++; }
+    if(!cleanOnly || x.k === 'clean'){ t.shapeN++; t.shape[x.s]++; if(x.l) t.line[x.l]++; }
+  });
+  return t;
+}
+
+/* ---------- rendering helpers ---------- */
+function segBar(t){
+  if(!t.shapeN) return '<div class="seg empty" aria-label="No balls yet"></div>';
+  const order = shapeOrder();
+  const label = order.map(s => `${SHAPE_LABEL[s]} ${t.shape[s]} (${pct(t.shape[s], t.shapeN)}%)`).join(', ');
+  return `<div class="seg" role="img" aria-label="${esc(label)}">` + order.map(s => {
+    const v = t.shape[s]; if(!v) return '';
+    const p = pct(v, t.shapeN);
+    return `<div class="seg-part s-${s}" style="flex:${v} 1 0" title="${SHAPE_LABEL[s]}: ${v} (${p}%)">${p >= 12 ? `<span>${p}%</span>` : ''}</div>`;
+  }).join('') + '</div>';
+}
+function legend(t){
+  return '<div class="legend">' + shapeOrder().map(s =>
+    `<span class="k"><i class="sw ${s}"></i>${SHAPE_LABEL[s]} <b>${t.shape[s]}</b>${t.shapeN ? ' · ' + pct(t.shape[s], t.shapeN) + '%' : ''}</span>`
+  ).join('') + '</div>' + lineLine(t) + resultLine(t) + girLine(t);
+}
+function girLine(t){
+  if(!t.girN) return '';
+  return `<div class="strike"><span class="lbl">GIR:</span> Yes ${t.gir.y} (${pct(t.gir.y, t.girN)}%) · No ${t.gir.n} (${pct(t.gir.n, t.girN)}%) <span class="muted">— ${t.girN} marked</span></div>`;
+}
+const fmtM = v => (Math.round(v * 10) / 10).toString().replace(/\.0$/, '');
+function distLine(t){
+  let h = '';
+  if(t.dN) h += `<div class="strike"><span class="lbl">Distance:</span> avg ${Math.round(t.dSum / t.dN)} m · longest ${fmtM(t.dMax)} m <span class="muted">— ${t.dN} measured</span></div>`;
+  if(t.pdN) h += `<div class="strike"><span class="lbl">Putt length:</span> avg ${fmtM(t.pdSum / t.pdN)} m · longest ${fmtM(t.pdMax)} m <span class="muted">— ${t.pdN} measured</span></div>`;
+  return h;
+}
+function parseDist(txt){
+  const v = (txt || '').trim().replace(',', '.');
+  if(!v) return {ok:true, v:null};
+  if(!/^\d{1,3}(\.\d)?$/.test(v)) return {ok:false};
+  const n = parseFloat(v);
+  return n > 0 && n <= 450 ? {ok:true, v:n} : {ok:false};
+}
+function fairwayPct(t){
+  // fairway % ignores shots marked Green (those are approaches, not tee shots)
+  const n = t.resN - t.res.green;
+  return n ? pct(t.res.fairway, n) + '%' : '–';
+}
+function resultLine(t){
+  if(!t.resN) return '';
+  return `<div class="strike"><span class="lbl">Result:</span> ` + RESULTS.map(r => `${RESULT_SHORT[r]} ${t.res[r]} (${pct(t.res[r], t.resN)}%)`).join(' · ') + ` <span class="muted">— ${t.resN} marked</span></div>`;
+}
+function lineLine(t){
+  if(!t.shapeN) return '';
+  const pl = t.line.pull, pu = t.line.push, none = t.shapeN - pl - pu;
+  return `<div class="strike"><span class="lbl">Start line:</span> Pull ${pl} (${pct(pl, t.shapeN)}%) · Push ${pu} (${pct(pu, t.shapeN)}%) · Neither ${pct(none, t.shapeN)}%</div>`;
+}
+function lineOrder(){ return data.settings.hand === 'L' ? ['push','pull'] : ['pull','push']; }
+function shotLabel(x){
+  if(isPutt(x.c)) return PUTT_LABEL[x.s];
+  let l = x.l ? (x.s === 'straight' ? 'Straight ' + x.l : LINE_LABEL[x.l] + ' ' + x.s) : SHAPE_LABEL[x.s];
+  if(x.k && x.k !== 'clean') l += ' · ' + STRIKE_LABEL[x.k];
+  if(x.r) l += ' · ' + RESULT_LABEL[x.r];
+  if(x.g) l += ' · ' + GIR_LABEL[x.g];
+  if(x.d) l += ' · ' + fmtM(x.d) + ' m';
+  return l;
+}
+function dirBlock(t){
+  if(!t.shapeN) return '';
+  const L = leftShapes().reduce((a, s) => a + t.shape[s], 0);
+  const R = rightShapes().reduce((a, s) => a + t.shape[s], 0);
+  const S = t.shape.straight;
+  return `<div class="dir">
+    <div><div class="v">${pct(L, t.shapeN)}%</div><div class="l">Curves left</div></div>
+    <div><div class="v">${pct(S, t.shapeN)}%</div><div class="l">Straight</div></div>
+    <div><div class="v">${pct(R, t.shapeN)}%</div><div class="l">Curves right</div></div>
+  </div>`;
+}
+function likely(t){
+  if(!t.shapeN) return '';
+  let best = SHAPES[0];
+  SHAPES.forEach(s => { if(t.shape[s] > t.shape[best]) best = s; });
+  return `Most likely flight: <b>${SHAPE_LABEL[best]}</b> (${pct(t.shape[best], t.shapeN)}%)`;
+}
+function strikeLine(t){
+  if(!t.balls) return '';
+  return `<div class="strike">Strike: <b>Clean ${pct(t.strike.clean, t.balls)}%</b> · ` +
+    ['chunk','thin','topped'].map(k => `${STRIKE_LABEL[k]} ${t.strike[k]} (${pct(t.strike[k], t.balls)}%)`).join(' · ') +
+    '</div>';
+}
+function sampleNote(n){
+  return n && n < 30 ? `<div class="note">Small sample (${n} shots) — treat the % as rough until you've logged 30+.</div>` : '';
+}
+function puttBlock(t){
+  if(!t.putts) return '<div class="muted small">No putts logged.</div>';
+  return `<div class="putt-grid">` + PUTTS.map(p =>
+    `<div><div class="v">${pct(t.putt[p], t.putts)}%</div><div class="l">${PUTT_SHORT[p]} · ${t.putt[p]}</div></div>`
+  ).join('') + '</div>';
+}
+const shapeIcon = s => {
+  // ball flight seen from behind, starting bottom centre; mirrored for left-handers
+  const paths = {
+    hook:'M17 44 C 30 30, 26 10, 4 4',
+    draw:'M17 44 C 24 30, 22 14, 10 4',
+    straight:'M17 44 L 17 4',
+    fade:'M17 44 C 10 30, 12 14, 24 4',
+    slice:'M17 44 C 4 30, 8 10, 30 4'
+  };
+  const flip = data.settings.hand === 'L' ? ' transform="translate(34 0) scale(-1 1)"' : '';
+  return `<svg viewBox="0 0 34 48" aria-hidden="true"><g${flip}><path d="${paths[s]}" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></g><circle cx="17" cy="44" r="3.5" fill="currentColor"/></svg>`;
+};
+
+/* ---------- tabs ---------- */
+const TAB_ICONS = {
+  range:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="17" r="3"/><path d="M12 14V3l6 3-6 3"/></svg>',
+  stats:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+  history:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  rounds:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 21V3l11 4-11 4"/><path d="M3 21h12"/></svg>',
+  backup:'<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>'
+};
+const TAB_NAMES = {range:'Range', rounds:'Course', stats:'Stats', history:'History', backup:'More'};
+function renderTabs(){
+  $('#tabs').innerHTML = Object.keys(TAB_NAMES).map(k =>
+    `<button data-action="tab" data-tab="${k}" class="${ui.tab === k ? 'on' : ''}" aria-label="${TAB_NAMES[k]}">${TAB_ICONS[k]}${TAB_NAMES[k]}</button>`
+  ).join('');
+}
+
+function render(){
+  indexBag();
+  const pr = data.profile;
+  const full = fullName();
+  $('#subtitle').textContent = full ? full + (pr.handicap !== null ? ' · HCP ' + fmtHcp(pr.handicap) : '') : (pr.handicap !== null ? 'HCP ' + fmtHcp(pr.handicap) : 'Range & course');
+  $('#headAvatar').innerHTML = avatarInner(pr.photo);
+  renderTabs();
+  renderPill();
+  const v = {range:viewRange, stats:viewStats, history:viewHistory, rounds:viewRounds, backup:viewBackup}[ui.tab]();
+  $('#view').innerHTML = v;
+  updateWakeLock();
+}
+
+/* ---------- banners ---------- */
+const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isStandalone = () => window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches;
+function banners(){
+  let h = '';
+  if(loadError) h += `<div class="banner bad"><div>${esc(loadError)}</div></div>`;
+  if(!saveState.ok) h += `<div class="banner bad"><div><b>Last change did not save.</b> Go to Backup and download a backup now.</div></div>`;
+  if(isIOS && !isStandalone() && !data.settings.hideHomeTip)
+    h += `<div class="banner warn"><div><b>Add this to your Home Screen</b> (Share → Add to Home Screen) and always open it from the icon. In a normal Safari tab, iPhone can wipe saved data after 7 days without a visit.</div><button class="x" data-action="hideTip" aria-label="Dismiss">×</button></div>`;
+  return h;
+}
+function backupNudge(){
+  const n = data.meta.changesSinceBackup || 0;
+  const balls = data.sessions.reduce((a, s) => a + s.shots.length, 0) + data.rounds.length;
+  if(!balls || n < 1) return '';
+  const days = data.meta.lastBackupAt ? (Date.now() - data.meta.lastBackupAt) / 864e5 : 999;
+  if(n < 20 && days < 7) return '';
+  return `<div class="banner warn"><div>Not backed up since ${data.meta.lastBackupAt ? ago(data.meta.lastBackupAt) : 'you started'}.</div><button class="btn ghost" style="margin-left:auto;padding:0 6px;min-height:0;color:inherit;font-weight:700" data-action="backup">Back up</button></div>`;
+}
+
+/* ---------- RANGE ---------- */
+function viewRange(){
+  const s = activeSession();
+  if(!s){
+    const last = data.sessions[data.sessions.length - 1];
+    let lastHtml = '';
+    if(last){
+      const t = tally(last.shots);
+      const clubs = new Set(last.shots.map(x => x.c)).size;
+      lastHtml = `<div class="card"><h3>Last session</h3>
+        <div class="ink2 small">${fmtDate(last.startedAt)} · ${plural(t.balls, 'ball')}${t.putts ? ' · ' + plural(t.putts, 'putt') : ''} · ${plural(clubs, 'club')}</div>
+        ${t.balls ? segBar(t) + legend(t) : ''}
+      </div>`;
+    }
+    return banners() + backupNudge() + `
+      <div class="card" style="text-align:center;padding:26px 16px">
+        <h2 style="margin-top:0">Ready to hit some balls?</h2>
+        <p class="ink2" style="margin:0 0 16px">Start a session, pick a club, tap <b>+</b> after every ball and choose how it flew.</p>
+        <button class="btn primary big block" data-action="start">Start range session</button>
+      </div>` + lastHtml;
+  }
+  const total = s.shots.length;
+  return banners() + `
+    <div class="row between" style="margin-bottom:10px">
+      <div><div style="font-weight:700">Session in progress</div>
+      <div class="small muted">Started ${fmtTime(s.startedAt)}${new Date(s.startedAt).toDateString() !== new Date().toDateString() ? ' on ' + fmtDay(s.startedAt) : ''} · ${total} ball${total === 1 ? '' : 's'} logged</div></div>
+      <button class="btn" data-action="end">End</button>
+    </div>` + loggerBlock('range', s);
+}
+
+/* ---------- shared shot logger (range sessions and rounds) ---------- */
+function loggerBlock(ctx, s, hole){
+  const club = ctxClub(ctx);
+  if(!club) return `<div class="card empty-state">Your bag is empty. Add clubs under More → My bag.</div>`;
+  const counts = {};
+  s.shots.forEach(x => counts[x.c] = (counts[x.c] || 0) + 1);
+  const clubShots = s.shots.filter(x => x.c === club.id);
+  const t = tally(clubShots);
+  const holeMode = hole !== undefined;
+  if(ctx === 'round'){
+    if(holeMode){
+      const done = s.shots.filter(x => x.h === hole && !isPutt(x.c)).length + (s.pen[hole] || 0);
+      ui.resultSet = done === 0 && (s.par[hole] || 4) >= 4 ? 'tee' : 'approach';
+    } else ui.resultSet = 'all';
+  }
+  const pool = holeMode ? s.shots.filter(x => x.h === hole) : clubShots;
+  const recent = pool.slice(-8).reverse();
+  const isPutter = club.type === 'putter';
+  const unit = isPutter ? 'putt' : (ctx === 'round' ? 'shot' : 'ball');
+  const last = holeMode ? pool[pool.length - 1] : s.shots[s.shots.length - 1];
+  const opt = '<span class="opt">— optional</span>';
+  const pad = isPutter
+    ? `<div class="seglabel">Putt result — tap to save</div>
+      <div class="putts">
+        <div></div><button class="putt" data-action="putt" data-ctx="${ctx}" data-r="long">Long</button><div></div>
+        <button class="putt" data-action="putt" data-ctx="${ctx}" data-r="left">Missed left</button>
+        <button class="putt holed" data-action="putt" data-ctx="${ctx}" data-r="holed">Holed</button>
+        <button class="putt" data-action="putt" data-ctx="${ctx}" data-r="right">Missed right</button>
+        <div></div><button class="putt" data-action="putt" data-ctx="${ctx}" data-r="short">Short</button><div></div>
+      </div>`
+    : `<div class="seglabel">Mishit / start line ${opt}</div>
+      <div class="toggles" id="togRow">${toggleChips()}</div>
+      ${ctx === 'round' ? `<div class="seglabel">${ui.resultSet === 'tee' ? 'Tee shot — where did it finish?' : ui.resultSet === 'approach' ? 'Where did it finish?' : 'Result'} ${opt}</div><div class="results ${ui.resultSet === 'all' ? '' : 'five'}" id="resultRow">${resultButtons()}</div>` : ''}
+      ${ctx === 'round' && !holeMode ? `<div class="seglabel">Green in regulation ${opt}</div><div class="lines" id="girRow">${girButtons()}</div>` : ''}
+      <div class="seglabel">Ball flight — tap to save</div>
+      <div class="shapes">${shapeOrder().map(sh => `<button class="shape s-${sh}" data-action="shape" data-ctx="${ctx}" data-shape="${sh}">${shapeIcon(sh)}${SHAPE_LABEL[sh]}</button>`).join('')}</div>`;
+  const distBox = ctx === 'round'
+    ? `<div class="dstep" title="Distance in metres (optional)">
+        <button class="pchip" data-action="distStep" data-d="-1" aria-label="Less distance">−</button>
+        <input id="distIn" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="done" placeholder="m?" aria-label="Distance in metres, optional">
+        <button class="pchip" data-action="distStep" data-d="1" aria-label="More distance">+</button>
+        <button class="dclear" data-action="distClear" aria-label="Clear distance">×</button>
+      </div>` : '';
+  return `<div class="clubs ${holeMode ? 'compact' : ''}" role="group" aria-label="Choose club">
+      ${activeClubs().map(c => `<button class="club ${c.id === club.id ? 'sel' : ''}" data-action="club" data-ctx="${ctx}" data-club="${c.id}" aria-pressed="${c.id === club.id}">${c.short}<span class="n">${counts[c.id] || 0}</span></button>`).join('')}
+    </div>
+    <div class="card logger" style="margin-top:12px">
+      <div class="row between"><div style="min-width:0">${holeMode
+        ? `<h3 style="margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(club.name)} <span class="muted small" style="font-weight:500">${esc(makeModel(club))}</span></h3>`
+        : `<h3 style="margin:0">${esc(club.name)}</h3><div class="small muted">${esc(makeModel(club) || TYPE[club.type].label)} · ${plural(clubShots.length, unit)} this ${ctx === 'round' ? 'round' : 'session'}</div>`}</div>${distBox}</div>
+      ${pad}
+      ${clubShots.length && !holeMode ? (isPutter ? `<div style="margin-top:12px">${puttBlock(t)}</div>` : `<div style="margin-top:10px">${segBar(t)}${legend(t)}${strikeLine(t)}</div>`) + distLine(t) : ''}
+      ${holeMode && recent.length ? `<div class="seglabel">This hole</div>` : ''}
+      ${recent.length ? `<div class="recent">${recent.map(x => `<button class="chip" data-action="editShot" data-ctx="${ctx}" data-t="${x.t}">${holeMode ? `<b>${CLUB[x.c].short}</b> ` : ''}${isPutt(x.c) ? PUTT_SHORT[x.s] : `<i class="sw ${x.s}"></i>${shotLabel(x)}`}</button>`).join('')}</div><div class="note" style="margin-top:4px">Tap a shot to change or delete it.</div>` : ''}
+      ${last ? `<button class="btn ghost" style="margin-top:6px" data-action="undo" data-ctx="${ctx}">↶ Undo last ${isPutt(last.c) ? 'putt' : (ctx === 'round' ? 'shot' : 'ball')} (${CLUB[last.c].short})</button>` : ''}
+    </div>`;
+}
+const DEFAULT_DIST = {driver:220, wood:200, hybrid:180, wedge:90, putter:3};
+const IRON_DIST = {2:190, 3:180, 4:170, 5:160, 6:150, 7:140, 8:130, 9:120};
+function distBaseline(c){
+  // your average on the course with this club, else a sensible starting point
+  const ds = data.rounds.flatMap(r => r.shots).filter(x => x.c === c.id && x.d).map(x => x.d);
+  const step = c.type === 'putter' ? 0.5 : 5;
+  if(ds.length) return Math.round(ds.reduce((a, b) => a + b, 0) / ds.length / step) * step;
+  const n = (c.name.match(/\d+/) || [])[0];
+  if(c.type === 'iron' && IRON_DIST[n]) return IRON_DIST[n];
+  if(c.type === 'wedge' && n && +n >= 46) return Math.max(50, 230 - +n * 2.5);
+  return DEFAULT_DIST[c.type] || 150;
+}
+function findShot(ctx, t){
+  const s = ctxTarget(ctx); if(!s) return null;
+  const i = s.shots.findIndex(x => x.t === t);
+  return i < 0 ? null : {s, i, shot: s.shots[i]};
+}
+function openEditShot(ctx, t){
+  const f = findShot(ctx, t); if(!f) return;
+  ui.edit = {ctx, t, draft: Object.assign({}, f.shot)};
+  renderEditSheet(true);
+}
+function renderEditSheet(open){
+  const e = ui.edit; if(!e) return;
+  const x = e.draft, putt = isPutt(x.c), round = e.ctx === 'round';
+  const chip = (act, val, cur, label) => `<button class="sbtn ${cur === val ? 'on' : ''}" data-action="${act}" data-v="${val}">${label}</button>`;
+  const clubs = activeClubs().filter(c => (c.type === 'putter') === putt || c.id === x.c);
+  let body = `<label class="field"><span>Club</span><select id="eClub">${clubs.map(c => `<option value="${c.id}" ${c.id === x.c ? 'selected' : ''}>${esc(c.name)}</option>`).join('')}</select></label>`;
+  if(putt){
+    body += `<div class="seglabel">Putt</div><div class="results five">${PUTTS.map(p => chip('eSet', 's:' + p, 's:' + x.s, PUTT_SHORT[p])).join('')}</div>`;
+  } else {
+    body += `<div class="seglabel">Ball flight</div><div class="results five">${shapeOrder().map(sh => chip('eSet', 's:' + sh, 's:' + x.s, SHAPE_LABEL[sh])).join('')}</div>
+      <div class="seglabel">Strike</div><div class="strikes">${STRIKES.map(k => chip('eSet', 'k:' + k, 'k:' + x.k, STRIKE_LABEL[k])).join('')}</div>
+      <div class="seglabel">Start line</div><div class="strikes" style="grid-template-columns:repeat(3,1fr)">${chip('eSet', 'l:', 'l:' + (x.l || ''), 'Neither')}${chip('eSet', 'l:pull', 'l:' + (x.l || ''), 'Pull')}${chip('eSet', 'l:push', 'l:' + (x.l || ''), 'Push')}</div>`;
+    if(round) body += `<div class="seglabel">Where it finished</div><div class="results">${chip('eSet', 'r:', 'r:' + (x.r || ''), 'Not marked')}${RESULTS.map(r => chip('eSet', 'r:' + r, 'r:' + (x.r || ''), RESULT_LABEL[r])).join('')}</div>`;
+  }
+  if(round) body += `<label class="field" style="margin-top:10px"><span>Distance (m)</span><input id="eDist" type="text" inputmode="decimal" autocomplete="off" value="${x.d ? fmtM(x.d) : ''}" placeholder="optional"></label>`;
+  const html = `<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:6px"><h3 style="margin:0">Edit shot</h3><button class="btn ghost" data-action="closeSheet">Cancel</button></div>
+    <div class="small muted" style="margin-bottom:6px">${fmtTime(e.t)}${x.h ? ' · hole ' + x.h : ''}</div>
+    ${body}
+    <button class="btn primary block" style="margin-top:14px" data-action="eSave">Save changes</button>
+    <button class="btn ghost block" style="margin-top:4px;color:var(--danger)" data-action="eDelete">Delete this shot</button>`;
+  // keep typed values when re-rendering
+  const club = $('#eClub') ? $('#eClub').value : null, dist = $('#eDist') ? $('#eDist').value : null;
+  if(open) openSheet(html); else $('#sheetInner').innerHTML = html;
+  if(!open){ if(club && $('#eClub')) $('#eClub').value = club; if(dist !== null && $('#eDist')) $('#eDist').value = dist; }
+}
+function waterPenalty(s, h, before, after){
+  if(s.mode !== 'holes' || !h || before === after) return;
+  if(after === 'water') s.pen[h] = (s.pen[h] || 0) + 1;
+  else if(before === 'water' && s.pen[h]){ s.pen[h]--; if(!s.pen[h]) delete s.pen[h]; }
+}
+function resetToggles(){ ui.strike = 'clean'; ui.line = null; ui.result = null; ui.gir = null; }
+function toggleChips(){
+  const st = (k, l) => `<button class="sbtn ${ui.strike === k ? 'on' : ''}" data-action="strike" data-k="${k}" aria-pressed="${ui.strike === k}">${l}</button>`;
+  const arrow = {pull: data.settings.hand === 'L' ? ' →' : '← ', push: data.settings.hand === 'L' ? '← ' : ' →'};
+  const ln = k => {
+    const txt = arrow[k].startsWith('←') ? arrow[k] + LINE_LABEL[k] : LINE_LABEL[k] + arrow[k];
+    return `<button class="sbtn ${ui.line === k ? 'on' : ''}" data-action="line" data-l="${k}" aria-pressed="${ui.line === k}">${txt}</button>`;
+  };
+  return st('chunk', 'Chunk') + st('thin', 'Thin') + st('topped', 'Topped') + lineOrder().map(ln).join('');
+}
+function resultButtons(){
+  const short = ui.resultSet === 'tee' || ui.resultSet === 'approach';
+  const lbl = {left: short ? '← Left' : RESULT_LABEL.left, right: short ? 'Right →' : RESULT_LABEL.right};
+  const b = r => `<button class="sbtn ${ui.result === r ? 'on' : ''}" data-action="result" data-r="${r}" aria-pressed="${ui.result === r}">${lbl[r] || RESULT_LABEL[r]}</button>`;
+  if(ui.resultSet === 'tee') return b('left') + b('fairway') + b('right') + b('bunker') + b('water');
+  if(ui.resultSet === 'approach') return b('left') + b('green') + b('right') + b('bunker') + b('water');
+  return b('left') + b('fairway') + b('right') + b('green') + b('bunker') + b('water');
+}
+function girButtons(){
+  return [['y', 'GIR: Yes'], ['n', 'GIR: No']].map(([k, l]) =>
+    `<button class="sbtn ${ui.gir === k ? 'on' : ''}" data-action="gir" data-g="${k}" aria-pressed="${ui.gir === k}">${l}</button>`).join('');
+}
+function addDist(shot){
+  const inp = $('#distIn'); if(!inp) return true;
+  const r = parseDist(inp.value);
+  if(!r.ok){ alertBox('Distance should be a number of metres, e.g. 145 (or 2.5 for a putt).'); return false; }
+  if(r.v) shot.d = r.v;
+  return true;
+}
+function moveHole(dir){
+  const r = activeRound(); if(!r) return;
+  const list = holeList(r), idx = list.indexOf(r.cur), next = idx + dir;
+  if(next < 0) return;
+  if(next >= list.length){ rememberPars(r); save(false); openRoundSheet(r.id, 'finish'); return; }
+  r.cur = list[next]; ensurePar(r, r.cur);
+  // new hole: tee off with the driver on a par 4/5
+  const dr = activeClubs().find(c => c.type === 'driver');
+  if(dr && r.par[r.cur] >= 4) data.settings.lastRoundClub = dr.id;
+  resetToggles(); save(false); render(); window.scrollTo(0, 0);
+}
+function holedOut(r){
+  const i = holeInfo(r, r.cur), list = holeList(r), last = list.indexOf(r.cur) === list.length - 1;
+  const msg = `Hole ${r.cur}: ${i.score}${i.par ? ' (' + fmtToPar(i.score - i.par) + ')' : ''}`;
+  setTimeout(() => {
+    toast(last ? msg + ' — last hole' : msg + ` — on to hole ${list[list.indexOf(r.cur) + 1]}`, 2200);
+    if(last){ rememberPars(r); save(false); openRoundSheet(r.id, 'finish'); }
+    else moveHole(1);
+  }, 450);
+}
+function logShot(ctx, shot){
+  const s = ctxTarget(ctx); if(!s) return;
+  shot.t = Date.now();
+  s.shots.push(shot);
+  s.updatedAt = shot.t;
+  const ok = save();
+  resetToggles();
+  render();
+  if(ok) toast(`${CLUB[shot.c].short}: ${shotLabel(shot)} — saved`);
+}
+
+/* ---------- STATS ---------- */
+function statsEvents(){
+  // range sessions and rounds that have shots, oldest first, filtered by source and period
+  const ev = [];
+  if(ui.source !== 'course') data.sessions.forEach(x => { if(x.shots.length) ev.push({kind:'range', ts:x.startedAt, shots:x.shots}); });
+  if(ui.source !== 'range') data.rounds.forEach(x => { if(x.shots.length) ev.push({kind:'course', ts:Date.parse(x.date + 'T12:00:00') || x.startedAt, shots:x.shots, course:x.course}); });
+  ev.sort((a, b) => a.ts - b.ts);
+  if(ui.period === 'last5') return ev.slice(-5);
+  if(ui.period === '30d'){ const cut = Date.now() - 30 * 864e5; return ev.filter(e => e.ts >= cut); }
+  return ev;
+}
+const GOLFER_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/></svg>';
+function fullName(){ const p = data.profile; return [p.name, p.surname].filter(Boolean).join(' '); }
+function avatarInner(photo, first, last){
+  const p = data.profile;
+  if(photo) return `<img src="${photo}" alt="">`;
+  const ini = ((first ?? p.name) || '').slice(0, 1) + ((last ?? p.surname) || '').slice(0, 1);
+  return ini ? esc(ini.toUpperCase()) : GOLFER_SVG;
+}
+function bestScoreInfo(){
+  // best 18-hole score: the lower of your logged rounds and the score typed in your profile
+  const p = data.profile;
+  let best = null;
+  data.rounds.filter(r => r.endedAt && r.holes === 18 && r.score !== null).forEach(r => {
+    if(!best || r.score < best.score) best = {score:r.score, where:[r.course, fmtISO(r.date)].filter(Boolean).join(', '), src:'from your rounds'};
+  });
+  if(p.bestScore !== null && (!best || p.bestScore < best.score))
+    best = {score:p.bestScore, where:[p.bestScoreCourse, p.bestScoreDate ? fmtDate(Date.parse(p.bestScoreDate)) : ''].filter(Boolean).join(', '), src:'typed in'};
+  return best;
+}
+function hcpTrend(){
+  const pts = data.profile.handicapHistory.slice(-12);
+  if(pts.length < 2) return data.profile.handicap !== null ? '<div class="note">Update your handicap when it changes to build a trend line.</div>' : '';
+  const W = 300, H = 46, px = 8, py = 8, vals = pts.map(x => x.v), lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+  const X = i => px + i * (W - 2 * px) / (pts.length - 1), Y = v => py + (v - lo) / span * (H - 2 * py);   // lower handicap sits higher
+  const path = pts.map((p, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(p.v).toFixed(1)}`).join(' ');
+  const first = pts[0], last = pts[pts.length - 1], delta = Math.round((last.v - first.v) * 10) / 10;
+  const word = delta < 0 ? `down ${Math.abs(delta).toFixed(1)}, improving` : delta > 0 ? `up ${delta.toFixed(1)}` : 'no change';
+  return `<div class="trend">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Handicap trend from ${fmtHcp(first.v)} to ${fmtHcp(last.v)}">
+      <path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
+      ${pts.map((p, i) => `<circle cx="${X(i).toFixed(1)}" cy="${Y(p.v).toFixed(1)}" r="${i === pts.length - 1 ? 4 : 2.5}" fill="${i === pts.length - 1 ? 'var(--accent)' : '#fff'}" stroke="var(--accent)" stroke-width="1.5" vector-effect="non-scaling-stroke"><title>${fmtDay(p.d)}: ${fmtHcp(p.v)}</title></circle>`).join('')}
+    </svg>
+    <div class="small ink2">Handicap ${fmtHcp(first.v)} → <b>${fmtHcp(last.v)}</b> since ${fmtDay(first.d)} · ${word}</div>
+  </div>`;
+}
+function profileCard(){
+  const p = data.profile;
+  const best = bestScoreInfo();
+  const h = p.handicapHistory, prev = h.length >= 2 ? h[h.length - 2].v : null;
+  const arrow = prev === null || p.handicap === null || p.handicap === prev ? '' : (p.handicap < prev ? ' <span class="up">▼</span>' : ' <span class="down">▲</span>');
+  const nRounds = data.rounds.filter(r => r.endedAt).length;
+  return `<div class="card">
+    <div class="row between">
+      <div class="row" style="min-width:0;gap:12px">
+        <button class="avatar av64" data-action="editProfile" aria-label="Edit golfer profile">${avatarInner(p.photo)}</button>
+        <div style="min-width:0"><div class="pname">${esc(fullName() || 'Golfer profile')}</div>
+        <div class="small muted">${p.homeCourse ? 'Home course: ' + esc(p.homeCourse) : 'No home course set'}</div></div>
+      </div>
+      <button class="btn" data-action="editProfile">Edit</button>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="v">${fmtHcp(p.handicap)}${arrow}</div><div class="l">Handicap</div></div>
+      <div class="tile"><div class="v">${best ? best.score : '–'}</div><div class="l">Best score</div></div>
+      <div class="tile"><div class="v">${nRounds}</div><div class="l">Rounds logged</div></div>
+    </div>
+    ${best ? `<div class="note">Best 18: ${best.score}${best.where ? ' at ' + esc(best.where) : ''} (${best.src}).</div>` : ''}
+    ${hcpTrend()}
+  </div>`;
+}
+function viewStats(){
+  const nav = `<div class="seg2 block" role="tablist" style="margin-bottom:12px">
+    <button class="${ui.statsView === 'flight' ? 'on' : ''}" data-action="statsView" data-v="flight" role="tab">Ball flight</button>
+    <button class="${ui.statsView === 'bag' ? 'on' : ''}" data-action="statsView" data-v="bag" role="tab">My bag</button></div>`;
+  return `<h2>Stats</h2>` + viewFlight();
+}
+const SRC_LABEL = {all:'Range + course', range:'Range', course:'Course'};
+const PERIOD_LABEL = {all:'All time', last5:'Last 5', '30d':'Last 30 days'};
+function filterSummary(){
+  return [SRC_LABEL[ui.source], PERIOD_LABEL[ui.period], ui.cleanOnly ? 'Clean only' : ''].filter(Boolean).join(' · ');
+}
+function filterSheetHTML(){
+  const seg = (act, cur, opts) => `<div class="seg2 block">${opts.map(([k, l]) => `<button class="${cur === k ? 'on' : ''}" data-action="${act}" data-v="${k}">${l}</button>`).join('')}</div>`;
+  return `<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">Filters</h3><button class="btn ghost" data-action="closeSheet">Done</button></div>
+    <div class="seglabel">Shots from</div>${seg('fSource', ui.source, [['all','Range + course'],['range','Range'],['course','Course']])}
+    <div class="seglabel">Period</div>${seg('fPeriod', ui.period, [['all','All time'],['last5','Last 5'],['30d','30 days']])}
+    <div class="seglabel">Ball flight %</div>${seg('fClean', ui.cleanOnly ? 'clean' : 'every', [['every','Every shot'],['clean','Clean strikes only']])}
+    <div class="note">"Last 5" means your last 5 range sessions and rounds that have shots.</div>`;
+}
+function metricTile(value, label, pctVal, sub){
+  return `<div class="mt"><div class="mv">${value}</div><div class="ml">${label}</div>${pctVal !== null && pctVal !== undefined ? `<div class="mbar"><i style="width:${Math.max(0, Math.min(100, pctVal))}%"></i></div>` : ''}${sub ? `<div class="ms">${sub}</div>` : ''}</div>`;
+}
+function metricGrid(t, tAll){
+  const tiles = [];
+  if(tAll.balls) tiles.push(metricTile(pct(tAll.strike.clean, tAll.balls) + '%', 'Clean strikes', pct(tAll.strike.clean, tAll.balls),
+    ['chunk','thin','topped'].filter(k => tAll.strike[k]).map(k => `${STRIKE_LABEL[k]} ${pct(tAll.strike[k], tAll.balls)}%`).join(' · ')));
+  if(t.shapeN){
+    tiles.push(metricTile(pct(t.line.pull, t.shapeN) + '%', 'Pull', pct(t.line.pull, t.shapeN)));
+    tiles.push(metricTile(pct(t.line.push, t.shapeN) + '%', 'Push', pct(t.line.push, t.shapeN)));
+  }
+  const fwMarked = tAll.resN - tAll.res.green;
+  if(tAll.res.fairway || (fwMarked && tAll.res.green === 0)) tiles.push(metricTile(pct(tAll.res.fairway, fwMarked) + '%', 'Fairway', pct(tAll.res.fairway, fwMarked), `${fwMarked} marked`));
+  const grMarked = tAll.resN - tAll.res.fairway;
+  if(tAll.res.green) tiles.push(metricTile(pct(tAll.res.green, grMarked) + '%', 'Green hit', pct(tAll.res.green, grMarked), `${grMarked} marked`));
+  if(t.dN) tiles.push(metricTile(Math.round(t.dSum / t.dN) + ' m', 'Avg distance', null, `longest ${fmtM(t.dMax)} m · ${t.dN} measured`));
+  return tiles.length ? `<div class="mgrid">${tiles.join('')}</div>` : '';
+}
+function legendShapes(t){
+  return '<div class="legend">' + shapeOrder().map(s =>
+    `<span class="k"><i class="sw ${s}"></i>${SHAPE_LABEL[s]} <b>${t.shape[s]}</b>${t.shapeN ? ' · ' + pct(t.shape[s], t.shapeN) + '%' : ''}</span>`).join('') + '</div>';
+}
+function viewFlight(){
+  const ev = statsEvents();
+  const shots = ev.flatMap(e => e.shots);
+  const head = `<div class="row between" style="margin:-4px 0 12px"><div class="small muted">${esc(filterSummary())}</div>
+    <button class="btn" style="min-height:40px;padding:8px 14px" data-action="openFilters">Filters ▾</button></div>`;
+  if(!shots.length) return head + `<div class="card empty-state">No shots logged ${ui.period === 'all' ? 'yet' : 'in this period'}.</div>`;
+  // clubs that have shots in the current filter: picker first
+  const ordered = activeClubs().concat(data.bag.filter(c => c.retired));
+  const cnt = {}; shots.forEach(x => cnt[x.c] = (cnt[x.c] || 0) + 1);
+  const withShots = ordered.filter(c => cnt[c.id]);
+  if(!withShots.find(c => c.id === ui.statClub)) ui.statClub = withShots.slice().sort((a, b) => cnt[b.id] - cnt[a.id])[0].id;
+  const picker = `<div class="cpick">${withShots.map(c => `<button class="club ${c.id === ui.statClub ? 'sel' : ''} ${c.retired ? 'ret' : ''}" data-action="statClub" data-club="${c.id}">${esc(c.short)}<span class="n">${cnt[c.id]}</span></button>`).join('')}</div>`;
+  const c = CLUB[ui.statClub];
+  const cs = shots.filter(x => x.c === c.id);
+  const rangeN = ev.filter(e => e.kind === 'range').reduce((a, e) => a + e.shots.filter(x => x.c === c.id).length, 0);
+  const split = `<div class="small muted">${ui.source === 'all' ? `Range ${rangeN} · Course ${cs.length - rangeN}` : SRC_LABEL[ui.source] + ' only'}${c.retired ? ' · retired' : ''}</div>`;
+  let card;
+  if(c.type === 'putter'){
+    const t = tally(cs);
+    card = `<div class="card"><div class="stat-head"><h3>${esc(c.name)} <span class="muted small" style="font-weight:500">${esc(makeModel(c))}</span></h3><span class="n">${plural(t.putts, 'putt')}</span></div>${split}
+      ${puttBlock(t)}${t.pdN ? `<div class="mgrid">${metricTile(fmtM(t.pdSum / t.pdN) + ' m', 'Avg putt length', null, `longest ${fmtM(t.pdMax)} m`)}</div>` : ''}
+      <div class="seglabel">By session</div>${clubTable(c.id, ev)}</div>`;
+  } else {
+    const t = tally(cs, ui.cleanOnly), tAll = tally(cs);
+    card = `<div class="card"><div class="stat-head"><h3>${esc(c.name)} <span class="muted small" style="font-weight:500">${esc(makeModel(c))}</span></h3><span class="n">${plural(t.shapeN, 'shot')}</span></div>${split}
+      ${segBar(t)}${legendShapes(t)}
+      <div class="small" style="margin-top:8px">${likely(t)}</div>
+      ${dirBlock(t)}${metricGrid(t, tAll)}${sampleNote(t.shapeN)}
+      <div class="seglabel">By session</div>${clubTable(c.id, ev)}</div>`;
+  }
+  // overview: whole bag and groups
+  const all = tally(shots, ui.cleanOnly), allT = tally(shots);
+  const nRange = ev.filter(e => e.kind === 'range').length, nRounds = ev.length - nRange;
+  let over = `<h2 style="margin-top:18px">Overview</h2>
+    <div class="overview four">
+      <div class="card"><div class="v">${nRange}</div><div class="l">Range sessions</div></div>
+      <div class="card"><div class="v">${nRounds}</div><div class="l">Rounds</div></div>
+      <div class="card"><div class="v">${all.balls}</div><div class="l">Full swings</div></div>
+      <div class="card"><div class="v">${pct(allT.strike.clean, allT.balls)}%</div><div class="l">Clean</div></div>
+    </div>
+    <div class="card"><div class="stat-head"><h3>Whole bag</h3><span class="n">${plural(all.shapeN, 'shot')}</span></div>${segBar(all)}${legendShapes(all)}${dirBlock(all)}${metricGrid(all, allT)}</div>`;
+  GROUPS.forEach(g => {
+    const gs = shots.filter(x => groupOf(x.c) === g.id);
+    if(!gs.length) return;
+    const t = tally(gs, ui.cleanOnly);
+    over += `<div class="card"><div class="stat-head"><h3>${g.name}</h3><span class="n">${plural(t.shapeN, 'shot')}</span></div>${segBar(t)}${legendShapes(t)}${dirBlock(t)}</div>`;
+  });
+  return head + `<h2 style="margin:0 0 8px">By club</h2>` + picker + card + over;
+}
+
+/* ---------- BAG ---------- */
+function lifetimeCounts(){
+  // every logged shot, range and course: used for bag counts and to protect clubs with history
+  const n = {};
+  data.sessions.concat(data.rounds).forEach(s => s.shots.forEach(x => n[x.c] = (n[x.c] || 0) + 1));
+  return n;
+}
+function bagRow(c, n){
+  return `<button class="bag-row ${c.retired ? 'retired' : ''}" data-action="editClub" data-id="${c.id}">
+    <span class="cbadge">${esc(c.short)}</span>
+    <span class="bi"><b>${esc(c.name)}</b><span class="small muted">${esc(makeModel(c) || 'No make / model')}${c.retired && c.retiredAt ? ' · retired ' + fmtDay(c.retiredAt) : ''}</span></span>
+    <span class="small muted" style="white-space:nowrap">${plural(n[c.id] || 0, c.type === 'putter' ? 'putt' : 'shot')} ›</span>
+  </button>`;
+}
+function viewBag(){
+  const n = lifetimeCounts();
+  const act = activeClubs(), ret = data.bag.filter(c => c.retired);
+  return `<div class="card">
+      <div class="row between"><div><h3 style="margin:0">In the bag</h3><div class="small muted">${act.length} club${act.length === 1 ? '' : 's'}</div></div>
+      <button class="btn primary" data-action="addClub">＋ Add club</button></div>
+      ${act.length > 14 ? `<div class="banner warn" style="margin:10px 0 0"><div>${act.length} clubs active. Fine on the range, but the Rules allow 14 in a round.</div></div>` : ''}
+      <div style="margin-top:6px">${act.map(c => bagRow(c, n)).join('') || '<div class="muted small" style="padding:10px 0">No clubs yet.</div>'}</div>
+    </div>
+    <div class="card">
+      <h3>Retired clubs</h3>
+      ${ret.length ? ret.map(c => bagRow(c, n)).join('') : '<div class="small muted">None yet. When you replace a club, add the new one and retire the old one: its shots stay in your history and the new club starts with clean stats.</div>'}
+    </div>`;
+}
+function autoShort(name, type){
+  const t = name.trim(); let m;
+  if(type === 'driver') return 'Dr';
+  if(type === 'putter') return 'Putt';
+  if((m = t.match(/(\d+)\s*°/))) return m[1] + '°';
+  if((m = t.match(/^(\d+)/))) return m[1] + ({wood:'W', hybrid:'H', iron:'i', wedge:'°'}[type] || '');
+  const words = t.split(/\s+/).filter(Boolean);
+  if(words.length > 1) return words.map(w => w[0].toUpperCase()).join('').slice(0, 3);
+  return t.slice(0, 4);
+}
+function openClubSheet(id){
+  const c = id ? CLUB[id] : null;
+  const n = c ? (lifetimeCounts()[c.id] || 0) : 0;
+  const lockPutter = c && n > 0;        // logged shots can't switch between putter and full-swing
+  const typeOpts = CLUB_TYPES.map(t => {
+    const dis = lockPutter && ((c.type === 'putter') !== (t.id === 'putter'));
+    return `<option value="${t.id}" ${(c ? c.type : 'iron') === t.id ? 'selected' : ''} ${dis ? 'disabled' : ''}>${t.label}</option>`;
+  }).join('');
+  const idx = c ? data.bag.indexOf(c) : -1;
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">${c ? 'Edit club' : 'Add a club'}</h3><button class="btn ghost" data-action="closeSheet">Cancel</button></div>
+    <label class="field"><span>Club</span><input id="fName" type="text" autocomplete="off" placeholder="e.g. 7 Iron, 5 Wood, 56° Wedge" value="${c ? esc(c.name) : ''}"></label>
+    <div class="field2">
+      <label class="field"><span>Type</span><select id="fType">${typeOpts}</select></label>
+      <label class="field"><span>Button label</span><input id="fShort" type="text" maxlength="4" autocomplete="off" placeholder="auto" value="${c ? esc(c.short) : ''}"></label>
+    </div>
+    <div class="field2">
+      <label class="field"><span>Make</span><input id="fMake" type="text" autocomplete="off" placeholder="e.g. TaylorMade" value="${c ? esc(c.make) : ''}"></label>
+      <label class="field"><span>Model</span><input id="fModel" type="text" autocomplete="off" placeholder="e.g. Qi4D" value="${c ? esc(c.model) : ''}"></label>
+    </div>
+    ${!c ? '<div class="note" style="margin:-2px 0 10px">Replacing a club? Add the new one here, then retire the old one so their stats stay separate.</div>' : ''}
+    <button class="btn primary block" data-action="saveClub" data-id="${c ? c.id : ''}">${c ? 'Save changes' : 'Add to bag'}</button>
+    ${c ? `<div class="row" style="gap:8px;margin-top:8px">
+        <button class="btn" style="flex:1" data-action="moveClub" data-id="${c.id}" data-dir="-1" ${idx <= 0 ? 'disabled' : ''}>↑ Move up</button>
+        <button class="btn" style="flex:1" data-action="moveClub" data-id="${c.id}" data-dir="1" ${idx >= data.bag.length - 1 ? 'disabled' : ''}>↓ Move down</button></div>
+      ${c.retired
+        ? `<button class="btn block" style="margin-top:8px" data-action="unretireClub" data-id="${c.id}">Return to bag</button>`
+        : `<button class="btn danger block" style="margin-top:8px" data-action="retireClub" data-id="${c.id}">Retire club</button>`}
+      ${n === 0 ? `<button class="btn ghost block" style="margin-top:4px;color:var(--danger)" data-action="deleteClub" data-id="${c.id}">Delete club (nothing logged with it)</button>` : `<div class="note" style="text-align:center">${plural(n, c.type === 'putter' ? 'putt' : 'shot')} logged — they stay in your stats if you retire it.</div>`}` : ''}
+  `);
+}
+function insertIndex(type, name){
+  // numbered clubs slot in by number (new 7 Iron goes before the 8 Iron, 56° before 60°)
+  const num = x => { const m = String(x).match(/(\d+)/); return m ? +m[1] : null; };
+  const ti = TYPE_ORDER.indexOf(type), nn = num(name);
+  if(nn !== null){
+    const i = data.bag.findIndex(c => c.type === type && num(c.name) !== null && num(c.name) > nn);
+    if(i >= 0) return i;
+  }
+  for(let i = data.bag.length - 1; i >= 0; i--) if(TYPE_ORDER.indexOf(data.bag[i].type) <= ti) return i + 1;
+  return 0;
+}
+function openProfileSheet(){
+  const p = data.profile;
+  ui.pendingPhoto = undefined;           // undefined = unchanged, '' = removed, data URL = new photo
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">Golfer profile</h3><button class="btn ghost" data-action="closeSheet">Cancel</button></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin:4px 0 14px">
+      <div class="avatar av96" id="pAvatar">${avatarInner(p.photo)}</div>
+      <div class="row" style="gap:6px" id="pPhotoBtns">${photoButtons(!!p.photo)}</div>
+    </div>
+    <div class="field2">
+      <label class="field"><span>Name</span><input id="pName" type="text" autocomplete="given-name" value="${esc(p.name)}"></label>
+      <label class="field"><span>Surname</span><input id="pSurname" type="text" autocomplete="family-name" value="${esc(p.surname)}"></label>
+    </div>
+    <label class="field"><span>Home course</span><input id="pCourse" type="text" autocomplete="off" value="${esc(p.homeCourse)}"></label>
+    <div class="field2">
+      <label class="field"><span>Handicap index</span><input id="pHcp" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 12.4 or +1.2" value="${p.handicap !== null ? fmtHcp(p.handicap) : ''}"></label>
+      <label class="field"><span>Best score (before this app)</span><input id="pBest" type="number" inputmode="numeric" min="40" max="200" value="${p.bestScore ?? ''}"></label>
+    </div>
+    <div class="field2">
+      <label class="field"><span>Best score — course</span><input id="pBestCourse" type="text" autocomplete="off" placeholder="optional" value="${esc(p.bestScoreCourse)}"></label>
+      <label class="field"><span>Best score — date</span><input id="pBestDate" type="date" value="${esc(p.bestScoreDate)}"></label>
+    </div>
+    <button class="btn primary block" data-action="saveProfile">Save profile</button>`);
+}
+function photoButtons(has){
+  return `<button class="btn" data-action="pickPhoto">${has ? 'Change photo' : 'Add photo'}</button>` +
+    (has ? '<button class="btn ghost" style="color:var(--danger)" data-action="removePhoto">Remove</button>' : '');
+}
+async function processPhoto(file){
+  // centre-crop to a square and shrink to 256 px so it stays small in storage and backups
+  let url;
+  try {
+    url = URL.createObjectURL(file);
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+    const S = 256, side = Math.min(img.naturalWidth, img.naturalHeight);
+    const c = document.createElement('canvas'); c.width = c.height = S;
+    c.getContext('2d').drawImage(img, (img.naturalWidth - side) / 2, (img.naturalHeight - side) / 2, side, side, 0, 0, S, S);
+    ui.pendingPhoto = c.toDataURL('image/jpeg', 0.85);
+    const av = $('#pAvatar'); if(av) av.innerHTML = avatarInner(ui.pendingPhoto);
+    const pb = $('#pPhotoBtns'); if(pb) pb.innerHTML = photoButtons(true);
+  } catch(e){
+    alertBox('That photo could not be read. Try a different one.');
+  } finally { if(url) URL.revokeObjectURL(url); }
+}
+function parseHcp(txt){
+  const t = txt.trim().replace(',', '.');
+  if(!t) return {ok:true, v:null};
+  const m = t.match(/^([+-]?)(\d{1,2}(\.\d)?)$/);
+  if(!m) return {ok:false};
+  let v = parseFloat(m[2]);
+  if(m[1] === '+') v = -v;                // plus handicaps stored as negative
+  if(v < -10 || v > 54) return {ok:false};
+  return {ok:true, v};
+}
+function clubTable(cid, ev){
+  const rows = ev.map(e => ({e, shots:e.shots.filter(x => x.c === cid)})).filter(r => r.shots.length).reverse();
+  const when = e => `${fmtDay(e.ts)}${e.kind === 'course' ? ' ⛳' : ''}`;
+  const key = ev.some(e => e.kind === 'course') ? '<div class="note">⛳ = on the course</div>' : '';
+  if(isPutt(cid)){
+    return `<table class="tbl"><thead><tr><th>Date</th><th>Putts</th>${PUTTS.map(p => `<th>${PUTT_SHORT[p]}</th>`).join('')}</tr></thead><tbody>` +
+      rows.map(r => { const t = tally(r.shots); return `<tr><td>${when(r.e)}</td><td>${t.putts}</td>${PUTTS.map(p => `<td>${pct(t.putt[p], t.putts)}%</td>`).join('')}</tr>`; }).join('') + '</tbody></table>' + key;
+  }
+  const order = shapeOrder();
+  return `<table class="tbl"><thead><tr><th>Date</th><th>Shots</th>${order.map(s => `<th><i class="sw ${s}"></i> ${s === 'straight' ? 'Str' : SHAPE_LABEL[s]}</th>`).join('')}<th>Pull</th><th>Push</th><th>Mis</th></tr></thead><tbody>` +
+    rows.map(r => {
+      const t = tally(r.shots, ui.cleanOnly), tAll = tally(r.shots);
+      return `<tr><td>${when(r.e)}</td><td>${tAll.balls}</td>${order.map(s => `<td>${t.shapeN ? pct(t.shape[s], t.shapeN) + '%' : '–'}</td>`).join('')}<td>${t.shapeN ? pct(t.line.pull, t.shapeN) + '%' : '–'}</td><td>${t.shapeN ? pct(t.line.push, t.shapeN) + '%' : '–'}</td><td>${pct(tAll.balls - tAll.strike.clean, tAll.balls)}%</td></tr>`;
+    }).join('') + '</tbody></table>' + key;
+}
+
+/* ---------- HISTORY ---------- */
+function viewHistory(){
+  const f = ui.histFilter || 'all';
+  const items = [];
+  if(f !== 'course') data.sessions.forEach(x => items.push({ts:x.startedAt, html:sessionRow(x)}));
+  if(f !== 'range') data.rounds.forEach(x => items.push({ts:Date.parse(x.date + 'T12:00:00') || x.startedAt, html:roundRow(x)}));
+  items.sort((a, b) => b.ts - a.ts);
+  const chips = `<div class="seg2 block" style="margin-bottom:12px">${[['all','All'],['range','Range'],['course','Course']].map(([k, l]) => `<button class="${f === k ? 'on' : ''}" data-action="histFilter" data-f="${k}">${l}</button>`).join('')}</div>`;
+  if(!items.length) return `<h2>History</h2>${chips}<div class="card empty-state">${f === 'course' ? 'No rounds yet. Start one from the Course tab.' : f === 'range' ? 'No range sessions yet. Start one from the Range tab.' : 'Nothing logged yet. Start a range session or a round.'}</div>`;
+  return `<h2>History</h2>${chips}` + items.map(i => i.html).join('');
+}
+function openSessionSheet(id){
+  const s = data.sessions.find(x => x.id === id); if(!s) return;
+  const used = data.bag.filter(c => s.shots.some(x => x.c === c.id));
+  const body = used.map(c => {
+    const cs = s.shots.filter(x => x.c === c.id);
+    const t = tally(cs);
+    if(c.type === 'putter') return `<div class="card"><div class="stat-head"><h3>${esc(c.name)}</h3><span class="n">${plural(t.putts, 'putt')}</span></div>${puttBlock(t)}</div>`;
+    return `<div class="card"><div class="stat-head"><h3>${esc(c.name)}</h3><span class="n">${plural(t.balls, 'ball')}</span></div>${segBar(t)}${legend(t)}${strikeLine(t)}</div>`;
+  }).join('') || '<div class="muted">No balls in this session.</div>';
+  const canReopen = s.endedAt && !activeSession();
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:10px"><div><h3 style="margin:0">${fmtDate(s.startedAt)}</h3>
+    <div class="small muted">${fmtTime(s.startedAt)}${s.endedAt ? '–' + fmtTime(s.endedAt) : ' · still open'}</div></div>
+    <button class="btn ghost" data-action="closeSheet">Close</button></div>
+    ${body}
+    <div class="row" style="gap:8px;margin-top:6px">
+      ${canReopen ? `<button class="btn" style="flex:1" data-action="reopen" data-id="${s.id}">Reopen session</button>` : ''}
+      <button class="btn danger" style="flex:1" data-action="deleteSession" data-id="${s.id}">Delete session</button>
+    </div>`);
+}
+
+/* ---------- ROUNDS ---------- */
+function viewRounds(){
+  const r = activeRound();
+  if(r && r.mode === 'holes') return banners() + holeView(r);
+  if(r){
+    return banners() + `<div class="row between" style="margin-bottom:10px">
+        <div style="min-width:0"><div style="font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.course || 'Round in progress')}</div>
+        <div class="small muted">Round in progress · ${fmtDay(new Date(r.date + 'T12:00:00'))} · ${plural(r.shots.length, 'shot')} logged</div></div>
+        <button class="btn" data-action="finishRound">Finish</button>
+      </div>` + loggerBlock('round', r);
+  }
+  const done = doneRounds();
+  let h = banners() + startCard();
+  if(!done.length) return h;
+  h += roundsSummary(done);
+  h += `<h2 style="margin-top:18px">Recent rounds</h2>` + done.slice(0, 3).map(roundRow).join('');
+  if(done.length > 3) h += `<button class="btn ghost block" data-action="historyCourse">See all ${done.length} rounds in History ›</button>`;
+  return h;
+}
+function holeView(r){
+  const h = r.cur, i = holeInfo(r, h), list = holeList(r), idx = list.indexOf(h), tot = roundTotals(r);
+  const parBtns = [3, 4, 5].map(v => `<button class="pchip ${i.par === v ? 'on' : ''}" data-action="par" data-v="${v}">${v}</button>`).join('');
+  const mark = v => v === null ? '–' : (v ? '✓' : '✗');
+  const counter = (lbl, act, v, cls = '') => `<div class="hcell ${cls}"><span class="hl">${lbl}</span><div class="hctl"><button class="pchip" data-action="${act}" data-d="-1" aria-label="${lbl} down">−</button><b class="hval ${v === null ? 'muted' : ''}">${v ?? '·'}</b><button class="pchip" data-action="${act}" data-d="1" aria-label="${lbl} up">+</button></div></div>`;
+  const strip = list.map(x => {
+    const xi = holeInfo(r, x);
+    const cls = x === h ? 'cur' : '';
+    const diff = xi.score !== null && xi.par ? xi.score - xi.par : null;
+    const tone = diff === null ? '' : diff < 0 ? 'under' : diff === 0 ? 'par' : diff === 1 ? 'bogey' : 'dbl';
+    return `<button class="hchip ${cls} ${tone}" data-action="goHole" data-h="${x}"><span>${x}</span><b>${xi.score ?? '·'}</b></button>`;
+  }).join('');
+  return `<div class="row between" style="margin-bottom:6px">
+      <div style="min-width:0"><div style="font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.course || r.holes + '-hole round')}</div>
+      <div class="small muted">${tot.thru ? `${tot.score} (${fmtToPar(tot.toPar)}) thru ${tot.thru}` : 'Round in progress'} · ${fmtDay(new Date(r.date + 'T12:00:00'))}</div></div>
+      <div class="row" style="gap:6px;flex:none"><button class="btn" style="min-height:40px;padding:8px 12px" data-action="openCard">Card</button>
+      <button class="btn" style="min-height:40px;padding:8px 12px" data-action="finishRound">Finish</button></div>
+    </div>
+    <div class="card holebar">
+      <div class="hhead">
+        <button class="btn hnav" data-action="hole" data-d="-1" ${idx <= 0 ? 'disabled' : ''} aria-label="Previous hole">‹</button>
+        <div class="hmid"><span class="hnum">Hole ${h}</span><span class="hl" style="margin-left:6px">Par</span>${parBtns}</div>
+        <button class="btn hnav" data-action="hole" data-d="1" aria-label="${idx === list.length - 1 ? 'Finish round' : 'Next hole'}">${idx === list.length - 1 ? '✓' : '›'}</button>
+      </div>
+      <div class="hrow">
+        ${counter('Score', 'hscore', i.score, 'strong')}${counter('Putts', 'hputts', i.score === null && !i.putts ? null : i.putts)}${counter('Pen', 'pen', i.pen || (i.score === null ? null : 0))}
+      </div>
+      <div class="small ink2" style="margin-top:6px;text-align:center">Fairway <b>${i.par >= 4 ? mark(i.fir) : 'n/a'}</b> · GIR <b>${mark(i.gir)}</b>${i.adj > 0 ? ` · <span class="muted">${plural(i.adj, 'stroke')} added with +</span>` : ''}</div>
+      <div class="hstrip">${strip}</div>
+    </div>` + loggerBlock('round', r, h);
+}
+function roundRow(r){
+  const nPh = CARD_SIDES.filter(k => r.photos[k]).length;
+  return `<button class="list-item" data-action="openRound" data-id="${r.id}">
+    <div style="min-width:0"><div class="t" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><span class="kind course">Course</span> ${esc(r.course || 'Round')}</div>
+    <div class="s">${fmtISO(r.date)} · ${r.holes} holes${r.shots.length ? ' · ' + plural(r.shots.length, 'shot') : ''}${nPh ? ' · scorecard' : ''}</div></div>
+    <div style="text-align:right;flex:none">${!r.endedAt ? '<span class="badge">Open</span>' : r.score !== null ? `<div style="font-size:22px;font-weight:700">${r.score}</div>` : '<span class="muted small">No score</span>'}</div>
+  </button>`;
+}
+function sessionRow(s){
+  const t = tally(s.shots);
+  const clubs = new Set(s.shots.map(x => x.c)).size;
+  const mins = s.endedAt ? Math.max(1, Math.round((s.endedAt - s.startedAt) / 60000)) : null;
+  return `<button class="list-item" data-action="openSession" data-id="${s.id}">
+    <div><div class="t"><span class="kind range">Range</span> ${fmtDate(s.startedAt)}</div>
+    <div class="s">${plural(t.balls, 'ball')}${t.putts ? ' · ' + plural(t.putts, 'putt') : ''} · ${plural(clubs, 'club')}${mins ? ' · ' + mins + ' min' : ''}</div></div>
+    ${s.endedAt ? '<span class="muted">›</span>' : '<span class="badge">Open</span>'}
+  </button>`;
+}
+function doneRounds(){
+  return data.rounds.filter(x => x.endedAt).sort((a, b) => b.date.localeCompare(a.date) || b.startedAt - a.startedAt);
+}
+function roundsSummary(done){
+  const scored = done.filter(r => r.score !== null && r.holes === 18);
+  const avg = scored.length ? (scored.reduce((a, r) => a + r.score, 0) / scored.length) : null;
+  const best = scored.length ? Math.min(...scored.map(r => r.score)) : null;
+  const shots = done.flatMap(r => r.shots);
+  const t = tally(shots);
+  const k = courseKPIs(done);
+  return `<div class="card"><div class="stat-head"><h3>Round stats</h3><span class="n">${plural(done.length, 'round')}</span></div>
+    <div class="tiles four" style="margin-top:6px">
+      <div class="tile"><div class="v">${avg !== null ? avg.toFixed(1) : '–'}</div><div class="l">Avg (18)</div></div>
+      <div class="tile"><div class="v">${best ?? '–'}</div><div class="l">Best (18)</div></div>
+      <div class="tile"><div class="v">${k.firN ? pct(k.firY, k.firN) + '%' : '–'}</div><div class="l">Fairway</div></div>
+      <div class="tile"><div class="v">${k.girN ? pct(k.girY, k.girN) + '%' : '–'}</div><div class="l">GIR</div></div>
+    </div>
+    ${k.puttHoles ? `<div class="note">Putts per hole: <b>${(k.putts / k.puttHoles).toFixed(1)}</b> over ${plural(k.puttHoles, 'hole')}.</div>` : ''}
+    ${t.balls ? `<div style="margin-top:10px">${segBar(t)}${legend(t)}${strikeLine(t)}</div>` : '<div class="note">Shot stats appear here once you log shots during a round.</div>'}
+    ${courseDistTable(shots)}
+  </div>`;
+}
+function courseKPIs(rounds){
+  const k = {firY:0, firN:0, girY:0, girN:0, putts:0, puttHoles:0};
+  rounds.forEach(r => {
+    if(r.mode === 'holes'){
+      holeList(r).forEach(h => { const i = holeInfo(r, h);
+        if(i.fir !== null){ k.firN++; if(i.fir) k.firY++; }
+        if(i.gir !== null){ k.girN++; if(i.gir) k.girY++; }
+        if(i.score !== null && i.putts){ k.putts += i.putts; k.puttHoles++; } });
+    } else {
+      const t = tally(r.shots);
+      k.firY += t.res.fairway; k.firN += t.resN - t.res.green;
+      k.girY += t.gir.y; k.girN += t.girN;
+    }
+  });
+  return k;
+}
+function courseDistTable(shots){
+  const rows = data.bag.map(c => {
+    const ds = shots.filter(x => x.c === c.id && x.d).map(x => x.d);
+    if(!ds.length) return '';
+    const avg = ds.reduce((a, b) => a + b, 0) / ds.length;
+    return `<tr><td>${esc(c.short)} <span class="muted">${esc(c.name)}</span>${c.retired ? ' <span class="tag">Retired</span>' : ''}</td><td>${ds.length}</td><td>${c.type === 'putter' ? fmtM(avg) : Math.round(avg)}</td><td>${fmtM(Math.max(...ds))}</td></tr>`;
+  }).join('');
+  if(!rows) return '';
+  return `<h3 style="margin:14px 0 0">Distances on the course</h3>
+    <table class="tbl dist"><thead><tr><th>Club</th><th>Shots</th><th>Avg m</th><th>Longest m</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+function courseOptions(){
+  const set = new Set(data.rounds.map(r => r.course).filter(Boolean));
+  if(data.profile.homeCourse) set.add(data.profile.homeCourse);
+  return `<datalist id="courseList">${Array.from(set).map(c => `<option value="${esc(c)}">`).join('')}</datalist>`;
+}
+function roundForm(r){
+  return `<label class="field"><span>Course</span><input id="rCourse" type="text" list="courseList" autocomplete="off" placeholder="Name of the course" value="${esc(r.course)}"></label>${courseOptions()}
+    <div class="field2">
+      <label class="field"><span>Date</span><input id="rDate" type="date" value="${esc(r.date)}"></label>
+      <label class="field"><span>Holes</span><select id="rHoles"><option value="18" ${r.holes === 18 ? 'selected' : ''}>18 holes</option><option value="9" ${r.holes === 9 ? 'selected' : ''}>9 holes</option></select></label>
+    </div>`;
+}
+function readRoundForm(){
+  return {course: $('#rCourse').value.trim(), date: $('#rDate').value || isoDay(Date.now()), holes: $('#rHoles').value === '9' ? 9 : 18};
+}
+function startCard(){
+  const rd = ui.rd || (ui.rd = {holes: data.settings.lastHoles === 9 ? 9 : 18, start: 1, course: ''});
+  const seg = (act, v, cur, lbl) => `<button class="${v === cur ? 'on' : ''}" data-action="${act}" data-v="${v}" aria-pressed="${v === cur}">${lbl}</button>`;
+  const startLbl = rd.holes === 9 ? ['Front 9', 'Back 9'] : ['Hole 1', 'Hole 10'];
+  return `<div class="card startcard">
+      <h2 style="margin:0 0 10px">Open a round</h2>
+      <div class="seg2 block holes2">${seg('rdHoles', 9, rd.holes, '9 holes')}${seg('rdHoles', 18, rd.holes, '18 holes')}</div>
+      <label class="field" style="margin-top:12px"><span>Course <span class="opt">— optional</span></span>
+        <input id="rdCourse" type="text" list="courseList" autocomplete="off" placeholder="Any course, or add it at the end" value="${esc(rd.course)}"></label>${courseOptions()}
+      ${data.profile.homeCourse && courseKey(rd.course) !== courseKey(data.profile.homeCourse) ? `<button class="fbtn" style="margin:-4px 0 12px" data-action="rdHome">Home: ${esc(data.profile.homeCourse)}</button>` : ''}
+      <div class="row between" style="margin:-2px 0 12px"><span class="small ink2">Tee off on</span>
+        <div class="seg2">${seg('rdStart', 1, rd.start, startLbl[0])}${seg('rdStart', 10, rd.start, startLbl[1])}</div></div>
+      <button class="btn primary big block" data-action="beginRound">Open round</button>
+      <div class="note" style="text-align:center">Pick par 3, 4 or 5 on each hole as you go. Your scorecard builds itself, on any course.</div>
+      <button class="btn ghost block" style="margin-top:4px" data-action="cardOnly">Just add a score &amp; scorecard</button>
+    </div>`;
+}
+function keepRdCourse(){ const i = $('#rdCourse'); if(i && ui.rd) ui.rd.course = i.value; }
+function scTile(side, photoUrl){
+  return `<div class="sc"><span class="lbl">${CARD_LABEL[side]}</span>
+    <button class="sc-tile ${photoUrl ? 'has' : ''}" data-action="pickCard" data-side="${side}" aria-label="${photoUrl ? 'Change' : 'Add'} ${CARD_LABEL[side].toLowerCase()} of scorecard">${photoUrl ? cardMedia(photoUrl, CARD_LABEL[side] + ' of scorecard') : '<span class="addtxt">＋ Add<small>photo or scan</small></span>'}</button>
+    ${photoUrl ? `<button class="btn ghost" style="min-height:32px;padding:4px;color:var(--danger)" data-action="removeCard" data-side="${side}">Remove</button>` : ''}</div>`;
+}
+const cardTilesHTML = r => CARD_SIDES.map(k => scTile(k, pendingCardUrl(r, k))).join('');
+function pendingCardUrl(r, side){
+  const p = ui.cardPending[side];
+  if(p === undefined) return r && r.photos[side] ? photoCache.get(r.photos[side]) || null : null;
+  return p || null;
+}
+function openRoundSheet(id, mode){
+  // mode: 'finish' (active round), 'card' (new score-only round), 'edit' (existing round)
+  const r = id ? data.rounds.find(x => x.id === id) : {course: data.profile.homeCourse || '', date: isoDay(Date.now()), holes: 18, score: null, photos:{cover:null, front:null, back:null}, shots:[]};
+  if(!r) return;
+  ui.cardPending = {cover: undefined, front: undefined, back: undefined};
+  ui.roundSheet = {id: id || null, mode};
+  const title = mode === 'finish' ? 'Finish round' : mode === 'card' ? 'Add a round' : 'Edit round';
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">${title}</h3><button class="btn ghost" data-action="closeSheet">Cancel</button></div>
+    ${roundForm(r)}
+    <label class="field"><span>Score${r.mode === 'holes' ? ` <span class="muted" style="font-weight:500">— from holes: ${roundTotals(r).score || '–'} thru ${roundTotals(r).thru}</span>` : ''}</span><input id="rScore" type="number" inputmode="numeric" min="9" max="200" placeholder="e.g. 86" value="${r.score ?? (r.mode === 'holes' && roundTotals(r).thru === r.holes ? roundTotals(r).score : '')}"></label>
+    <div class="seglabel" style="margin-top:4px">Scorecard</div>
+    <div class="cards3" id="cardTiles">${cardTilesHTML(id ? r : null)}</div>
+    <div class="note" style="margin-top:6px">Take a photo, pick one from Photos, or choose a scan (PDF) from Files.</div>
+    ${photoStoreError ? '<div class="note" style="color:var(--danger)">Photo storage is not available in this browser, so scorecard photos can\'t be saved here.</div>' : ''}
+    <button class="btn primary block" style="margin-top:14px" data-action="saveRound">${mode === 'edit' ? 'Save changes' : 'Save round'}</button>`);
+}
+function refreshCardTiles(){
+  const rs = ui.roundSheet; if(!rs) return;
+  const r = rs.id ? data.rounds.find(x => x.id === rs.id) : null;
+  const el = $('#cardTiles'); if(el) el.innerHTML = cardTilesHTML(r);
+}
+const isPdfFile = f => f.type === 'application/pdf' || /\.pdf$/i.test(f.name || '');
+async function processCardPhoto(file, side){
+  if(isPdfFile(file)){
+    // scans are kept exactly as scanned (all pages)
+    if(file.size > MAX_SCAN_MB * 1048576) return alertBox(`That scan is ${(file.size / 1048576).toFixed(1)} MB. The limit is ${MAX_SCAN_MB} MB, so try scanning one side of the card at a time.`);
+    try {
+      const u = await new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(fr.result); fr.onerror = () => rej(fr.error); fr.readAsDataURL(file); });
+      if(typeof u !== 'string' || !u.startsWith('data:application/pdf')) throw new Error('not a pdf');
+      ui.cardPending[side] = u; refreshCardTiles();
+    } catch(e){ alertBox('That scan could not be read. Try saving it again as a PDF, or take a photo instead.'); }
+    return;
+  }
+  // photos and image scans: keep readable, longest side 1600 px, JPEG
+  let url;
+  try {
+    url = URL.createObjectURL(file);
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+    const max = 1600, k = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const w = Math.round(img.naturalWidth * k), h = Math.round(img.naturalHeight * k);
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    c.getContext('2d').drawImage(img, 0, 0, w, h);
+    ui.cardPending[side] = c.toDataURL('image/jpeg', 0.78);
+    refreshCardTiles();
+  } catch(e){ alertBox('That file could not be read. Use a photo (JPEG or PNG) or a PDF scan.'); }
+  finally { if(url) URL.revokeObjectURL(url); }
+}
+async function saveRoundSheet(){
+  // busy flag: a second tap while photos are still being stored is ignored (no duplicate rounds)
+  if(ui.savingRound) return;
+  ui.savingRound = true;
+  try { await saveRoundSheetInner(); } finally { ui.savingRound = false; }
+}
+async function saveRoundSheetInner(){
+  const rs = ui.roundSheet; if(!rs) return;
+  const f = readRoundForm();
+  const sTxt = $('#rScore').value.trim();
+  const score = sTxt ? parseInt(sTxt, 10) : null;
+  if(sTxt && (!Number.isInteger(score) || String(score) !== sTxt || score < 9 || score > 200)) return alertBox('Score should be a whole number, e.g. 86.');
+  let r;
+  if(rs.id) r = data.rounds.find(x => x.id === rs.id);
+  else { const now = Date.now(); r = {id:uid(), startedAt:now, endedAt:now, updatedAt:now, photos:{cover:null, front:null, back:null}, shots:[]}; data.rounds.push(r); }
+  if(!r) return;
+  Object.assign(r, f, {score, updatedAt: Date.now()});
+  if(rs.mode === 'finish') r.endedAt = Date.now();
+  if(r.mode === 'holes') rememberPars(r);
+  let photoFail = false;
+  for(const side of CARD_SIDES){
+    const p = ui.cardPending[side];
+    if(p === undefined) continue;
+    const old = r.photos[side];
+    if(p === ''){ r.photos[side] = null; }
+    else {
+      const pid = 'sc_' + uid();
+      try { await photoPut(pid, p); r.photos[side] = pid; } catch(e){ photoFail = true; continue; }
+    }
+    if(old) await photoDel(old);
+  }
+  const ok = save();
+  ui.roundSheet = null;
+  closeSheet(); render();
+  if(photoFail) alertBox('The round was saved, but a scorecard photo or scan could not be stored on this phone. Try adding it again from the round.');
+  else if(ok) toast(rs.mode === 'edit' ? 'Round updated' : 'Round saved');
+  if(rs.mode === 'finish' && ok && !photoFail){
+    const b = await choose('Round saved ✓', 'Back up now so it\'s safe off this phone too?', [{id:'yes', label:'Back up now', cls:'primary'}, {id:'no', label:'Later', cls:'ghost'}]);
+    if(b === 'yes') doBackup(false);
+  }
+}
+function scorecardTable(r, edit){
+  // a scorecard built from the pars you set: Out (1-9), In (10-18) and Total, in the order the holes were played
+  const rows = holeList(r).map(h => holeInfo(r, h));
+  const mk = v => v === null ? '' : (v ? '✓' : '·');
+  const sum = (a, f) => a.reduce((n, x) => n + (f(x) || 0), 0);
+  const tone = x => x.score !== null && x.par ? (x.score < x.par ? 'under' : x.score > x.par ? 'over' : '') : '';
+  const parCell = x => edit
+    ? `<div class="pmini">${[3, 4, 5].map(v => `<button class="${x.par === v ? 'on' : ''}" data-action="cardPar" data-h="${x.h}" data-v="${v}" aria-label="Hole ${x.h} par ${v}" aria-pressed="${x.par === v}">${v}</button>`).join('')}</div>`
+    : (x.par ?? '');
+  const row = x => `<tr class="${edit && x.h === r.cur ? 'curh' : ''}"><td>${edit ? `<button class="hjump" data-action="cardHole" data-h="${x.h}" aria-label="Go to hole ${x.h}">${x.h}</button>` : x.h}</td><td>${parCell(x)}</td><td class="${tone(x)}">${x.score ?? ''}</td><td>${x.score !== null ? x.putts : ''}</td><td>${mk(x.fir)}</td><td>${mk(x.gir)}</td></tr>`;
+  const sub = (lbl, a) => {
+    const pl = a.filter(x => x.score !== null), tp = sum(pl.filter(x => x.par), x => x.score - x.par);
+    const fr = a.filter(x => x.fir !== null), gr = a.filter(x => x.gir !== null);
+    return `<tr class="tot"><td>${lbl}</td><td>${a.every(x => x.par) ? sum(a, x => x.par) : ''}</td><td>${pl.length ? `${sum(pl, x => x.score)}<span class="tp">${fmtToPar(tp)}</span>` : ''}</td><td>${pl.length ? sum(pl, x => x.putts) : ''}</td><td>${fr.length ? `${fr.filter(x => x.fir).length}/${fr.length}` : ''}</td><td>${gr.length ? `${gr.filter(x => x.gir).length}/${gr.length}` : ''}</td></tr>`;
+  };
+  let body = '';
+  rows.forEach(x => {
+    body += row(x);
+    if(r.holes === 18 && x.h === 9) body += sub('Out', rows.filter(y => y.h <= 9));
+    if(r.holes === 18 && x.h === 18) body += sub('In', rows.filter(y => y.h >= 10));
+  });
+  body += sub('Total', rows);
+  return `<table class="tbl sc-tbl ${edit ? 'edit' : ''}"><thead><tr><th>Hole</th><th>Par</th><th>Score</th><th>Putts</th><th>FIR</th><th>GIR</th></tr></thead><tbody>${body}</tbody></table>`;
+}
+function openCardSheet(){
+  const r = activeRound(); if(!r) return;
+  openSheet(`<div class="grabber"></div>
+    <div class="row between"><h3 style="margin:0">Scorecard</h3><button class="btn ghost" data-action="closeSheet">Close</button></div>
+    <div class="small muted" style="margin:2px 0 4px">${esc(r.course || r.holes + '-hole round')} · ${fmtISO(r.date)}<br>Tap 3, 4 or 5 to set a hole's par. Tap a hole number to go to it.</div>
+    <div id="cardTbl">${scorecardTable(r, true)}</div>`);
+}
+function openRoundDetail(id){
+  const r = data.rounds.find(x => x.id === id); if(!r) return;
+  const t = tally(r.shots);
+  const used = data.bag.filter(c => r.shots.some(x => x.c === c.id));
+  const thumbs = CARD_SIDES.map(side => {
+    const u = r.photos[side] ? photoCache.get(r.photos[side]) : null;
+    return `<div class="sc"><span class="lbl">${CARD_LABEL[side]}</span>${u
+      ? `<button class="sc-tile has" data-action="viewCard" data-id="${r.id}" data-side="${side}" aria-label="View ${CARD_LABEL[side].toLowerCase()} of scorecard">${cardMedia(u, CARD_LABEL[side] + ' of scorecard')}</button>`
+      : `<div class="sc-tile">${r.photos[side] ? 'Missing' : '–'}</div>`}</div>`;
+  }).join('');
+  const perClub = used.map(c => {
+    const cs = r.shots.filter(x => x.c === c.id), ct = tally(cs);
+    if(c.type === 'putter') return `<div class="card"><div class="stat-head"><h3>${esc(c.name)}</h3><span class="n">${plural(ct.putts, 'putt')}</span></div>${puttBlock(ct)}${distLine(ct)}</div>`;
+    return `<div class="card"><div class="stat-head"><h3>${esc(c.name)}</h3><span class="n">${plural(ct.balls, 'shot')}</span></div>${segBar(ct)}${legend(ct)}${strikeLine(ct)}${distLine(ct)}</div>`;
+  }).join('');
+  openSheet(`<div class="grabber"></div>
+    <div class="row between"><h3 style="margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.course || 'Round')}</h3>
+      <button class="btn ghost" data-action="closeSheet">Close</button></div>
+    <div class="row between" style="margin:2px 0 12px;align-items:flex-end">
+      <div class="small muted">${fmtISO(r.date)} · ${r.holes} holes</div>
+      <div style="text-align:right">${r.score !== null ? `<div style="font-size:28px;font-weight:700;line-height:1">${r.score}</div><div class="small muted">score</div>` : '<span class="muted small">No score</span>'}</div></div>
+    ${CARD_SIDES.some(k => r.photos[k]) ? `<div class="cards3" style="margin-bottom:12px">${thumbs}</div>` : '<div class="small muted" style="margin-bottom:10px">No scorecard added. Use Edit below to add the cover, front or back.</div>'}
+    ${r.mode === 'holes' ? `<div class="card"><h3>Scorecard</h3>${scorecardTable(r)}</div>` : ''}
+    ${t.balls ? `<div class="card"><div class="stat-head"><h3>All shots</h3><span class="n">${plural(t.balls, 'shot')}${t.putts ? ' · ' + plural(t.putts, 'putt') : ''}</span></div>${segBar(t)}${legend(t)}${strikeLine(t)}</div>` + perClub
+      : (t.putts ? perClub : '<div class="small muted" style="margin-bottom:10px">No shots logged for this round.</div>')}
+    <button class="btn block" data-action="editRound" data-id="${r.id}">Edit course, score &amp; scorecard</button>
+    <div class="row" style="gap:8px;margin-top:8px">
+      ${!activeRound() ? `<button class="btn" style="flex:1" data-action="reopenRound" data-id="${r.id}">Log more shots</button>` : ''}
+      <button class="btn danger" style="flex:1" data-action="deleteRound" data-id="${r.id}">Delete round</button>
+    </div>`);
+}
+
+/* ---------- BACKUP & SETTINGS ---------- */
+function viewBackup(){
+  const balls = data.sessions.reduce((a, s) => a + s.shots.length, 0);
+  const nPhotos = photoIdsIn(data).size;
+  let prev = null; try { prev = localStorage.getItem(PREV_KEY); } catch(_){}
+  const canShare = !!(navigator.canShare && window.File);
+  const jump = [['secProfile','Profile'],['secBag','My bag'],['secBackup','Backup'],['secLogin','Login'],['secSettings','Settings']]
+    .map(([id, l]) => `<button class="fbtn" data-action="jump" data-to="${id}">${l}</button>`).join('');
+  return banners() + `<h2>More</h2><div class="filters">${jump}</div>
+    <h2 id="secProfile" style="margin-top:6px">Golfer profile</h2>${profileCard()}
+    <h2 id="secBag" style="margin-top:18px">My bag</h2>${viewBag()}
+    <h2 id="secBackup" style="margin-top:18px">Backup</h2>
+    <div class="card">
+      <div class="small ink2">On this device: <b>${plural(data.sessions.length, 'range session')}</b> (${plural(balls, 'shot')}), <b>${plural(data.rounds.length, 'round')}</b>, <b>${plural(nPhotos, 'scorecard image')}</b>.</div>
+      <div class="small ink2" style="margin-top:2px">Last backup: <b>${ago(data.meta.lastBackupAt)}</b>${data.meta.lastBackupAt ? ' (' + fmtDate(data.meta.lastBackupAt) + ')' : ''}</div>
+      <button class="btn primary block" style="margin-top:12px" data-action="backup">${canShare ? 'Back up now (save to Files / Dropbox)' : 'Download backup file'}</button>
+      ${canShare ? '<button class="btn ghost block" data-action="backupDownload">Download file instead</button>' : ''}
+      <div class="note">File name includes the app version and date, e.g. golf-tracker-backup_v${APP_VERSION}_2026-11-21_0545.json${nPhotos ? '. Scorecard photos and scans are included, so the file is bigger (about 0.3 MB per photo, more for PDF scans).' : ''}</div>
+    </div>
+    <div class="card">
+      <h3>Restore from a backup</h3>
+      <p class="small ink2" style="margin:0 0 10px">Choose a backup file. You'll see what's in it before anything changes.</p>
+      <button class="btn block" data-action="restore">Choose backup file…</button>
+      ${prev ? '<button class="btn ghost block" data-action="undoRestore">↶ Undo last restore</button>' : ''}
+    </div>
+    ${securityCard()}
+    <h2 id="secSettings" style="margin-top:18px">Settings</h2>
+    <div class="card">
+      <div class="toggle"><div>Handed<div class="small muted">Sets which way hook/draw curve on screen</div></div>
+        <div class="seg2"><button class="${data.settings.hand === 'R' ? 'on' : ''}" data-action="hand" data-h="R">Right</button><button class="${data.settings.hand === 'L' ? 'on' : ''}" data-action="hand" data-h="L">Left</button></div></div>
+      <div class="toggle"><div>Keep screen on<div class="small muted">On the Range tab during a session. Never on the course, so the phone can sleep in your pocket.</div></div>
+        <div class="seg2"><button class="${data.settings.keepAwake ? 'on' : ''}" data-action="awake" data-v="1">On</button><button class="${!data.settings.keepAwake ? 'on' : ''}" data-action="awake" data-v="0">Off</button></div></div>
+    </div>
+    <div class="card">
+      <div class="small muted">Golf Tracker v${APP_VERSION} · data format ${SCHEMA}<br>
+      Opened ${isStandalone() ? 'from Home Screen' : 'in a browser tab'}${storagePersisted === true ? ' · storage protected' : ''}</div>
+      <button class="btn danger block" style="margin-top:12px" data-action="clearAll">Delete all data on this device</button>
+    </div>`;
+}
+
+function backupName(){
+  const d = new Date(), p = n => String(n).padStart(2, '0');
+  return `golf-tracker-backup_v${APP_VERSION}_${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}.json`;
+}
+function backupJSON(){
+  const photos = {};
+  photoIdsIn(data).forEach(id => { const u = photoCache.get(id); if(u) photos[id] = u; });
+  return JSON.stringify({app:APP_ID, schema:SCHEMA, appVersion:APP_VERSION, exportedAt:new Date().toISOString(), data, photos});
+}
+function markBackedUp(){
+  data.meta.lastBackupAt = Date.now();
+  data.meta.changesSinceBackup = 0;
+  save(false);
+  render();
+}
+function downloadFile(json, name){
+  const blob = new Blob([json], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name; a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+async function doBackup(forceDownload){
+  if(!photosLoaded && photoIdsIn(data).size && !photoStoreError) return alertBox('Scorecard photos are still loading. Try again in a moment.');
+  const json = backupJSON(), name = backupName();
+  let file = null;
+  try { file = new File([json], name, {type:'application/json'}); } catch(_){}
+  if(!forceDownload && file && navigator.canShare && navigator.canShare({files:[file]})){
+    try {
+      await navigator.share({files:[file], title:'Golf Tracker backup'});
+      markBackedUp(); toast('Backup saved');
+      return;
+    } catch(e){
+      if(e && e.name === 'AbortError'){ toast('Backup cancelled — nothing saved'); return; }
+      // share failed for another reason: fall back to download
+    }
+  }
+  downloadFile(json, name);
+  markBackedUp();
+  toast('Backup downloaded — check your Downloads');
+}
+
+function readBackupObject(obj){
+  if(!obj || typeof obj !== 'object') return null;
+  if(obj.app === APP_ID && obj.data) return obj.data;
+  if(obj.app === APP_ID && Array.isArray(obj.sessions)) return obj; // raw data object
+  return null;
+}
+async function handleRestoreFile(file){
+  let text;
+  try { text = await file.text(); } catch(e){ return alertBox('Could not read that file.'); }
+  let obj; try { obj = JSON.parse(text); } catch(e){ return alertBox('That is not a Golf Tracker backup file (could not read it).'); }
+  const raw = readBackupObject(obj);
+  if(!raw) return alertBox('That file is not a Golf Tracker backup.');
+  const incoming = normalise(raw);
+  const balls = incoming.sessions.concat(incoming.rounds).reduce((a, s) => a + s.shots.length, 0);
+  const when = obj.exportedAt ? fmtDate(Date.parse(obj.exportedAt)) + ' ' + fmtTime(Date.parse(obj.exportedAt)) : 'unknown date';
+  const curBalls = data.sessions.concat(data.rounds).reduce((a, s) => a + s.shots.length, 0);
+  const inPhotos = obj.photos && typeof obj.photos === 'object' ? obj.photos : {};
+  const choice = await choose(`Restore this backup?`,
+    `Backup from <b>${esc(when)}</b>${obj.appVersion ? ' (app v' + esc(obj.appVersion) + ')' : ''}: <b>${incoming.sessions.length}</b> sessions, <b>${balls}</b> shots, <b>${incoming.rounds.length}</b> rounds.<br><br>This device has ${data.sessions.length} sessions, ${curBalls} shots, ${data.rounds.length} rounds.`,
+    [{id:'replace', label:'Replace everything with the backup', cls:'primary'},
+     {id:'merge', label:'Merge (keep both, no duplicates)'},
+     {id:'cancel', label:'Cancel', cls:'ghost'}]);
+  if(choice === 'cancel' || !choice) return;
+  try { localStorage.setItem(PREV_KEY, JSON.stringify(data)); } catch(_){}
+  let photoFail = 0;
+  for(const [pid, url] of Object.entries(inPhotos)){
+    if(typeof url !== 'string' || !/^data:(image\/|application\/pdf)/.test(url) || photoCache.get(pid) === url) continue;
+    try { await photoPut(pid, url); } catch(e){ photoFail++; }
+  }
+  if(choice === 'replace'){
+    const keep = {settings: data.settings};
+    data = incoming;
+    data.settings = Object.assign({}, incoming.settings, {hideHomeTip: keep.settings.hideHomeTip});
+  } else {
+    const byId = new Map(data.sessions.map(s => [s.id, s]));
+    incoming.sessions.forEach(s => {
+      const mine = byId.get(s.id);
+      if(!mine) byId.set(s.id, s);
+      else if(s.shots.length > mine.shots.length || (s.shots.length === mine.shots.length && s.updatedAt > mine.updatedAt)) byId.set(s.id, s);
+    });
+    const bagIds = new Set(data.bag.map(c => c.id));
+    incoming.bag.forEach(c => { if(!bagIds.has(c.id)) data.bag.push(c); });
+    const p = data.profile, ip = incoming.profile;
+    ['name','surname','photo','homeCourse','bestScoreCourse','bestScoreDate'].forEach(k => { if(!p[k] && ip[k]) p[k] = ip[k]; });
+    if(p.handicap === null && ip.handicap !== null) p.handicap = ip.handicap;
+    if(p.bestScore === null && ip.bestScore !== null) p.bestScore = ip.bestScore;
+    const hd = new Set(p.handicapHistory.map(x => x.d));
+    ip.handicapHistory.forEach(x => { if(!hd.has(x.d)) p.handicapHistory.push(x); });
+    p.handicapHistory.sort((a, b) => a.d - b.d);
+    const rById = new Map(data.rounds.map(r => [r.id, r]));
+    incoming.rounds.forEach(r => {
+      const mine = rById.get(r.id);
+      if(!mine || r.shots.length > mine.shots.length || (r.shots.length === mine.shots.length && r.updatedAt > mine.updatedAt)) rById.set(r.id, r);
+    });
+    Object.keys(incoming.courses || {}).forEach(k => { if(!data.courses[k]) data.courses[k] = incoming.courses[k]; });
+    data = normalise(Object.assign({}, data, {sessions: Array.from(byId.values()), rounds: Array.from(rById.values())}));
+  }
+  data.meta.lastBackupAt = Math.max(data.meta.lastBackupAt || 0, obj.exportedAt ? Date.parse(obj.exportedAt) : 0);
+  data.meta.changesSinceBackup = choice === 'merge' ? 1 : 0;
+  loadError = null;
+  const ok = save(false);
+  render();
+  toast(ok ? (choice === 'replace' ? 'Backup restored' : 'Backup merged') : 'Restore did not save!');
+  if(photoFail) alertBox(`${plural(photoFail, 'scorecard photo')} could not be stored on this phone. Everything else was restored.`);
+}
+
+/* ---------- sheet / modal / toast ---------- */
+function openSheet(html){
+  $('#sheetInner').innerHTML = html;
+  $('#overlay').classList.add('show');
+  requestAnimationFrame(() => $('#sheet').classList.add('show'));
+}
+function closeSheet(){
+  $('#sheet').classList.remove('show');
+  $('#overlay').classList.remove('show');
+}
+let modalResolve = null;
+function choose(title, html, buttons){
+  return new Promise(res => {
+    modalResolve = res;
+    $('#modalBox').innerHTML = `<h3>${title}</h3><p>${html}</p><div class="btns">${buttons.map(b => `<button class="btn block ${b.cls || ''}" data-action="modalChoice" data-id="${b.id}">${b.label}</button>`).join('')}</div>`;
+    $('#modal').classList.add('show');
+  });
+}
+function alertBox(msg){ return choose('Heads up', esc(msg), [{id:'ok', label:'OK', cls:'primary'}]); }
+function confirmBox(title, msg, yes, danger){
+  return choose(title, msg, [{id:'yes', label:yes, cls: danger ? 'danger' : 'primary'}, {id:'no', label:'Cancel', cls:'ghost'}]).then(v => v === 'yes');
+}
+let toastTimer;
+function toast(msg, ms = 1700){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), ms);
+}
+
+/* ---------- forgotten session / round check ---------- */
+const STALE_MS = 8 * 3600e3;
+function lastActivity(x){ const last = x.shots.length ? x.shots[x.shots.length - 1].t : 0; return Math.max(x.startedAt || 0, last || 0, x.updatedAt || 0); }
+let staleChecking = false;
+async function checkStale(){
+  if(staleChecking || lockView || modalResolve) return;
+  staleChecking = true;
+  try {
+    const s = activeSession();
+    if(s && Date.now() - lastActivity(s) > STALE_MS){
+      const c = await choose('Range session still open', `Your range session from <b>${fmtDate(s.startedAt)}</b> was never ended. Last activity ${ago(lastActivity(s))}.`,
+        [{id:'end', label:'End it now', cls:'primary'}, {id:'keep', label:'Keep going with it', cls:'ghost'}]);
+      if(c === 'end'){
+        if(!s.shots.length) data.sessions = data.sessions.filter(x => x !== s);
+        else { s.endedAt = lastActivity(s); s.updatedAt = Date.now(); }
+        save(); render(); toast('Old session ended');
+      } else { s.updatedAt = Date.now(); save(false); }
+    }
+    const r = activeRound();
+    if(r && Date.now() - lastActivity(r) > STALE_MS){
+      const c = await choose('Round still open', `Your round${r.course ? ' at <b>' + esc(r.course) + '</b>' : ''} on ${fmtISO(r.date)} was never finished. Last activity ${ago(lastActivity(r))}.`,
+        [{id:'finish', label:'Finish it now', cls:'primary'}, {id:'keep', label:'Keep going with it', cls:'ghost'}]);
+      if(c === 'finish'){ ui.tab = 'rounds'; render(); openRoundSheet(r.id, 'finish'); }
+      else { r.updatedAt = Date.now(); save(false); }
+    }
+  } finally { staleChecking = false; }
+}
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible' && !lockView) setTimeout(checkStale, 400); });
+
+/* ---------- screen wake lock ---------- */
+let wakeLock = null;
+async function updateWakeLock(){
+  // range sessions only: on the course the phone should sleep in your pocket (saves battery, no stray taps)
+  const want = !!(activeSession() && ui.tab === 'range' && !lockView && data.settings.keepAwake && document.visibilityState === 'visible');
+  try {
+    if(want && !wakeLock && navigator.wakeLock){
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => { wakeLock = null; });
+    } else if(!want && wakeLock){ await wakeLock.release(); wakeLock = null; }
+  } catch(_){ wakeLock = null; }
+}
+document.addEventListener('visibilitychange', updateWakeLock);
+
+/* ---------- actions ---------- */
+const actions = {
+  tab: el => { ui.tab = el.dataset.tab; closeSheet(); $('#viewer').classList.remove('show'); render(); window.scrollTo(0, 0); },
+  start: () => {
+    const now = Date.now();
+    data.sessions.push({id:uid(), startedAt:now, endedAt:null, updatedAt:now, shots:[]});
+    save(); render(); toast('Session started');
+  },
+  end: async () => {
+    const s = activeSession(); if(!s) return;
+    if(!s.shots.length){
+      const del = await confirmBox('End session?', 'No balls were logged, so this empty session will be removed.', 'End and remove');
+      if(!del) return;
+      data.sessions = data.sessions.filter(x => x !== s); save(false); render(); return;
+    }
+    const ok = await confirmBox('End this session?', `${s.shots.length} shots logged. You can reopen it from History if needed.`, 'End session');
+    if(!ok) return;
+    s.endedAt = Date.now(); s.updatedAt = s.endedAt;
+    save(); render();
+    const b = await choose('Session saved ✓', 'Back up now so it\'s safe off this phone too?', [{id:'yes', label:'Back up now', cls:'primary'}, {id:'no', label:'Later', cls:'ghost'}]);
+    if(b === 'yes') doBackup(false);
+  },
+  club: el => { data.settings[ctxClubKey(el.dataset.ctx)] = el.dataset.club; resetToggles(); save(false); render(); },
+  result: el => { ui.result = ui.result === el.dataset.r ? null : el.dataset.r; $('#resultRow').innerHTML = resultButtons(); },
+  gir: el => { ui.gir = ui.gir === el.dataset.g ? null : el.dataset.g; $('#girRow').innerHTML = girButtons(); },
+  strike: el => { ui.strike = ui.strike === el.dataset.k ? 'clean' : el.dataset.k; $('#togRow').innerHTML = toggleChips(); },
+  line: el => { ui.line = ui.line === el.dataset.l ? null : el.dataset.l; $('#togRow').innerHTML = toggleChips(); },
+  shape: el => {
+    const ctx = el.dataset.ctx || 'range';
+    const c = ctxClub(ctx); if(!c) return;
+    const sh = {c:c.id, s:el.dataset.shape, k:ui.strike};
+    if(ui.line) sh.l = ui.line;
+    if(ctx === 'round' && ui.result) sh.r = ui.result;
+    if(ctx === 'round' && ui.gir) sh.g = ui.gir;
+    if(!addDist(sh)) return;
+    const r = ctx === 'round' ? activeRound() : null;
+    if(r && r.mode === 'holes'){
+      sh.h = r.cur;
+      if(sh.r === 'water'){ r.pen[r.cur] = (r.pen[r.cur] || 0) + 1; setTimeout(() => toast('Water: 1 penalty stroke added'), 1800); }
+    }
+    logShot(ctx, sh);
+  },
+  putt: el => {
+    const ctx = el.dataset.ctx || 'range'; const c = ctxClub(ctx); if(!c) return;
+    const pt = {c:c.id, s:el.dataset.r}; if(!addDist(pt)) return;
+    const r = ctx === 'round' ? activeRound() : null;
+    if(r && r.mode === 'holes') pt.h = r.cur;
+    logShot(ctx, pt);
+    if(r && r.mode === 'holes' && pt.s === 'holed') holedOut(r);
+  },
+  hole: el => moveHole(+el.dataset.d),
+  editShot: el => openEditShot(el.dataset.ctx, +el.dataset.t),
+  eSet: el => {
+    const e = ui.edit; if(!e) return;
+    const [k, v] = el.dataset.v.split(':');
+    if(v) e.draft[k] = v; else delete e.draft[k];
+    renderEditSheet(false);
+  },
+  eSave: () => {
+    const e = ui.edit; if(!e) return;
+    const f = findShot(e.ctx, e.t); if(!f){ closeSheet(); return; }
+    const x = Object.assign({}, e.draft);
+    const c = $('#eClub') ? $('#eClub').value : x.c; if(CLUB[c]) x.c = c;
+    if($('#eDist')){ const r = parseDist($('#eDist').value); if(!r.ok) return alertBox('Distance should be a number of metres, e.g. 145.'); if(r.v) x.d = r.v; else delete x.d; }
+    waterPenalty(f.s, x.h, f.shot.r, x.r);
+    f.s.shots[f.i] = x; f.s.updatedAt = Date.now();
+    ui.edit = null; save(); closeSheet(); render(); toast('Shot updated');
+  },
+  eDelete: async () => {
+    const e = ui.edit; if(!e) return;
+    const ok = await confirmBox('Delete this shot?', 'It will be removed from this session and your stats.', 'Delete shot', true);
+    if(!ok) return;
+    const f = findShot(e.ctx, e.t); if(!f){ closeSheet(); return; }
+    waterPenalty(f.s, f.shot.h, f.shot.r, null);
+    f.s.shots.splice(f.i, 1); f.s.updatedAt = Date.now();
+    ui.edit = null; save(); closeSheet(); render(); toast('Shot deleted');
+  },
+  distStep: el => {
+    const inp = $('#distIn'); const c = ctxClub('round'); if(!inp || !c) return;
+    const step = c.type === 'putter' ? 0.5 : 5;
+    let v = parseFloat((inp.value || '').replace(',', '.'));
+    v = isNaN(v) ? distBaseline(c) : v + (+el.dataset.d) * step;
+    v = Math.max(0, Math.min(450, Math.round(v * 10) / 10));
+    inp.value = v ? fmtM(v) : '';
+  },
+  distClear: () => { const inp = $('#distIn'); if(inp) inp.value = ''; },
+  goHole: el => { const r = activeRound(); if(!r) return; r.cur = +el.dataset.h; ensurePar(r, r.cur); save(false); render(); },
+  par: el => { const r = activeRound(); if(!r) return; r.par[r.cur] = +el.dataset.v; rememberPars(r); save(); render(); },
+  hscore: el => {
+    const r = activeRound(); if(!r) return; const h = r.cur, i = holeInfo(r, h), d = +el.dataset.d;
+    const base = i.shots.length + i.pen, cur = i.score || 0;
+    const next = Math.min(20, Math.max(cur + d, i.shots.length ? 1 : 0, i.putts));
+    if(next === cur) return;
+    if(next - base) r.adj[h] = next - base; else delete r.adj[h];
+    r.updatedAt = Date.now(); save(); render();
+  },
+  hputts: el => {
+    const r = activeRound(); if(!r) return; const h = r.cur, i = holeInfo(r, h), d = +el.dataset.d;
+    const logged = i.shots.filter(x => isPutt(x.c)).length, next = Math.min(10, Math.max(0, i.putts + d));
+    if(next === i.putts) return;
+    if(next - logged) r.padj[h] = next - logged; else delete r.padj[h];
+    // putts are part of the score: a putt added beyond the strokes counted adds a stroke too
+    if(next > (i.score || 0)){ const a = (r.adj[h] || 0) + next - (i.score || 0); if(a) r.adj[h] = a; else delete r.adj[h]; }
+    r.updatedAt = Date.now(); save(); render();
+  },
+  pen: el => { const r = activeRound(); if(!r) return; const v = Math.max(0, (r.pen[r.cur] || 0) + (+el.dataset.d)); if(v) r.pen[r.cur] = v; else delete r.pen[r.cur]; save(); render(); },
+  undo: el => {
+    const s = ctxTarget(el.dataset.ctx || 'range'); if(!s || !s.shots.length) return;
+    let x;
+    if(s.mode === 'holes'){
+      const k = s.shots.map(y => y.h).lastIndexOf(s.cur); if(k < 0) return;
+      x = s.shots.splice(k, 1)[0];
+      if(x.r === 'water' && s.pen[s.cur]){ s.pen[s.cur]--; if(!s.pen[s.cur]) delete s.pen[s.cur]; }
+    } else x = s.shots.pop();
+    s.updatedAt = Date.now(); save(); render();
+    toast(`Removed ${CLUB[x.c].short}: ${shotLabel(x)}`);
+  },
+  closeSheet: () => closeSheet(),
+  statsView: el => { ui.statsView = el.dataset.v; render(); },
+  histFilter: el => { ui.histFilter = el.dataset.f; render(); },
+  historyCourse: () => { ui.histFilter = 'course'; ui.tab = 'history'; render(); window.scrollTo(0, 0); },
+  jump: el => { const t = document.getElementById(el.dataset.to); if(t) window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'}); },
+  rdHoles: el => { keepRdCourse(); ui.rd.holes = +el.dataset.v === 9 ? 9 : 18; render(); },
+  rdHome: () => { ui.rd.course = data.profile.homeCourse || ''; render(); },
+  rdStart: el => { keepRdCourse(); ui.rd.start = +el.dataset.v === 10 ? 10 : 1; render(); },
+  beginRound: () => {
+    if(activeRound()) return;
+    keepRdCourse();
+    const rd = ui.rd || {holes:18, start:1, course:''}, now = Date.now(), course = (rd.course || '').trim();
+    const known = data.courses[courseKey(course)];
+    const r = {id:uid(), startedAt:now, endedAt:null, updatedAt:now, date:isoDay(now), course, holes:rd.holes, score:null,
+      photos:{cover:null, front:null, back:null}, shots:[], mode:'holes', start:rd.start, cur:rd.start,
+      par:Object.assign({}, known ? known.par : {}), pen:{}, adj:{}, padj:{}};
+    ensurePar(r, r.cur);
+    const dr = activeClubs().find(c => c.type === 'driver');
+    if(dr && r.par[r.cur] >= 4) data.settings.lastRoundClub = dr.id;
+    data.settings.lastHoles = rd.holes;
+    data.rounds.push(r);
+    ui.rd = null;
+    resetToggles(); save(); render(); window.scrollTo(0, 0);
+    toast(known ? `${rd.holes} holes — pars loaded for ${known.name}` : `${rd.holes} holes — good luck!`);
+  },
+  openCard: () => openCardSheet(),
+  cardPar: el => {
+    const r = activeRound(); if(!r) return;
+    r.par[+el.dataset.h] = +el.dataset.v; rememberPars(r); r.updatedAt = Date.now(); save();
+    const t = $('#cardTbl'); if(t) t.innerHTML = scorecardTable(r, true);
+    render();
+  },
+  cardHole: el => { const r = activeRound(); if(!r) return; r.cur = +el.dataset.h; ensurePar(r, r.cur); resetToggles(); save(false); closeSheet(); render(); window.scrollTo(0, 0); },
+  finishRound: () => { const r = activeRound(); if(r) openRoundSheet(r.id, 'finish'); },
+  cardOnly: () => openRoundSheet(null, 'card'),
+  editRound: el => openRoundSheet(el.dataset.id, 'edit'),
+  saveRound: () => saveRoundSheet(),
+  pickCard: el => { ui.cardSide = el.dataset.side; const i = $('#cardInput'); i.value = ''; i.click(); },
+  removeCard: el => { ui.cardPending[el.dataset.side] = ''; refreshCardTiles(); },
+  openRound: el => openRoundDetail(el.dataset.id),
+  viewCard: el => {
+    const r = data.rounds.find(x => x.id === el.dataset.id); if(!r) return;
+    const u = photoCache.get(r.photos[el.dataset.side]); if(!u) return;
+    const pdf = isPdfUrl(u), img = $('#viewerImg');
+    ui.viewerUrl = u; ui.viewerName = `scorecard-${el.dataset.side}-${r.date}.pdf`;
+    img.classList.toggle('pdfimg', pdf); img.hidden = false;
+    img.src = pdf ? blobUrlFor(u) : u;
+    $('#viewerPdf').hidden = !pdf; $('#viewerNoPrev').hidden = true;
+    $('#viewer').classList.add('show');
+  },
+  openPdf: async () => {
+    const u = ui.viewerUrl; if(!isPdfUrl(u)) return;
+    const file = new File([dataUrlToBlob(u)], ui.viewerName || 'scorecard.pdf', {type:'application/pdf'});
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      try { await navigator.share({files:[file]}); return; } catch(e){ if(e && e.name === 'AbortError') return; }
+    }
+    const a = document.createElement('a'); a.href = blobUrlFor(u); a.target = '_blank'; a.rel = 'noopener'; a.download = file.name; document.body.appendChild(a); a.click(); a.remove();
+  },
+  closeViewer: () => { $('#viewer').classList.remove('show'); const i = $('#viewerImg'); i.removeAttribute('src'); i.classList.remove('pdfimg'); $('#viewerPdf').hidden = true; $('#viewerNoPrev').hidden = true; ui.viewerUrl = null; },
+  reopenRound: el => {
+    const r = data.rounds.find(x => x.id === el.dataset.id); if(!r || activeRound()) return;
+    r.endedAt = null; r.updatedAt = Date.now(); save(); closeSheet(); ui.tab = 'rounds'; render(); toast('Round reopened');
+  },
+  deleteRound: async el => {
+    const r = data.rounds.find(x => x.id === el.dataset.id); if(!r) return;
+    const ok = await confirmBox('Delete this round?', `${esc(r.course || 'Round')}, ${fmtISO(r.date)}: ${plural(r.shots.length, 'shot')} and its scorecard photos. This can't be undone unless you have a backup.`, 'Delete round', true);
+    if(!ok) return;
+    data.rounds = data.rounds.filter(x => x !== r);
+    save(); closeSheet(); render(); toast('Round deleted');
+    prunePhotos();
+  },
+  editProfile: () => openProfileSheet(),
+  pickPhoto: () => { const i = $('#photoInput'); i.value = ''; i.click(); },
+  removePhoto: () => {
+    ui.pendingPhoto = '';
+    $('#pAvatar').innerHTML = avatarInner('', $('#pName').value, $('#pSurname').value);
+    $('#pPhotoBtns').innerHTML = photoButtons(false);
+  },
+  saveProfile: () => {
+    const p = data.profile;
+    const h = parseHcp($('#pHcp').value);
+    if(!h.ok) return alertBox('Handicap should be a number like 12.4, or +1.2 for a plus handicap (max 54).');
+    const bTxt = $('#pBest').value.trim();
+    const best = bTxt ? parseInt(bTxt, 10) : null;
+    if(bTxt && (!Number.isInteger(best) || best < 40 || best > 200 || String(best) !== bTxt)) return alertBox('Best score should be a whole number, e.g. 78.');
+    p.name = $('#pName').value.trim();
+    p.surname = $('#pSurname').value.trim();
+    if(ui.pendingPhoto !== undefined) p.photo = ui.pendingPhoto;
+    p.homeCourse = $('#pCourse').value.trim();
+    if(h.v !== p.handicap && h.v !== null) p.handicapHistory.push({d:Date.now(), v:h.v});
+    p.handicap = h.v;
+    p.bestScore = best;
+    p.bestScoreCourse = $('#pBestCourse').value.trim();
+    p.bestScoreDate = $('#pBestDate').value;
+    save(); closeSheet(); render(); toast('Profile saved');
+  },
+  addClub: () => openClubSheet(null),
+  editClub: el => openClubSheet(el.dataset.id),
+  saveClub: el => {
+    const name = $('#fName').value.trim();
+    if(!name) return alertBox('Give the club a name, e.g. "7 Iron".');
+    const type = $('#fType').value;
+    const short = ($('#fShort').value.trim() || autoShort(name, type)).slice(0, 4);
+    const make = $('#fMake').value.trim(), model = $('#fModel').value.trim();
+    const id = el.dataset.id;
+    if(id){
+      const c = CLUB[id]; if(!c) return;
+      const n = lifetimeCounts()[id] || 0;
+      if(n && ((c.type === 'putter') !== (type === 'putter'))) return alertBox("This club has logged shots, so it can't switch between putter and full-swing club.");
+      Object.assign(c, {name, type, short, make, model});
+      save(); closeSheet(); render(); toast('Club updated');
+    } else {
+      const c = {id:uid(), short, name, make, model, type, retired:false, addedAt:Date.now(), retiredAt:null};
+      data.bag.splice(insertIndex(type, name), 0, c);
+      save(); closeSheet(); render(); toast(`${name} added to the bag`);
+    }
+  },
+  moveClub: el => {
+    const c = CLUB[el.dataset.id]; if(!c) return;
+    const i = data.bag.indexOf(c), j = i + (+el.dataset.dir);
+    if(j < 0 || j >= data.bag.length) return;
+    data.bag.splice(i, 1); data.bag.splice(j, 0, c);
+    save(false); render(); openClubSheet(c.id);
+  },
+  retireClub: async el => {
+    const c = CLUB[el.dataset.id]; if(!c) return;
+    const n = lifetimeCounts()[c.id] || 0;
+    const ok = await confirmBox(`Retire ${esc(c.name)}?`, `${esc(makeModel(c) || c.name)} leaves your club buttons on the range and the course. Its ${plural(n, c.type === 'putter' ? 'putt' : 'shot')} stay in History and Stats. You can return it to the bag later.`, 'Retire club');
+    if(!ok) return;
+    c.retired = true; c.retiredAt = Date.now();
+    if(data.settings.lastClub === c.id){ const f = activeClubs()[0]; data.settings.lastClub = f ? f.id : ''; }
+    save(); closeSheet(); render(); toast(`${c.name} retired`);
+  },
+  unretireClub: el => {
+    const c = CLUB[el.dataset.id]; if(!c) return;
+    c.retired = false; c.retiredAt = null;
+    save(); closeSheet(); render(); toast(`${c.name} is back in the bag`);
+  },
+  deleteClub: async el => {
+    const c = CLUB[el.dataset.id]; if(!c) return;
+    if(lifetimeCounts()[c.id]) return alertBox('This club has logged shots. Retire it instead so its history is kept.');
+    const ok = await confirmBox(`Delete ${esc(c.name)}?`, 'Nothing has been logged with it, so nothing else changes.', 'Delete club', true);
+    if(!ok) return;
+    data.bag = data.bag.filter(x => x !== c);
+    if(data.settings.lastClub === c.id){ const f = activeClubs()[0]; data.settings.lastClub = f ? f.id : ''; }
+    save(); closeSheet(); render(); toast('Club deleted');
+  },
+  period: el => { ui.period = el.dataset.p; render(); },
+  source: el => { ui.source = el.dataset.s; render(); },
+  openFilters: () => openSheet(filterSheetHTML()),
+  fSource: el => { ui.source = el.dataset.v; render(); $('#sheetInner').innerHTML = filterSheetHTML(); },
+  fPeriod: el => { ui.period = el.dataset.v; render(); $('#sheetInner').innerHTML = filterSheetHTML(); },
+  fClean: el => { ui.cleanOnly = el.dataset.v === 'clean'; render(); $('#sheetInner').innerHTML = filterSheetHTML(); },
+  statClub: el => { ui.statClub = el.dataset.club; render(); },
+  lockGo: el => { lockView = el.dataset.v; renderLock(); },
+  copyCodes: () => copyCodes(pendingCodes || []),
+  saveCodes: () => { const a = getAuth(); saveCodesFile(a ? a.user : '', pendingCodes || []); },
+  codesDone: () => {
+    if(!$('#codesSaved').checked) return lockErr('Tick the box once you have saved your codes.');
+    unlockApp(); toast('Login created');
+  },
+  doneNewCodes: () => { pendingCodes = null; closeSheet(); render(); },
+  secSheet: el => openSecSheet(el.dataset.v),
+  signOut: async () => {
+    const ok = await confirmBox('Sign out?', 'You\'ll need your username and password to open the app again.', 'Sign out');
+    if(!ok) return;
+    clearSession(); showLock('login');
+  },
+  cleanOnly: () => { ui.cleanOnly = !ui.cleanOnly; render(); },
+  openClub: el => { ui.openClub = ui.openClub === el.dataset.club ? null : el.dataset.club; render(); },
+  openSession: el => openSessionSheet(el.dataset.id),
+  reopen: el => {
+    const s = data.sessions.find(x => x.id === el.dataset.id); if(!s || activeSession()) return;
+    s.endedAt = null; s.updatedAt = Date.now(); save(); closeSheet(); ui.tab = 'range'; render(); toast('Session reopened');
+  },
+  deleteSession: async el => {
+    const s = data.sessions.find(x => x.id === el.dataset.id); if(!s) return;
+    const ok = await confirmBox('Delete this session?', `${fmtDate(s.startedAt)} — ${s.shots.length} shots. This can't be undone unless you have a backup.`, 'Delete session', true);
+    if(!ok) return;
+    data.sessions = data.sessions.filter(x => x !== s); save(); closeSheet(); render(); toast('Session deleted');
+  },
+  backup: () => doBackup(false),
+  backupDownload: () => doBackup(true),
+  restore: () => { const i = $('#restoreInput'); i.value = ''; i.click(); },
+  undoRestore: async () => {
+    let prev = null; try { prev = localStorage.getItem(PREV_KEY); } catch(_){}
+    if(!prev) return;
+    const ok = await confirmBox('Undo last restore?', 'This puts back the data you had just before your last restore or delete.', 'Undo restore');
+    if(!ok) return;
+    try { data = normalise(JSON.parse(prev)); localStorage.removeItem(PREV_KEY); } catch(e){ return alertBox('Could not undo.'); }
+    save(); render(); toast('Previous data restored');
+  },
+  hand: el => { data.settings.hand = el.dataset.h; save(false); render(); },
+  awake: el => { data.settings.keepAwake = el.dataset.v === '1'; save(false); render(); },
+  hideTip: () => { data.settings.hideHomeTip = true; save(false); render(); },
+  clearAll: async () => {
+    const ok = await confirmBox('Delete all data?', 'Every session and round on this device will be removed. Download a backup first if you might want it back.', 'Delete everything', true);
+    if(!ok) return;
+    try { localStorage.setItem(PREV_KEY, JSON.stringify(data)); } catch(_){}
+    const settings = data.settings;
+    data = emptyData(); data.settings = settings; data.meta.lastBackupAt = 0;
+    save(false); render(); toast('All data deleted');
+    prunePhotos();
+  },
+  modalChoice: el => { $('#modal').classList.remove('show'); const r = modalResolve; modalResolve = null; if(r) r(el.dataset.id); }
+};
+// Ignore a second tap that lands too soon after the first (stops double-logged shots and duplicate rounds)
+const TAP_GUARD = {shape:['log', 450], putt:['log', 450], start:['start', 900], beginRound:['beginRound', 900], saveRound:['saveRound', 400],
+  cardOnly:['cardOnly', 500], finishRound:['finishRound', 500], end:['end', 600], saveProfile:['save', 600], saveClub:['save', 600]};
+const lastTap = {};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-action]');
+  if(!el) return;
+  const fn = actions[el.dataset.action];
+  if(!fn) return;
+  e.preventDefault();
+  if(el.closest('#sheet') && !$('#sheet').classList.contains('show')) return;   // sheet is closing
+  const g = TAP_GUARD[el.dataset.action];
+  if(g){ const now = Date.now(); if(now - (lastTap[g[0]] || 0) < g[1]) return; lastTap[g[0]] = now; }
+  fn(el);
+});
+$('#photoInput').addEventListener('change', e => {
+  const f = e.target.files && e.target.files[0];
+  e.target.value = '';
+  if(f) processPhoto(f);
+});
+$('#cardInput').addEventListener('change', e => {
+  const f = e.target.files && e.target.files[0];
+  e.target.value = '';
+  if(f && ui.cardSide) processCardPhoto(f, ui.cardSide);
+});
+$('#restoreInput').addEventListener('change', e => {
+  const f = e.target.files && e.target.files[0];
+  e.target.value = '';            // lets the same file be chosen again later
+  if(f) handleRestoreFile(f);
+});
+
+/* ---------- login: username, password, recovery codes ----------
+   The password and codes are stored only as salted hashes, on this device.
+   The login is kept separate from the app data and from backups. */
+const AUTH_KEY = KEY + ':auth', SESS_KEY = KEY + ':session', AUTH_ITER = 210000;
+let lockView = null, pendingCodes = null, recoverIdx = null, failCount = 0, lockUntil = 0;
+const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const unb64 = str => Uint8Array.from(atob(str), c => c.charCodeAt(0));
+function randBytes(n){ const a = new Uint8Array(n); crypto.getRandomValues(a); return a; }
+async function pbkdf2(pw, salt, iter){
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+  return b64(await crypto.subtle.deriveBits({name:'PBKDF2', hash:'SHA-256', salt, iterations:iter}, key, 256));
+}
+async function sha(str){ return b64(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))); }
+function newCodes(){
+  const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';           // no 0/O or 1/I to mix up
+  return Array.from({length:8}, () => { const r = randBytes(8); let c = ''; for(let i = 0; i < 8; i++) c += A[r[i] % 32]; return c.slice(0, 4) + '-' + c.slice(4); });
+}
+const normCode = c => (c || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const sameUser = (a, b) => (a || '').trim().toLowerCase() === (b || '').trim().toLowerCase();
+function getAuth(){ try { const a = JSON.parse(localStorage.getItem(AUTH_KEY) || 'null'); return a && a.user && a.hash ? a : null; } catch(_){ return null; } }
+function putAuth(a){ a.updatedAt = Date.now(); const j = JSON.stringify(a); localStorage.setItem(AUTH_KEY, j); return localStorage.getItem(AUTH_KEY) === j; }
+async function hashCodes(codes){ const salt = b64(randBytes(16)); return {codeSalt: salt, codes: await Promise.all(codes.map(async c => ({h: await sha(salt + normCode(c)), used:false})))}; }
+async function checkPassword(a, pw){ return (await pbkdf2(pw, unb64(a.salt), a.iter || AUTH_ITER)) === a.hash; }
+async function setPassword(a, pw){ const salt = randBytes(16); a.salt = b64(salt); a.iter = AUTH_ITER; a.hash = await pbkdf2(pw, salt, AUTH_ITER); }
+const codesLeft = a => a ? a.codes.filter(c => !c.used).length : 0;
+function isUnlocked(){
+  const a = getAuth(); if(!a) return false;
+  try { if(sessionStorage.getItem(SESS_KEY) === a.user) return true; } catch(_){}
+  try {
+    const ses = JSON.parse(localStorage.getItem(SESS_KEY) || 'null');
+    if(ses && ses.u === a.user && ses.exp > Date.now()){ ses.exp = Date.now() + 30 * 864e5; localStorage.setItem(SESS_KEY, JSON.stringify(ses)); return true; }
+  } catch(_){}
+  return false;
+}
+function setSession(user, keep){
+  try { sessionStorage.setItem(SESS_KEY, user); } catch(_){}
+  if(keep) localStorage.setItem(SESS_KEY, JSON.stringify({u:user, exp:Date.now() + 30 * 864e5}));
+  else localStorage.removeItem(SESS_KEY);
+}
+function clearSession(){ try { sessionStorage.removeItem(SESS_KEY); } catch(_){} localStorage.removeItem(SESS_KEY); }
+function pwProblem(pw, pw2){
+  if(pw.length < 6) return 'Password needs at least 6 characters.';
+  if(pw !== pw2) return 'The two passwords don\'t match.';
+  return '';
+}
+function codesFileText(user, codes){
+  return `Golf Tracker recovery codes\nUsername: ${user}\nCreated: ${fmtDate(Date.now())} ${fmtTime(Date.now())}\n\n${codes.join('\n')}\n\nEach code works once. Use one if you forget your password.\n`;
+}
+async function saveCodesFile(user, codes){
+  const txt = codesFileText(user, codes), name = 'golf-tracker-recovery-codes.txt';
+  let file = null; try { file = new File([txt], name, {type:'text/plain'}); } catch(_){}
+  if(file && navigator.canShare && navigator.canShare({files:[file]})){
+    try { await navigator.share({files:[file], title:'Golf Tracker recovery codes'}); toast('Codes saved'); return; }
+    catch(e){ if(e && e.name === 'AbortError') return; }
+  }
+  const url = URL.createObjectURL(new Blob([txt], {type:'text/plain'}));
+  const el = document.createElement('a'); el.href = url; el.download = name; document.body.appendChild(el); el.click(); el.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+  toast('Codes downloaded');
+}
+async function copyCodes(codes){
+  try { await navigator.clipboard.writeText(codes.join('\n')); toast('Codes copied'); } catch(_){ toast('Copy not available here, use Save instead'); }
+}
+function codesBlock(codes){
+  return `<div class="codes">${codes.map(c => `<code>${c}</code>`).join('')}</div>
+    <div class="row" style="gap:8px"><button type="button" class="btn" style="flex:1" data-action="copyCodes">Copy</button><button type="button" class="btn" style="flex:1" data-action="saveCodes">Save to Files / Dropbox</button></div>`;
+}
+function lockLogo(){ const l = document.querySelector('link[rel="apple-touch-icon"]'); return l ? `<img class="logo" src="${l.href}" alt="">` : ''; }
+function showLock(view){
+  document.body.classList.add('locked');
+  closeSheet();
+  lockView = view;
+  $('#lock').hidden = false;
+  renderLock();
+}
+function unlockApp(){
+  document.body.classList.remove('locked');
+  $('#lock').hidden = true; $('#lock').innerHTML = '';
+  lockView = null; pendingCodes = null; recoverIdx = null;
+  render();
+  setTimeout(checkStale, 600);
+}
+function renderLock(err){
+  const a = getAuth();
+  const e = `<div class="err" id="lockErr">${err ? esc(err) : ''}</div>`;
+  let h = `<div class="inner">${lockLogo()}<h1>Golf Tracker</h1>`;
+  if(!(window.crypto && crypto.subtle)){
+    h += `<p class="sub">The login needs a secure (https) connection. Open the app from its GitHub link.</p></div>`;
+    $('#lock').innerHTML = h; return;
+  }
+  if(lockView === 'setup'){
+    h += `<p class="sub">Create your login</p>
+      <form data-form="setup" autocomplete="on">
+        <label class="field"><span>Username</span><input id="aUser" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" required></label>
+        <label class="field"><span>Password</span><input id="aPw" type="password" autocomplete="new-password" required></label>
+        <label class="field"><span>Repeat password</span><input id="aPw2" type="password" autocomplete="new-password" required></label>
+        ${e}<button class="btn primary block" type="submit">Create login</button>
+      </form>
+      <p class="note" style="text-align:center">Your sessions, rounds and photos stay on this phone. After this you'll get 8 recovery codes in case you forget your password.</p>`;
+  } else if(lockView === 'codes'){
+    h += `<p class="sub">Your recovery codes</p>
+      <p class="small ink2" style="margin:0">If you forget your password, any one of these codes lets you set a new one. Each code works once. Keep them somewhere safe <b>off this phone</b>, e.g. Dropbox or Notes. You won't see them again.</p>
+      ${codesBlock(pendingCodes || [])}
+      <label class="check"><input type="checkbox" id="codesSaved"> I've saved these codes somewhere safe</label>
+      ${e}<button class="btn primary block" type="button" data-action="codesDone">Continue to the app</button>`;
+  } else if(lockView === 'login'){
+    h += `<p class="sub">Sign in</p>
+      <form data-form="login" autocomplete="on">
+        <label class="field"><span>Username</span><input id="aUser" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" value="${a ? esc(a.user) : ''}" required></label>
+        <label class="field"><span>Password</span><input id="aPw" type="password" autocomplete="current-password" required></label>
+        <label class="check"><input type="checkbox" id="aKeep" checked> Keep me signed in on this phone</label>
+        ${e}<button class="btn primary block" type="submit">Sign in</button>
+      </form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="recover">Forgot password? Use a recovery code</button>`;
+  } else if(lockView === 'recover'){
+    h += `<p class="sub">Use a recovery code</p>
+      <form data-form="recover">
+        <label class="field"><span>Recovery code</span><input id="aCode" type="text" autocomplete="one-time-code" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="ABCD-EFGH" required></label>
+        ${e}<button class="btn primary block" type="submit">Check code</button>
+      </form>
+      <p class="note" style="text-align:center">${codesLeft(a)} of 8 codes unused.</p>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="login">Back to sign in</button>
+      <button class="linkbtn" type="button" style="color:var(--danger)" data-action="lockGo" data-v="reset">Lost your recovery codes too?</button>`;
+  } else if(lockView === 'newpw'){
+    h += `<p class="sub">Code accepted. Set a new password.</p>
+      <form data-form="newpw" autocomplete="on">
+        <label class="field"><span>Username</span><input id="aUser" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" value="${a ? esc(a.user) : ''}" required></label>
+        <label class="field"><span>New password</span><input id="aPw" type="password" autocomplete="new-password" required></label>
+        <label class="field"><span>Repeat new password</span><input id="aPw2" type="password" autocomplete="new-password" required></label>
+        ${e}<button class="btn primary block" type="submit">Save and sign in</button>
+      </form>`;
+  } else if(lockView === 'reset'){
+    h += `<p class="sub">Start again without a code</p>
+      <p class="small ink2">Without your password or a recovery code, the only way in is to <b>erase everything in the app on this phone</b>: login, sessions, rounds and scorecard photos. Then create a new login and restore your latest backup from Dropbox. Backups are not locked.</p>
+      <form data-form="reset">
+        <label class="field"><span>Type ERASE to confirm</span><input id="aErase" type="text" autocapitalize="characters" autocorrect="off" spellcheck="false" required></label>
+        ${e}<button class="btn danger block" type="submit">Erase and start again</button>
+      </form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="recover">Back</button>`;
+  }
+  $('#lock').innerHTML = h + '</div>';
+  const first = $('#lock input:not([type=checkbox])'); if(first && !first.value) setTimeout(() => { try { first.focus(); } catch(_){} }, 50);
+}
+function lockErr(msg){ const el = $('#lockErr'); if(el) el.textContent = msg; }
+function throttled(){ if(Date.now() < lockUntil){ lockErr(`Too many tries. Wait ${Math.ceil((lockUntil - Date.now()) / 1000)} seconds.`); return true; } return false; }
+function failed(msg){ failCount++; if(failCount >= 5){ failCount = 0; lockUntil = Date.now() + 30000; } lockErr(msg); }
+const authForms = {
+  setup: async () => {
+    const user = $('#aUser').value.trim(), pw = $('#aPw').value, pw2 = $('#aPw2').value;
+    if(user.length < 3) return lockErr('Username needs at least 3 characters.');
+    const prob = pwProblem(pw, pw2); if(prob) return lockErr(prob);
+    lockErr('Setting up…');
+    const a = {v:1, user, createdAt:Date.now()};
+    await setPassword(a, pw);
+    const codes = newCodes(); Object.assign(a, await hashCodes(codes));
+    if(!putAuth(a)) return lockErr('Could not save the login on this phone. Check you are not in Private Browsing.');
+    setSession(user, true);
+    pendingCodes = codes; lockView = 'codes'; renderLock();
+  },
+  login: async () => {
+    if(throttled()) return;
+    const a = getAuth(); if(!a) return showLock('setup');
+    const user = $('#aUser').value, pw = $('#aPw').value, keep = $('#aKeep').checked;
+    lockErr('Checking…');
+    if(!sameUser(user, a.user) || !(await checkPassword(a, pw))) return failed('Username or password is wrong.');
+    failCount = 0; setSession(a.user, keep); unlockApp();
+  },
+  recover: async () => {
+    if(throttled()) return;
+    const a = getAuth(); if(!a) return showLock('setup');
+    const code = normCode($('#aCode').value);
+    if(code.length !== 8) return lockErr('Codes have 8 letters and numbers, like ABCD-EFGH.');
+    const h = await sha(a.codeSalt + code);
+    const idx = a.codes.findIndex(c => !c.used && c.h === h);
+    if(idx < 0) return failed('That code is not valid or has already been used.');
+    failCount = 0; recoverIdx = idx; lockView = 'newpw'; renderLock();
+  },
+  newpw: async () => {
+    const a = getAuth(); if(!a || recoverIdx === null) return showLock('login');
+    const user = $('#aUser').value.trim(), pw = $('#aPw').value, pw2 = $('#aPw2').value;
+    if(user.length < 3) return lockErr('Username needs at least 3 characters.');
+    const prob = pwProblem(pw, pw2); if(prob) return lockErr(prob);
+    lockErr('Saving…');
+    a.codes[recoverIdx].used = true; a.user = user;
+    await setPassword(a, pw);
+    if(!putAuth(a)) return lockErr('Could not save the new password.');
+    setSession(a.user, true);
+    const left = codesLeft(a);
+    unlockApp();
+    toast(`New password saved. ${left} recovery code${left === 1 ? '' : 's'} left.`, 3200);
+    if(left <= 2) setTimeout(() => alertBox(`Only ${left} recovery code${left === 1 ? '' : 's'} left. Make a new set under Backup → Login & security.`), 600);
+  },
+  reset: async () => {
+    if($('#aErase').value.trim().toUpperCase() !== 'ERASE') return lockErr('Type ERASE to confirm.');
+    [KEY, PREV_KEY, AUTH_KEY, SESS_KEY].forEach(k => { try { localStorage.removeItem(k); } catch(_){} });
+    clearSession();
+    try { if(idbPromise){ (await idbPromise).close(); idbPromise = null; } } catch(_){}
+    try { indexedDB.deleteDatabase(IDB_NAME); } catch(_){}
+    photoCache.clear();
+    data = emptyData(); indexBag();
+    showLock('setup');
+    toast('Everything erased. Create a new login, then restore your backup.', 3500);
+  },
+  changePw: async () => {
+    const a = getAuth(); if(!a) return;
+    if(!(await checkPassword(a, $('#sCur').value))) return sheetErr('Current password is wrong.');
+    const prob = pwProblem($('#sPw').value, $('#sPw2').value); if(prob) return sheetErr(prob);
+    await setPassword(a, $('#sPw').value); putAuth(a);
+    closeSheet(); toast('Password changed');
+  },
+  changeUser: async () => {
+    const a = getAuth(); if(!a) return;
+    const user = $('#sUser').value.trim();
+    if(user.length < 3) return sheetErr('Username needs at least 3 characters.');
+    if(!(await checkPassword(a, $('#sCur').value))) return sheetErr('Password is wrong.');
+    const keep = !!localStorage.getItem(SESS_KEY);
+    a.user = user; putAuth(a); setSession(user, keep);
+    closeSheet(); render(); toast('Username changed');
+  },
+  newCodes: async () => {
+    const a = getAuth(); if(!a) return;
+    if(!(await checkPassword(a, $('#sCur').value))) return sheetErr('Password is wrong.');
+    const codes = newCodes(); Object.assign(a, await hashCodes(codes)); putAuth(a);
+    pendingCodes = codes;
+    openSheet(`<div class="grabber"></div>
+      <div class="row between" style="margin-bottom:6px"><h3 style="margin:0">New recovery codes</h3><button class="btn ghost" data-action="doneNewCodes">Done</button></div>
+      <p class="small ink2" style="margin:0">Your old codes no longer work. Save these somewhere safe off this phone. You won't see them again.</p>
+      ${codesBlock(codes)}`);
+    render();
+  }
+};
+function sheetErr(msg){ const el = $('#sheetErr'); if(el) el.textContent = msg; }
+function securityCard(){
+  const a = getAuth(); if(!a) return '';
+  const left = codesLeft(a);
+  return `<h2 id="secLogin" style="margin-top:18px">Login &amp; security</h2>
+    <div class="card">
+      <div class="small ink2">Signed in as <b>${esc(a.user)}</b></div>
+      <div class="small ink2" style="margin-top:2px">Recovery codes: <b>${left} of 8</b> unused${left <= 2 ? ' <span style="color:var(--danger);font-weight:600">— make a new set</span>' : ''}</div>
+      <div class="cards2" style="margin-top:12px">
+        <button class="btn" data-action="secSheet" data-v="changePw">Change password</button>
+        <button class="btn" data-action="secSheet" data-v="changeUser">Change username</button>
+        <button class="btn" data-action="secSheet" data-v="newCodes">New recovery codes</button>
+        <button class="btn" data-action="signOut">Sign out</button>
+      </div>
+      <div class="note">The login stops anyone else opening the app on this phone. Backup files are not password-protected, so keep them in your own Dropbox.</div>
+    </div>`;
+}
+function openSecSheet(kind){
+  const a = getAuth(); if(!a) return;
+  const cur = `<label class="field"><span>${kind === 'changePw' ? 'Current password' : 'Password'}</span><input id="sCur" type="password" autocomplete="current-password" required></label>`;
+  const body = {
+    changePw: `${cur}<label class="field"><span>New password</span><input id="sPw" type="password" autocomplete="new-password" required></label>
+      <label class="field"><span>Repeat new password</span><input id="sPw2" type="password" autocomplete="new-password" required></label>`,
+    changeUser: `<label class="field"><span>New username</span><input id="sUser" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" value="${esc(a.user)}" required></label>${cur}`,
+    newCodes: `<p class="small ink2" style="margin:0 0 10px">This replaces all your recovery codes. Old codes will stop working.</p>${cur}`
+  }[kind];
+  const title = {changePw:'Change password', changeUser:'Change username', newCodes:'New recovery codes'}[kind];
+  const btn = {changePw:'Save new password', changeUser:'Save username', newCodes:'Make new codes'}[kind];
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">${title}</h3><button class="btn ghost" type="button" data-action="closeSheet">Cancel</button></div>
+    <form data-form="${kind}">${body}<div class="err" id="sheetErr"></div><button class="btn primary block" type="submit">${btn}</button></form>`);
+}
+document.addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target.dataset && e.target.dataset.form;
+  if(f && authForms[f]) authForms[f](e.target).catch(err => { lockErr('Something went wrong. Try again.'); sheetErr('Something went wrong. Try again.'); });
+});
+
+/* ---------- start ---------- */
+load();
+if(activeSession()) ui.tab = 'range';
+else if(activeRound()) ui.tab = 'rounds';
+if(isUnlocked()){ render(); setTimeout(checkStale, 600); }
+else showLock(getAuth() ? 'login' : 'setup');
+try {
+  photoLoadAll().then(() => { if(!lockView && (ui.tab === 'rounds' || ui.tab === 'backup')) render(); })
+    .catch(() => { photoStoreError = true; photosLoaded = true; });
+} catch(_){ photoStoreError = true; photosLoaded = true; }
+</script>
+</body>
+</html>
