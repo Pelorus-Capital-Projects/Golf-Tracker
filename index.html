@@ -29,6 +29,11 @@ html,body{margin:0;padding:0}
 /* dimpled golf-ball surface behind every tab (cards, sheets and bars stay solid so text stays easy to read) */
 :root{--dimples:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.60' height='27.02' viewBox='0 0 15.60 27.02'%3E%3Cdefs%3E%3CradialGradient id='d' cx='.5' cy='.5' r='.5' fx='.64' fy='.66'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='.55' stop-color='%23f4f7f5'/%3E%3Cstop offset='.84' stop-color='%23e1e7e3'/%3E%3Cstop offset='1' stop-color='%23d0d8d3'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='15.60' height='27.02' fill='%23f5f8f6'/%3E%3Ccircle cx='0.00' cy='0.00' r='7.0' fill='url(%23d)'/%3E%3Ccircle cx='15.60' cy='0.00' r='7.0' fill='url(%23d)'/%3E%3Ccircle cx='0.00' cy='27.02' r='7.0' fill='url(%23d)'/%3E%3Ccircle cx='15.60' cy='27.02' r='7.0' fill='url(%23d)'/%3E%3Ccircle cx='7.80' cy='13.51' r='7.0' fill='url(%23d)'/%3E%3C/svg%3E");--dimple-size:15.60px 27.02px}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:#f5f8f6 var(--dimples) 0 0/var(--dimple-size) repeat;pointer-events:none}
+/* Africa and Europe (Natural Earth outlines, public domain) in Masters green, printed on the dimpled surface behind every tab */
+:root{--map:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1780'%3E%3Cpath d='M524,1677L515,1668L511,1660L506,1645L504,1637L504,1627L500,1616L499,1599L500,1595L498,1588L493,1583L487,1571L483,1561L474,1545L470,1540L466,1533L466,1523L467,1516L466,1504L468,1502L472,1489L476,1473L481,1465L486,1462L491,1452L492,1443L484,1426L481,1417L486,1413L486,1409L480,1394L479,1391L475,1386L473,1380L482,1377L474,1379L471,1376L469,1366L466,1361L458,1353L448,1341L441,1335L435,1328L432,1320L435,1324L438,1324L432,1320L429,1313L435,1308L435,1300L441,1303L444,1301L438,1300L435,1297L439,1297L439,1291L436,1290L441,1280L441,1275L443,1265L438,1256L440,1256L431,1253L430,1247L426,1247L426,1244L422,1242L422,1247L414,1247L413,1245L406,1249L395,1250L389,1246L386,1236L380,1228L374,1224L370,1223L353,1224L339,1226L334,1227L331,1231L322,1232L309,1238L298,1241L294,1244L280,1240L280,1240L281,1240L278,1237L277,1240L268,1238L249,1240L233,1245L224,1249L215,1246L205,1240L190,1228L184,1225L183,1223L175,1217L170,1214L163,1211L162,1208L158,1205L154,1201L153,1190L148,1183L148,1179L138,1175L134,1166L131,1166L131,1164L126,1163L126,1153L121,1156L119,1153L115,1152L110,1148L109,1139L108,1135L112,1136L126,1134L117,1134L114,1135L112,1132L107,1122L104,1119L100,1117L104,1115L112,1103L113,1093L118,1081L118,1068L116,1062L112,1057L115,1051L116,1045L113,1040L111,1040L108,1034L106,1038L106,1030L107,1023L114,1014L116,1007L121,998L120,997L131,987L133,983L134,975L139,963L149,957L154,944L157,940L169,937L176,933L180,929L188,924L198,909L198,904L195,900L196,890L202,880L203,873L211,864L233,852L239,840L245,824L253,822L252,825L258,832L265,834L273,832L279,833L282,830L283,834L291,835L295,835L305,827L313,823L319,822L325,817L334,813L351,812L356,809L366,807L378,807L387,810L400,804L405,807L409,804L418,808L426,806L440,800L446,802L449,809L457,804L458,807L450,816L451,823L456,826L458,833L450,843L445,848L446,854L453,859L457,858L459,863L463,864L472,868L478,869L485,868L497,871L500,874L508,875L511,879L512,886L515,890L520,892L536,895L546,899L555,906L560,906L565,903L571,895L568,884L573,875L582,870L589,867L596,868L607,872L610,878L620,881L627,881L632,883L633,886L636,888L642,887L659,890L668,894L675,895L681,898L687,897L699,889L706,889L707,887L713,889L717,888L716,892L720,894L723,892L726,895L743,893L746,891L747,893L755,918L753,921L749,939L747,942L741,938L734,931L732,924L728,917L726,911L723,916L726,919L727,925L730,931L738,940L738,944L742,952L743,958L751,971L759,988L766,995L763,996L763,1002L765,1009L772,1013L780,1022L780,1027L784,1033L784,1047L784,1054L787,1064L793,1068L801,1075L805,1082L808,1092L810,1102L816,1112L817,1108L821,1114L833,1119L839,1127L847,1132L849,1137L858,1144L861,1150L860,1153L852,1158L859,1159L867,1168L874,1173L881,1173L891,1167L901,1169L911,1163L919,1164L927,1161L930,1162L945,1159L954,1153L959,1155L957,1161L958,1170L961,1173L955,1174L954,1185L949,1193L945,1201L936,1216L932,1226L918,1247L905,1263L894,1273L880,1281L873,1286L862,1296L843,1316L838,1325L836,1327L830,1329L827,1335L822,1337L820,1344L817,1348L812,1360L809,1362L804,1377L805,1383L813,1393L810,1398L812,1404L810,1410L814,1419L816,1428L825,1435L826,1438L824,1446L826,1463L826,1474L827,1487L829,1491L826,1500L820,1506L817,1512L807,1519L796,1523L784,1529L773,1543L764,1548L756,1556L753,1557L752,1564L756,1570L760,1581L761,1592L762,1587L763,1599L761,1610L763,1611L758,1620L751,1624L736,1630L729,1636L726,1641L729,1644L731,1642L730,1652L725,1671L722,1677L716,1682L710,1688L697,1711L679,1731L667,1742L657,1749L649,1753L644,1752L639,1756L631,1756L629,1759L614,1756L610,1757L601,1756L597,1757L591,1762L582,1762L575,1763L569,1768L564,1768L557,1761L554,1762L554,1758L548,1759L550,1754L547,1747L542,1739L547,1736L548,1728L546,1723L540,1712L534,1699L531,1689ZM1000,565L994,558L985,551L976,551L973,547L961,551L954,546L947,554L937,559L935,563L927,568L929,580L924,583L915,573L910,575L906,583L904,592L906,597L903,603L902,610L906,613L910,623L920,623L926,631L931,641L926,641L926,644L934,649L927,653L922,659L913,662L907,676L903,679L903,683L907,684L911,690L913,699L912,707L926,727L917,737L909,736L903,727L899,726L889,721L890,716L886,715L880,711L875,712L868,715L866,712L849,703L839,704L827,698L821,697L818,700L803,685L796,683L792,678L786,677L784,673L777,670L781,667L789,666L790,661L793,655L800,653L791,643L800,643L799,640L810,635L809,632L796,635L788,635L786,638L772,643L767,643L760,650L759,647L754,651L756,659L763,667L772,664L776,666L774,671L767,672L763,670L757,676L753,676L743,683L737,680L738,671L730,666L725,665L740,656L739,653L734,651L725,653L716,649L719,647L713,645L723,646L726,644L713,643L704,645L700,653L697,657L689,660L690,668L688,675L682,677L681,673L677,685L676,694L675,701L670,700L668,704L667,712L662,716L669,725L663,726L660,723L651,725L648,729L652,734L648,737L648,742L644,745L642,744L633,741L629,743L625,742L620,745L616,745L617,751L615,754L610,754L602,749L601,757L610,769L604,769L606,773L601,775L609,779L618,785L619,794L614,789L607,791L612,798L608,800L603,797L606,805L606,813L603,809L598,813L595,805L592,809L589,804L588,797L583,792L586,786L592,784L605,790L608,787L599,783L587,784L583,783L579,773L573,768L569,762L567,757L562,754L560,746L562,742L562,734L563,728L561,726L555,720L550,717L540,709L539,708L530,701L524,698L519,698L508,686L512,685L505,678L504,671L498,667L493,675L489,671L488,663L490,662L490,662L489,659L472,665L472,668L475,673L472,677L474,686L477,690L488,697L494,713L505,723L508,725L518,725L521,728L519,734L533,740L543,747L550,756L548,760L545,758L542,753L537,752L534,749L530,750L525,760L526,763L533,767L533,774L526,778L526,783L519,790L515,790L518,778L521,777L519,768L515,758L506,753L503,746L495,744L490,737L482,737L477,733L464,719L460,717L453,708L444,690L435,684L428,683L420,691L412,694L412,694L411,695L400,704L395,706L386,703L382,700L377,701L369,697L359,704L357,709L359,717L359,725L345,736L332,740L318,759L315,765L316,773L321,777L314,783L311,787L308,796L302,796L296,802L291,809L264,810L260,813L254,814L248,820L243,818L238,806L233,802L226,802L221,805L211,803L206,805L209,799L208,782L204,782L205,778L200,778L202,768L204,765L208,754L211,740L208,727L209,725L210,720L207,711L203,708L208,702L216,700L216,697L223,694L228,697L248,697L262,700L274,698L281,701L283,699L290,702L296,700L300,698L303,680L305,663L309,667L306,659L304,649L296,645L291,634L294,631L287,631L288,628L270,621L265,621L260,617L265,615L260,611L260,608L278,602L285,608L288,606L302,606L299,603L299,595L296,586L303,586L305,592L317,593L324,591L321,586L334,580L339,575L338,565L343,560L350,558L361,553L372,553L362,549L371,548L368,544L375,534L377,524L386,518L388,514L395,511L404,510L409,514L407,512L410,505L419,505L422,510L425,509L427,501L431,500L430,493L427,490L431,487L427,479L426,468L420,464L421,441L427,444L434,432L431,432L428,439L425,440L422,436L427,430L438,427L443,419L450,415L450,427L447,432L447,441L454,443L454,448L448,450L446,458L439,466L440,471L437,476L440,481L446,488L453,492L456,491L455,499L461,500L470,495L476,489L482,490L487,496L490,495L492,502L497,504L496,501L493,501L492,496L496,500L521,492L526,487L535,483L548,481L552,489L556,491L564,489L568,479L575,477L580,471L581,471L576,477L584,479L584,471L582,453L582,436L586,432L590,419L601,416L608,425L610,430L614,433L622,428L624,425L623,412L625,401L620,403L616,401L612,387L612,380L620,378L624,374L637,372L638,370L652,372L656,374L667,375L669,373L669,367L675,364L681,365L683,361L695,364L690,356L682,356L677,351L675,343L666,347L659,347L639,352L633,356L606,365L609,360L605,355L600,360L601,351L587,346L586,336L589,320L584,309L586,303L583,292L589,281L588,276L598,273L600,264L609,257L622,239L626,231L635,229L636,211L626,202L621,201L608,203L603,199L598,200L597,207L588,213L589,220L583,230L588,241L581,249L578,258L561,269L557,275L551,277L550,285L542,287L544,293L538,297L538,305L534,316L534,343L539,347L543,346L554,359L556,367L546,375L550,375L547,383L529,395L528,404L526,414L527,421L525,431L519,450L503,452L496,459L498,465L496,468L485,470L480,468L481,459L475,448L480,441L474,435L465,416L460,398L459,383L461,384L454,381L451,371L446,385L440,385L425,402L421,406L412,409L401,406L390,397L388,392L389,385L395,388L392,384L393,378L397,372L386,381L383,380L385,369L391,369L396,365L390,364L395,355L400,350L400,357L404,348L396,352L387,365L383,369L384,346L381,334L394,332L407,333L413,331L402,330L385,332L381,324L385,323L380,317L381,312L395,313L383,310L383,305L397,293L403,292L415,293L419,288L404,290L406,283L413,279L420,279L426,273L424,267L429,264L440,264L443,271L453,269L453,264L461,259L460,252L455,256L455,260L443,267L439,260L451,242L463,232L462,226L471,220L473,206L479,196L479,192L490,189L493,185L483,188L484,175L495,159L512,155L499,154L506,145L512,149L510,138L503,141L507,132L519,123L522,134L524,128L521,121L524,118L538,116L526,115L527,109L536,103L540,93L545,91L547,80L552,81L559,70L565,69L564,82L570,65L574,66L572,78L575,77L577,64L583,65L587,60L593,68L592,61L586,52L591,52L602,47L609,61L611,52L624,35L622,30L628,23L635,29L641,29L635,40L632,57L650,27L653,29L651,46L656,42L659,33L663,30L659,25L664,20L674,24L671,50L676,33L683,29L696,41L701,41L706,51L693,57L679,56L689,62L689,69L696,67L705,69L712,72L719,67L719,63L731,70L731,74L721,73L723,80L736,81L735,91L740,86L755,89L760,87L767,90L790,107L799,119L804,120L813,128L816,125L823,136L831,140L833,155L836,157L834,169L825,181L810,191L799,193L785,188L763,182L754,176L737,171L729,163L730,161L717,158L734,178L739,181L736,184L745,188L754,199L749,213L754,225L755,238L762,244L764,243L773,254L787,259L795,253L793,245L784,242L775,229L780,220L788,222L794,228L816,237L819,232L824,231L816,214L816,207L827,196L837,191L846,179L859,182L870,194L870,187L875,174L872,160L867,157L867,149L872,131L871,120L861,110L869,112L882,111L892,115L902,132L902,136L888,139L881,148L881,152L888,157L894,168L900,170L914,164L917,144L930,140L927,135L933,135L954,119L969,112L973,119L978,114L973,110L991,97L991,109L993,116L985,122L1000,122L1000,565ZM285,548L278,552L268,547L261,545L257,548L253,543L264,536L269,529L267,521L260,524L267,515L279,511L282,504L283,495L279,496L274,489L276,478L269,482L262,482L255,480L260,466L258,462L258,454L252,459L249,469L247,468L249,454L254,438L248,443L242,439L249,427L246,424L249,420L249,412L254,412L252,403L256,403L255,397L260,397L281,394L279,401L269,410L271,413L267,419L276,416L293,416L297,421L291,435L286,442L279,446L286,448L277,454L286,454L292,457L298,465L303,482L310,488L318,496L316,498L323,516L319,522L322,524L326,520L332,520L339,525L341,531L338,538L335,543L328,546L327,553L336,553L336,557L321,565L309,565L301,562L300,565L293,566L293,568L281,566L276,568L271,575L267,572L260,574L253,579L252,575L261,565L266,556L280,556ZM241,400L237,407L238,409L232,415L231,404L241,397ZM229,475L238,472L242,472L249,484L249,493L244,498L241,497L239,499L242,508L243,521L240,535L225,538L223,541L209,549L196,551L199,546L192,548L197,544L189,543L194,537L189,537L198,529L195,529L200,524L202,518L207,515L200,515L192,508L195,504L196,497L193,493L202,492L212,493L211,491L217,485L209,484L214,479L215,474L225,473L228,469L232,472ZM557,413L554,416L555,423L546,434L545,420L550,413ZM358,761L362,761L357,769L348,764L358,758ZM1000,35L986,28L989,21L996,19L985,8L986,2L966,4L965,0L1000,0ZM947,90L939,101L927,106L922,95L924,84L934,78ZM559,58L564,62L554,76L547,78L548,69L559,52ZM516,112L523,101L525,109L518,118L510,118L502,124L497,124L501,117L507,116L511,110L512,95L517,87L520,89L516,96L518,106ZM938,1460L943,1469L946,1481L947,1490L950,1498L946,1506L942,1499L939,1501L942,1510L941,1517L937,1524L937,1528L936,1537L926,1565L923,1577L918,1591L913,1611L908,1624L903,1629L896,1630L888,1634L883,1634L879,1631L873,1630L869,1627L865,1618L865,1606L861,1598L860,1586L863,1577L867,1573L874,1558L874,1551L872,1547L872,1542L869,1536L868,1525L874,1516L875,1509L880,1509L884,1506L889,1506L890,1504L898,1503L907,1495L912,1490L913,1493L916,1489L919,1475L922,1477L929,1471L930,1466L929,1461L934,1456ZM513,786L508,798L510,805L508,810L500,808L496,804L493,804L474,792L478,787L480,789L483,786L490,790L500,789L504,787ZM439,743L441,748L439,768L437,771L432,770L430,775L427,775L424,770L426,760L425,753L421,747L422,742L426,743L434,737ZM124,188L133,183L130,191L135,194L133,201L149,209L146,214L149,224L142,233L139,232L138,240L131,245L118,251L111,258L96,262L93,268L86,271L66,266L53,256L51,258L36,259L37,254L43,252L48,242L44,245L44,239L38,231L27,230L20,232L18,229L33,224L45,223L38,218L46,211L32,207L20,213L13,210L19,206L17,202L24,204L28,202L22,193L27,189L31,195L38,193L32,188L37,187L30,184L38,181L51,194L51,211L55,217L60,205L63,208L64,194L68,193L74,201L76,192L84,189L93,200L90,190L95,190L99,196L104,188L113,189L112,181L119,179ZM611,774L620,779L622,786L616,783L609,777L605,776ZM617,828L623,831L628,830L637,832L641,834L646,833L647,835L629,837L628,835L617,832L613,830ZM437,711L438,722L434,735L429,731L427,725L426,718L428,715ZM601,394L610,398L603,404L596,405L592,403L592,397ZM476,460L471,467L474,471L470,473L469,481L467,482L464,473L460,473L456,461L460,461L462,456L467,462L467,456L472,452L476,454ZM452,464L454,474L449,476L444,474L442,466ZM728,834L731,830L737,831L751,826L743,832L744,835L731,843L724,840L723,837Z' fill='%23006747' fill-opacity='.2' stroke='%23006747' stroke-opacity='.38' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;z-index:-1;pointer-events:none;left:10px;right:10px;
+  top:calc(env(safe-area-inset-top) + 74px);bottom:calc(var(--tabs-h) + env(safe-area-inset-bottom) + 6px);
+  background:var(--map) center/contain no-repeat}
 
 body{
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -55,7 +60,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 main{padding:14px 0 calc(var(--tabs-h) + env(safe-area-inset-bottom) + 24px)}
 h2{font-size:20px;margin:4px 0 10px;letter-spacing:-.01em}
 h3{font-size:16px;margin:0 0 6px}
-.card{background:var(--surface);border:1px solid var(--ring);box-shadow:0 1px 2px rgba(0,61,42,.05);border-radius:var(--radius);padding:14px;margin-bottom:12px}
+.card{background:rgba(255,255,255,.88);border:1px solid var(--ring);box-shadow:0 1px 2px rgba(0,61,42,.05);border-radius:var(--radius);padding:14px;margin-bottom:12px}
 .muted{color:var(--muted)}
 .ink2{color:var(--ink2)}
 .small{font-size:13px}
@@ -281,7 +286,7 @@ nav.tabs button.on::before{content:"";position:absolute;top:0;left:28%;right:28%
 .kind.range{background:var(--accent-soft);color:var(--accent)}
 .kind.course{background:var(--gold);color:var(--gold-ink)}
 body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
-.lock{position:fixed;inset:0;z-index:100;background:#f5f8f6 var(--dimples) 0 0/var(--dimple-size) repeat;overflow:auto;padding:calc(env(safe-area-inset-top) + 28px) 20px calc(env(safe-area-inset-bottom) + 28px)}
+.lock{position:fixed;inset:0;z-index:100;background:var(--map) center 54%/auto 86% no-repeat,#f5f8f6 var(--dimples) 0 0/var(--dimple-size) repeat;overflow:auto;padding:calc(env(safe-area-inset-top) + 28px) 20px calc(env(safe-area-inset-bottom) + 28px)}
 .lock[hidden]{display:none}
 .lock .inner{max-width:400px;margin:0 auto}
 .lock .logo{width:84px;height:84px;border-radius:20px;display:block;margin:0 auto 12px;box-shadow:0 2px 10px rgba(0,61,42,.18);border:2px solid var(--gold)}
@@ -391,6 +396,7 @@ body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
 <input type="file" id="mediaInput" accept="image/*,video/*" multiple style="display:none">
 <div class="viewer" id="viewer" data-action="closeViewer"><img id="viewerImg" alt="Scorecard"><video id="viewerVid" data-action="noop" controls playsinline hidden></video><div id="viewerMediaBar" class="vpdf" hidden><button class="btn danger" data-action="delMedia">Delete from this round</button></div><div id="viewerNoPrev" class="vnoprev" hidden>This phone can't show a preview of this scan here. Open it below to see every page.</div><div id="viewerPdf" class="vpdf" hidden><div class="vpdfmsg">Scanned scorecard (PDF)</div><button class="btn primary" data-action="openPdf">Open or save the full PDF</button></div><button class="vclose" data-action="closeViewer" aria-label="Close">×</button></div>
 
+
 <script>
 'use strict';
 /* =========================================================
@@ -398,7 +404,7 @@ body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
    Data is stored on this device (localStorage) and can be
    backed up to / restored from a JSON file.
    ========================================================= */
-const APP_VERSION = '2.6.0';
+const APP_VERSION = '2.7.0';
 const SCHEMA = 5;
 const APP_ID = 'golf-range-tracker';
 const KEY = 'pcp-golf-range-tracker';           // unique key: other apps share this github.io site
@@ -486,7 +492,8 @@ function emptyData(){
     meta: {createdAt: Date.now(), updatedAt: Date.now(), lastBackupAt: 0, changesSinceBackup: 0},
     sessions: [],
     rounds: [],
-    courses: {}
+    courses: {},
+    deleted: {}     // id -> time it was deleted (so sync doesn't bring it back)
   };
 }
 function normaliseBag(list){
@@ -596,8 +603,20 @@ function normalise(d){
   if(!lc || lc.retired){ const first = bag.find(c => !c.retired); out.settings.lastClub = first ? first.id : ''; }
   const rc = map[out.settings.lastRoundClub];
   if(!rc || rc.retired){ const first = bag.find(c => !c.retired); out.settings.lastRoundClub = first ? first.id : ''; }
+  out.deleted = {};
+  const old = Date.now() - 400 * 864e5;
+  if(d.deleted && typeof d.deleted === 'object') Object.keys(d.deleted).forEach(k => { const v = +d.deleted[k]; if(/^[\w-]{1,40}$/.test(k) && v > old) out.deleted[k] = v; });
+  out.sessions = out.sessions.filter(x => !(out.deleted[x.id] >= (x.updatedAt || x.startedAt || 0)));
+  out.rounds = out.rounds.filter(x => !(out.deleted[x.id] >= (x.updatedAt || x.startedAt || 0)));
   return out;
 }
+function reviveRestored(){
+  // what you restore should come back on your other devices too, even if it was deleted there
+  const now = Date.now();
+  data.sessions.concat(data.rounds).forEach(x => { delete data.deleted[x.id]; if(typeof cloudUser === 'function' && cloudUser()) x.updatedAt = Math.max(x.updatedAt || 0, now); });
+}
+function removeSession(s){ data.sessions = data.sessions.filter(x => x !== s); data.deleted[s.id] = Date.now(); }
+function removeRound(r){ data.rounds = data.rounds.filter(x => x !== r); data.deleted[r.id] = Date.now(); }
 
 let data;
 let loadError = null;
@@ -630,6 +649,7 @@ function save(countsAsChange = true){
   }
   renderPill();
   if(!saveState.ok) toast('Not saved! Download a backup now.', 3500);
+  else if(!applyingRemote) scheduleSync();
   askPersist();
   return saveState.ok;
 }
@@ -2109,6 +2129,7 @@ async function handleRestoreFile(file){
     Object.keys(incoming.courses || {}).forEach(k => { if(!data.courses[k]) data.courses[k] = incoming.courses[k]; });
     data = normalise(Object.assign({}, data, {sessions: Array.from(byId.values()), rounds: Array.from(rById.values())}));
   }
+  reviveRestored();
   data.meta.lastBackupAt = Math.max(data.meta.lastBackupAt || 0, obj.exportedAt ? Date.parse(obj.exportedAt) : 0);
   data.meta.changesSinceBackup = choice === 'merge' ? 1 : 0;
   loadError = null;
@@ -2167,6 +2188,7 @@ function undoLast(){
   undoState = null;
   const list = listOf(u.kind), obj = JSON.parse(u.json), i = list.findIndex(x => x.id === u.id);
   if(i >= 0) list[i] = obj; else list.splice(Math.max(0, Math.min(u.index, list.length)), 0, obj);
+  delete data.deleted[u.id];
   ui.roundSheet = null; ui.edit = null; closeSheet();
   resetToggles(); save(); render();
   toast(u.undone || 'Undone');
@@ -2185,7 +2207,7 @@ async function checkStale(){
       const c = await choose('Range session still open', `Your range session from <b>${fmtDate(s.startedAt)}</b> was never ended. Last activity ${ago(lastActivity(s))}.`,
         [{id:'end', label:'End it now', cls:'primary'}, {id:'keep', label:'Keep going with it', cls:'ghost'}]);
       if(c === 'end'){
-        if(!s.shots.length) data.sessions = data.sessions.filter(x => x !== s);
+        if(!s.shots.length) removeSession(s);
         else { s.endedAt = lastActivity(s); s.updatedAt = Date.now(); }
         save(); render(); toast('Old session ended');
       } else { s.updatedAt = Date.now(); save(false); }
@@ -2229,13 +2251,13 @@ const actions = {
     if(!s.shots.length){
       const del = await confirmBox('End session?', 'No balls were logged, so this empty session will be removed.', 'End and remove');
       if(!del) return;
-      data.sessions = data.sessions.filter(x => x !== s); save(false); render(); return;
+      removeSession(s); save(false); render(); return;
     }
     const v = await choose('End this session?', `${plural(s.shots.length, 'shot')} logged. Keep it in your stats, or delete it if it was a test or a mistake.`,
       [{id:'yes', label:'End and keep', cls:'primary'}, {id:'del', label:'Delete session', cls:'danger'}, {id:'no', label:'Keep going', cls:'ghost'}]);
     if(v === 'del'){
       remember('session', s, {undone:'Session restored'});
-      data.sessions = data.sessions.filter(x => x !== s); save(); render(); toast('Session deleted', 8000, true);
+      removeSession(s); save(); render(); toast('Session deleted', 8000, true);
       return;
     }
     if(v !== 'yes') return;
@@ -2448,7 +2470,7 @@ const actions = {
     const ok = await confirmBox(r.endedAt ? 'Delete this round?' : 'Delete the round in progress?', `${esc(r.course || r.holes + '-hole round')}, ${fmtISO(r.date)}: ${what}. You can undo straight after.`, 'Delete round', true);
     if(!ok) return;
     remember('round', r, {prune:true, undone:'Round restored'});
-    data.rounds = data.rounds.filter(x => x !== r);
+    removeRound(r);
     ui.roundSheet = null; save(); closeSheet(); render(); toast('Round deleted', 8000, true);
   },
   editProfile: () => openProfileSheet(),
@@ -2543,6 +2565,15 @@ const actions = {
   },
   doneNewCodes: () => { pendingCodes = null; closeSheet(); render(); },
   secSheet: el => openSecSheet(el.dataset.v),
+  syncNow: async () => { await syncNow(); renderSyncLine(); toast(syncState.status === 'ok' ? 'Synced' : syncState.status === 'offline' ? 'Offline: will sync later' : 'Could not sync', 1800); },
+  cloudPw: () => { cloudStep = null; openCloudPwSheet(); },
+  cloudOut: async () => {
+    const ok = await confirmBox('Sign out?', 'Your golf data stays on this device and in your account. Signing back in needs your email, password and an internet connection.', 'Sign out');
+    if(!ok) return;
+    if(navigator.onLine) await syncNow();
+    try { await sbc().auth.signOut({scope:'local'}); } catch(_){}
+    setCloudUser(null); cloudEmail = ''; showLock('cIn');
+  },
   signOut: async () => {
     const ok = await confirmBox('Sign out?', 'You\'ll need your username and password to open the app again.', 'Sign out');
     if(!ok) return;
@@ -2561,7 +2592,7 @@ const actions = {
     const ok = await confirmBox('Delete this session?', `${fmtDate(s.startedAt)} — ${plural(s.shots.length, 'shot')}. You can undo straight after.`, 'Delete session', true);
     if(!ok) return;
     remember('session', s, {undone:'Session restored'});
-    data.sessions = data.sessions.filter(x => x !== s); save(); closeSheet(); render(); toast('Session deleted', 8000, true);
+    removeSession(s); save(); closeSheet(); render(); toast('Session deleted', 8000, true);
   },
   backup: () => doBackup(false),
   backupDownload: () => doBackup(true),
@@ -2572,18 +2603,19 @@ const actions = {
     const ok = await confirmBox('Undo last restore?', 'This puts back the data you had just before your last restore or delete.', 'Undo restore');
     if(!ok) return;
     try { data = normalise(JSON.parse(prev)); localStorage.removeItem(PREV_KEY); } catch(e){ return alertBox('Could not undo.'); }
-    save(); render(); toast('Previous data restored');
+    reviveRestored(); save(); render(); toast('Previous data restored');
   },
   hand: el => { data.settings.hand = el.dataset.h; save(false); render(); },
   awake: el => { data.settings.keepAwake = el.dataset.v === '1'; save(false); render(); },
   hideTip: () => { data.settings.hideHomeTip = true; save(false); render(); },
   clearAll: async () => {
     expireUndo();
-    const ok = await confirmBox('Delete all data?', 'Every session and round on this device will be removed. Download a backup first if you might want it back.', 'Delete everything', true);
+    const ok = await confirmBox('Delete all data?', `Every session and round ${cloudUser() ? 'on this device <b>and in your account</b> (so on your other devices too)' : 'on this device'} will be removed. Download a backup first if you might want it back.`, 'Delete everything', true);
     if(!ok) return;
     try { localStorage.setItem(PREV_KEY, JSON.stringify(data)); } catch(_){}
-    const settings = data.settings;
-    data = emptyData(); data.settings = settings; data.meta.lastBackupAt = 0;
+    const settings = data.settings, dead = Object.assign({}, data.deleted), now = Date.now();
+    data.sessions.concat(data.rounds).forEach(x => { dead[x.id] = now; });
+    data = emptyData(); data.settings = settings; data.meta.lastBackupAt = 0; data.deleted = dead;
     save(false); render(); toast('All data deleted');
     prunePhotos();
   },
@@ -2707,6 +2739,7 @@ function unlockApp(){
   setTimeout(checkStale, 600);
 }
 function renderLock(err){
+  if(lockView && lockView[0] === 'c' && lockView.length > 1 && /^c[A-Z]/.test(lockView)) return renderCloudLock(err);
   const a = getAuth();
   const e = `<div class="err" id="lockErr">${err ? esc(err) : ''}</div>`;
   let h = `<div class="inner">${lockLogo()}<h1>Golf Tracker</h1>`;
@@ -2814,7 +2847,7 @@ const authForms = {
     const left = codesLeft(a);
     unlockApp();
     toast(`New password saved. ${left} recovery code${left === 1 ? '' : 's'} left.`, 3200);
-    if(left <= 2) setTimeout(() => alertBox(`Only ${left} recovery code${left === 1 ? '' : 's'} left. Make a new set under Backup → Login & security.`), 600);
+    if(left <= 2) setTimeout(() => alertBox(`Only ${left} recovery code${left === 1 ? '' : 's'} left. Make a new set under Settings → Login & security.`), 600);
   },
   reset: async () => {
     if($('#aErase').value.trim().toUpperCase() !== 'ERASE') return lockErr('Type ERASE to confirm.');
@@ -2857,6 +2890,7 @@ const authForms = {
 };
 function sheetErr(msg){ const el = $('#sheetErr'); if(el) el.textContent = msg; }
 function securityCard(){
+  if(cloudOn()) return cloudAccountCard();
   const a = getAuth(); if(!a) return '';
   const left = codesLeft(a);
   return `<h2 id="secLogin" style="margin-top:18px">Login &amp; security</h2>
@@ -2887,6 +2921,325 @@ function openSecSheet(kind){
     <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">${title}</h3><button class="btn ghost" type="button" data-action="closeSheet">Cancel</button></div>
     <form data-form="${kind}">${body}<div class="err" id="sheetErr"></div><button class="btn primary block" type="submit">${btn}</button></form>`);
 }
+
+/* ---------- online account (Supabase): email + password, codes by email, sync between devices ----------
+   Only used when the app is built with a Supabase project. Without one, the on-phone login above is used.
+   The app still opens and works with no signal; it syncs when it is back online. */
+const CLOUD = {url:'', key:''};
+const CLOUD_SETUP = '' === 'yes';     // test builds: you paste your own Supabase project details once
+const CLOUD_CFG_KEY = KEY + ':cloudcfg';
+if(CLOUD_SETUP && !CLOUD.url){ try { const c = JSON.parse(localStorage.getItem(CLOUD_CFG_KEY) || 'null'); if(c && c.url && c.key){ CLOUD.url = c.url; CLOUD.key = c.key; } } catch(_){} }
+const ACCT_KEY = KEY + ':account', BASE_KEY = KEY + ':synced';
+const cloudOn = () => /^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(CLOUD.url) && CLOUD.key.length > 20 && !!window.supabase;
+let sb = null, syncTimer = null, syncBusy = false, syncAgain = false, applyingRemote = false, cloudEmail = '', cloudStep = null;
+let syncState = {status:'idle', at:0, msg:''};
+function sbc(){
+  if(!sb && cloudOn()) sb = window.supabase.createClient(CLOUD.url, CLOUD.key, {auth:{persistSession:true, autoRefreshToken:true, detectSessionInUrl:true, flowType:'implicit', storageKey: KEY + ':sb'}});
+  return sb;
+}
+function cloudUser(){ try { const a = JSON.parse(localStorage.getItem(ACCT_KEY) || 'null'); return a && a.uid ? a : null; } catch(_){ return null; } }
+function setCloudUser(u){ if(u) localStorage.setItem(ACCT_KEY, JSON.stringify({uid:u.id, email:u.email, at:Date.now()})); else localStorage.removeItem(ACCT_KEY); }
+function cloudMsg(e, fallback){
+  const code = (e && (e.code || e.error_code)) || '', m = ((e && e.message) || '').toLowerCase(), st = e && e.status;
+  if(!navigator.onLine || /failed to fetch|network|load failed/.test(m)) return 'No internet connection. This step needs a connection.';
+  if(code === 'invalid_credentials' || /invalid login credentials/.test(m)) return 'Email or password is wrong.';
+  if(code === 'over_email_send_rate_limit' || st === 429 || /rate limit|too many/.test(m)) return 'Too many emails for now. The free email service sends about 2 an hour, so wait a while and try again.';
+  if(code === 'otp_expired' || /expired|invalid/.test(m) && /token|otp|code/.test(m)) return 'That code is wrong or has expired. Check the latest email, or ask for a new code.';
+  if(code === 'reauthentication_not_valid' || code === 'reauthentication_needed') return 'That code is wrong or has expired. Ask for a new code.';
+  if(code === 'user_already_exists' || /already registered|already exists/.test(m)) return 'There is already an account with that email. Sign in instead.';
+  if(code === 'weak_password' || /password should|weak/.test(m)) return 'Choose a stronger password: at least 8 characters.';
+  if(code === 'email_address_not_authorized' || /not authorized/.test(m)) return 'Supabase will only email addresses on your Supabase team. Use the email you signed up to Supabase with.';
+  if(code === 'same_password') return 'That is your current password. Choose a new one.';
+  if(code === 'signup_disabled' || /signups not allowed/.test(m)) return 'New accounts are switched off for this app.';
+  return fallback || 'Something went wrong. Try again.';
+}
+const cleanEmail = v => (v || '').trim().toLowerCase();
+const okEmail = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+const cleanCode = v => (v || '').replace(/\D/g, '');
+function cloudPwProblem(pw, pw2){ if(pw.length < 8) return 'Password needs at least 8 characters.'; if(pw !== pw2) return "The two passwords don't match."; return ''; }
+const emailField = (id, v) => `<label class="field"><span>Email</span><input id="${id}" type="email" inputmode="email" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" value="${esc(v || '')}" required></label>`;
+const codeField = lbl => `<label class="field"><span>${lbl}</span><input id="cCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="6-digit code" required></label>`;
+const newPwFields = () => `<label class="field"><span>New password</span><input id="cPw" type="password" autocomplete="new-password" required></label>
+  <label class="field"><span>Repeat new password</span><input id="cPw2" type="password" autocomplete="new-password" required></label>`;
+function renderCloudLock(err){
+  const e = `<div class="err" id="lockErr">${err ? esc(err) : ''}</div>`, v = lockView, oldLogin = !!getAuth();
+  let h = `<div class="inner">${lockLogo()}<h1>Golf Tracker</h1>`;
+  if(v === 'cSetup'){
+    h += `<p class="sub">Connect to your Supabase project</p>
+      <p class="small ink2" style="text-align:center">Test version. Paste these from Supabase → Project Settings → API Keys. You only do this once on each device.</p>
+      <form data-form="cSetup" autocomplete="off">
+        <label class="field"><span>Project URL</span><input id="cUrl" type="url" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="https://xxxx.supabase.co" required></label>
+        <label class="field"><span>Publishable key</span><input id="cKey" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="sb_publishable_…" required></label>
+        ${e}<button class="btn primary block" type="submit">Connect</button></form>
+      <p class="note" style="text-align:center">Never paste the secret key here. The publishable key is made to sit inside apps.</p>`;
+  } else if(v === 'cIn'){
+    h += `<p class="sub">Sign in</p>
+      ${oldLogin ? '<p class="note" style="text-align:center;margin-top:-6px">Golf Tracker now uses an online account so your phone and Mac stay in sync. Your sessions and rounds on this phone go into your account when you sign in.</p>' : ''}
+      <form data-form="cIn" autocomplete="on">${emailField('cEmail', cloudEmail)}
+        <label class="field"><span>Password</span><input id="cPw" type="password" autocomplete="current-password" required></label>
+        ${e}<button class="btn primary block" type="submit">Sign in</button></form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cForgot">Forgot password?</button>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cUp">Create an account</button>`;
+  } else if(v === 'cUp'){
+    h += `<p class="sub">Create your account</p>
+      <form data-form="cUp" autocomplete="on">${emailField('cEmail', cloudEmail)}
+        <label class="field"><span>Password</span><input id="cPw" type="password" autocomplete="new-password" required></label>
+        <label class="field"><span>Repeat password</span><input id="cPw2" type="password" autocomplete="new-password" required></label>
+        ${e}<button class="btn primary block" type="submit">Create account</button></form>
+      <p class="note" style="text-align:center">Use the email you signed up to Supabase with. Forgot-password codes are sent there.</p>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cIn">I already have an account</button>`;
+  } else if(v === 'cConfirm'){
+    h += `<p class="sub">Check your email</p>
+      <p class="small ink2" style="text-align:center">We sent a message to <b>${esc(cloudEmail)}</b>. Enter the code from it, or tap the link in it on this device.</p>
+      <form data-form="cConfirm">${codeField('Code from the email')}${e}<button class="btn primary block" type="submit">Confirm</button></form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cIn">Back to sign in</button>`;
+  } else if(v === 'cForgot'){
+    h += `<p class="sub">Forgot password</p>
+      <p class="small ink2" style="text-align:center">We'll email you a code to set a new password.</p>
+      <form data-form="cForgot">${emailField('cEmail', cloudEmail)}${e}<button class="btn primary block" type="submit">Email me a code</button></form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cIn">Back to sign in</button>`;
+  } else if(v === 'cReset'){
+    h += `<p class="sub">Set a new password</p>
+      <p class="small ink2" style="text-align:center">We emailed <b>${esc(cloudEmail)}</b>. Enter the code from it (or tap the link in it on this device).</p>
+      <form data-form="cReset" autocomplete="on">${codeField('Code from the email')}${newPwFields()}${e}<button class="btn primary block" type="submit">Save new password</button></form>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cForgot">Send a new code</button>
+      <button class="linkbtn" type="button" data-action="lockGo" data-v="cIn">Back to sign in</button>`;
+  } else if(v === 'cNewPw'){
+    h += `<p class="sub">Set a new password</p>
+      <form data-form="cNewPw" autocomplete="on">${newPwFields()}${e}<button class="btn primary block" type="submit">Save and sign in</button></form>`;
+  }
+  $('#lock').innerHTML = h + '</div>';
+  const first = $('#lock input:not([type=checkbox])'); if(first && !first.value) setTimeout(() => { try { first.focus(); } catch(_){} }, 50);
+}
+function busyBtn(on){ const b = $('#lock button[type=submit]') || $('#sheet button[type=submit]'); if(b){ b.disabled = on; } }
+async function cloudSignedIn(user, how){
+  // first account sign-in on this device: what's already here goes into the account
+  const prev = (() => { try { return localStorage.getItem(KEY + ':lastUid'); } catch(_){ return null; } })();
+  if(prev && prev !== user.id){
+    const keep = await confirmBox('Different account', 'This device has golf data from another account. Replace it with this account\'s data? (Download a backup first if unsure.)', 'Use this account');
+    if(!keep){ await sbc().auth.signOut({scope:'local'}); return showLock('cIn'); }
+    try { localStorage.setItem(PREV_KEY, JSON.stringify(data)); } catch(_){}
+    const settings = data.settings; data = emptyData(); data.settings = settings; localStorage.removeItem(BASE_KEY); save(false);
+  }
+  setCloudUser(user);
+  try { localStorage.setItem(KEY + ':lastUid', user.id); } catch(_){}
+  [AUTH_KEY, SESS_KEY].forEach(k => { try { localStorage.removeItem(k); } catch(_){} });   // the old on-phone login is no longer needed
+  clearSession();
+  unlockApp();
+  if(how) toast(how, 2600);
+  syncNow();
+}
+const cloudForms = {
+  cSetup: async () => {
+    const url = $('#cUrl').value.trim().replace(/\/+$/, '').toLowerCase(), key = $('#cKey').value.trim();
+    if(/^sb_secret_/.test(key) || /service_role/.test(key)) return lockErr("That's the secret key. Never put it in an app. Use the Publishable key (starts sb_publishable_).");
+    if(!/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(url)) return lockErr('The Project URL looks like https://xxxx.supabase.co');
+    if(!/^sb_publishable_[\w-]{10,}$/.test(key) && !/^eyJ[\w-]+\.[\w-]+\.[\w-]+$/.test(key)) return lockErr('The Publishable key starts sb_publishable_');
+    localStorage.setItem(CLOUD_CFG_KEY, JSON.stringify({url, key}));
+    location.reload();
+  },
+  cIn: async () => {
+    const email = cleanEmail($('#cEmail').value), pw = $('#cPw').value; cloudEmail = email;
+    if(!okEmail(email)) return lockErr('Enter your email address.');
+    if(throttled()) return;
+    lockErr('Signing in…'); busyBtn(true);
+    const {data:d, error} = await sbc().auth.signInWithPassword({email, password:pw}); busyBtn(false);
+    if(error) return failed(cloudMsg(error));
+    failCount = 0; cloudSignedIn(d.user, 'Signed in');
+  },
+  cUp: async () => {
+    const email = cleanEmail($('#cEmail').value), pw = $('#cPw').value; cloudEmail = email;
+    if(!okEmail(email)) return lockErr('Enter your email address.');
+    const prob = cloudPwProblem(pw, $('#cPw2').value); if(prob) return lockErr(prob);
+    lockErr('Creating your account…'); busyBtn(true);
+    const {data:d, error} = await sbc().auth.signUp({email, password:pw, options:{emailRedirectTo: location.origin + location.pathname}}); busyBtn(false);
+    if(error) return lockErr(cloudMsg(error));
+    if(d.session) return cloudSignedIn(d.user, 'Account created');
+    lockView = 'cConfirm'; renderCloudLock();
+  },
+  cConfirm: async () => {
+    const token = cleanCode($('#cCode').value);
+    if(token.length < 6) return lockErr('Enter the code from the email.');
+    lockErr('Checking…'); busyBtn(true);
+    let r = await sbc().auth.verifyOtp({email:cloudEmail, token, type:'email'});
+    if(r.error) r = await sbc().auth.verifyOtp({email:cloudEmail, token, type:'signup'});
+    busyBtn(false);
+    if(r.error) return failed(cloudMsg(r.error));
+    cloudSignedIn(r.data.user, 'Email confirmed');
+  },
+  cForgot: async () => {
+    const email = cleanEmail($('#cEmail').value); cloudEmail = email;
+    if(!okEmail(email)) return lockErr('Enter your email address.');
+    lockErr('Sending…'); busyBtn(true);
+    const {error} = await sbc().auth.resetPasswordForEmail(email, {redirectTo: location.origin + location.pathname}); busyBtn(false);
+    if(error) return lockErr(cloudMsg(error));
+    lockView = 'cReset'; renderCloudLock(); toast('Code sent. Check your email.', 2600);
+  },
+  cReset: async () => {
+    const token = cleanCode($('#cCode').value), pw = $('#cPw').value;
+    if(token.length < 6) return lockErr('Enter the code from the email.');
+    const prob = cloudPwProblem(pw, $('#cPw2').value); if(prob) return lockErr(prob);
+    if(throttled()) return;
+    lockErr('Checking…'); busyBtn(true);
+    const v = await sbc().auth.verifyOtp({email:cloudEmail, token, type:'recovery'});
+    if(v.error){ busyBtn(false); return failed(cloudMsg(v.error)); }
+    const u = await sbc().auth.updateUser({password:pw}); busyBtn(false);
+    if(u.error) return lockErr(cloudMsg(u.error));
+    failCount = 0; cloudSignedIn(u.data.user || v.data.user, 'New password saved');
+  },
+  cNewPw: async () => {
+    const pw = $('#cPw').value, prob = cloudPwProblem(pw, $('#cPw2').value); if(prob) return lockErr(prob);
+    lockErr('Saving…'); busyBtn(true);
+    const u = await sbc().auth.updateUser({password:pw}); busyBtn(false);
+    if(u.error) return lockErr(cloudMsg(u.error));
+    cloudSignedIn(u.data.user, 'New password saved');
+  },
+  // Settings: change password needs the code we email you (checked by Supabase every time)
+  cChangePw: async () => {
+    const u = cloudUser(); if(!u) return;
+    if(cloudStep !== 'code'){
+      sheetErr('Sending…');
+      const {error} = await sbc().auth.resetPasswordForEmail(u.email, {redirectTo: location.origin + location.pathname});
+      if(error) return sheetErr(cloudMsg(error));
+      cloudStep = 'code'; openCloudPwSheet(); toast('Code sent. Check your email.', 2600); return;
+    }
+    const token = cleanCode($('#cCode').value), pw = $('#cPw').value;
+    if(token.length < 6) return sheetErr('Enter the code from the email.');
+    const prob = cloudPwProblem(pw, $('#cPw2').value); if(prob) return sheetErr(prob);
+    sheetErr('Checking…');
+    const v = await sbc().auth.verifyOtp({email:u.email, token, type:'recovery'});
+    if(v.error) return sheetErr(cloudMsg(v.error));
+    const r = await sbc().auth.updateUser({password:pw});
+    if(r.error) return sheetErr(cloudMsg(r.error));
+    cloudStep = null; closeSheet(); toast('Password changed');
+  }
+};
+Object.assign(authForms, cloudForms);
+function openCloudPwSheet(){
+  const u = cloudUser(); if(!u) return;
+  const step2 = cloudStep === 'code';
+  openSheet(`<div class="grabber"></div>
+    <div class="row between" style="margin-bottom:8px"><h3 style="margin:0">Change password</h3><button class="btn ghost" type="button" data-action="closeSheet">Cancel</button></div>
+    <form data-form="cChangePw" autocomplete="on">
+      ${step2 ? `<p class="small ink2" style="margin:0 0 10px">We emailed a code to <b>${esc(u.email)}</b>.</p>${codeField('Code from the email')}${newPwFields()}`
+              : `<p class="small ink2" style="margin:0 0 10px">For safety, changing your password needs a code that we email to <b>${esc(u.email)}</b>.</p>`}
+      <div class="err" id="sheetErr"></div>
+      <button class="btn primary block" type="submit">${step2 ? 'Save new password' : 'Email me a code'}</button>
+    </form>`);
+}
+function syncLine(){
+  const st = syncState, t = st.at ? ago(st.at) : '';
+  if(syncBusy) return 'Syncing…';
+  if(st.status === 'ok') return `Synced ${t}`;
+  if(st.status === 'offline') return 'Offline: changes are saved on this device and will sync when you are back online.';
+  if(st.status === 'signin') return '<span style="color:var(--danger)">Sign in again to sync.</span>';
+  if(st.status === 'error') return `<span style="color:var(--danger)">Not synced: ${esc(st.msg)}</span>`;
+  return 'Not synced yet';
+}
+function cloudAccountCard(){
+  const u = cloudUser(); if(!u) return '';
+  return `<h2 id="secLogin" style="margin-top:18px">Account &amp; security</h2>
+    <div class="card">
+      <div class="small ink2">Signed in as <b>${esc(u.email)}</b></div>
+      <div class="small ink2" style="margin-top:2px" id="syncLine">${syncLine()}</div>
+      <div class="cards2" style="margin-top:12px">
+        <button class="btn" data-action="syncNow">Sync now</button>
+        <button class="btn" data-action="cloudPw">Change password</button>
+        <button class="btn" data-action="cloudOut">Sign out</button>
+      </div>
+      <div class="note">Your sessions, rounds, profile and bag sync between your devices. Scorecard photos and round photos/videos stay on the device you added them on.</div>
+    </div>`;
+}
+function renderSyncLine(){ const el = $('#syncLine'); if(el) el.innerHTML = syncLine(); }
+
+/* ---- sync: one row per account holds the shared copy; each device merges and writes back ---- */
+const DEVICE_SETTINGS = ['keepAwake', 'hideHomeTip', 'lastClub', 'lastRoundClub'];
+function syncView(d){
+  const settings = Object.assign({}, d.settings); DEVICE_SETTINGS.forEach(k => delete settings[k]);
+  return {schema:SCHEMA, at:d.meta.updatedAt || 0, sessions:d.sessions, rounds:d.rounds, profile:d.profile, bag:d.bag, courses:d.courses, settings, deleted:d.deleted || {}};
+}
+const sameJ = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+function mergeSynced(base, local, remote){
+  // sessions and rounds: newest edit wins per item; deletions win over older edits
+  const dead = Object.assign({}, remote.deleted || {});
+  Object.entries(local.deleted || {}).forEach(([k, v]) => { if(!(dead[k] >= v)) dead[k] = v; });
+  const byId = (a, b) => {
+    const m = new Map();
+    a.concat(b).forEach(x => { const cur = m.get(x.id); if(!cur || (x.updatedAt || x.startedAt || 0) > (cur.updatedAt || cur.startedAt || 0)) m.set(x.id, x); });
+    return Array.from(m.values()).filter(x => !(dead[x.id] >= (x.updatedAt || x.startedAt || 0)));
+  };
+  // profile, bag, course pars, settings: take whichever side changed since the last sync (newest if both did)
+  const pick = k => {
+    if(base){ if(sameJ(local[k], base[k])) return remote[k]; if(sameJ(remote[k], base[k])) return local[k]; }
+    return (remote.at || 0) > (local.at || 0) ? remote[k] : local[k];
+  };
+  return {schema:SCHEMA, at:Math.max(local.at || 0, remote.at || 0), sessions:byId(local.sessions, remote.sessions), rounds:byId(local.rounds, remote.rounds),
+    profile:pick('profile'), bag:pick('bag'), courses:pick('courses'), settings:pick('settings'), deleted:dead};
+}
+function scheduleSync(ms = 2500){ if(!cloudOn() || !cloudUser()) return; clearTimeout(syncTimer); syncTimer = setTimeout(syncNow, ms); }
+async function syncNow(){
+  if(!cloudOn() || !cloudUser()) return;
+  if(syncBusy){ syncAgain = true; return; }
+  if(!navigator.onLine){ syncState = {status:'offline', at:syncState.at}; renderSyncLine(); return; }
+  syncBusy = true; renderSyncLine();
+  try {
+    const {data:{session}} = await sbc().auth.getSession();
+    if(!session){ syncState = {status:'signin', at:syncState.at}; return; }
+    const uid = session.user.id;
+    for(let attempt = 0; attempt < 3; attempt++){
+      const {data:row, error} = await sbc().from('golf_data').select('data,updated_at').eq('user_id', uid).maybeSingle();
+      if(error) throw error;
+      let base = null; try { base = JSON.parse(localStorage.getItem(BASE_KEY) || 'null'); } catch(_){}
+      if(base && base.uid !== uid) base = null;
+      const local = syncView(data);
+      const remote = row && row.data ? syncView(normalise(row.data)) : null;
+      const merged = remote ? mergeSynced(base && base.v, local, remote) : local;
+      if(!sameJ(merged, local)){
+        // bring the other device's changes into this one
+        const keep = {}; DEVICE_SETTINGS.forEach(k => keep[k] = data.settings[k]);
+        const meta = data.meta;
+        const next = normalise(Object.assign({}, merged, {settings:Object.assign({}, merged.settings, keep)}));
+        next.meta = Object.assign({}, meta);
+        data = next; applyingRemote = true; save(false); applyingRemote = false;
+        if(!lockView) render();
+      }
+      const toSend = syncView(data);
+      if(!remote || !sameJ(toSend, remote)){
+        const now = new Date().toISOString();
+        if(row){
+          const {data:upd, error:e2} = await sbc().from('golf_data').update({data:toSend, updated_at:now}).eq('user_id', uid).eq('updated_at', row.updated_at).select('updated_at');
+          if(e2) throw e2;
+          if(!upd || !upd.length) continue;      // the other device saved in between: merge again
+        } else {
+          const {error:e3} = await sbc().from('golf_data').insert({user_id:uid, data:toSend, updated_at:now});
+          if(e3){ if(e3.code === '23505') continue; throw e3; }
+        }
+      }
+      localStorage.setItem(BASE_KEY, JSON.stringify({uid, v:syncView(data)}));
+      syncState = {status:'ok', at:Date.now()};
+      return;
+    }
+    syncState = {status:'error', at:syncState.at, msg:'your other device kept changing it. Try Sync now.'};
+  } catch(e){
+    syncState = navigator.onLine ? {status:'error', at:syncState.at, msg:cloudMsg(e, 'could not reach your account.')} : {status:'offline', at:syncState.at};
+  } finally {
+    syncBusy = false; renderSyncLine();
+    if(syncAgain){ syncAgain = false; scheduleSync(400); }
+  }
+}
+function cloudStart(){
+  sbc();
+  // the "reset password" link from the email opens the app with type=recovery in the address
+  const hashRecovery = /type=recovery/.test(location.hash);
+  if(cloudUser() && !hashRecovery){ render(); setTimeout(checkStale, 600); setTimeout(syncNow, 800); }
+  else if(hashRecovery) showLock('cNewPw');
+  else showLock('cIn');
+  addEventListener('online', () => scheduleSync(300));
+  addEventListener('offline', () => { syncState = {status:'offline', at:syncState.at}; renderSyncLine(); });
+  document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') scheduleSync(300); });
+  setInterval(() => { if(document.visibilityState === 'visible') syncNow(); }, 45000);
+}
+
 document.addEventListener('submit', e => {
   e.preventDefault();
   const f = e.target.dataset && e.target.dataset.form;
@@ -2897,7 +3250,9 @@ document.addEventListener('submit', e => {
 load();
 if(activeSession()) ui.tab = 'range';
 else if(activeRound()) ui.tab = 'rounds';
-if(isUnlocked()){ render(); setTimeout(checkStale, 600); }
+if(cloudOn()) cloudStart();
+else if(CLOUD_SETUP && window.supabase) showLock('cSetup');
+else if(isUnlocked()){ render(); setTimeout(checkStale, 600); }
 else showLock(getAuth() ? 'login' : 'setup');
 try {
   mediaLoadThumbs().then(() => { if(!lockView && ui.tab === 'rounds') render(); }).catch(() => {});
