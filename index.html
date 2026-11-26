@@ -362,6 +362,7 @@ body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
 .strike .lbl{color:var(--ink);font-weight:600}
 .seg2.block{display:flex}
 .seg2.block button{flex:1}
+.seg2.four button{padding-left:4px;padding-right:4px}
 .holes2 button{min-height:48px;font-size:17px;font-weight:700}
 .startcard .field input{font-size:16px}
 .pname{font-size:18px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -414,7 +415,7 @@ body.locked header.top, body.locked main, body.locked nav.tabs{display:none}
    Data is stored on this device (localStorage) and can be
    backed up to / restored from a JSON file.
    ========================================================= */
-const APP_VERSION = '2.8.0';
+const APP_VERSION = '2.8.1';
 const SCHEMA = 5;
 const APP_ID = 'golf-range-tracker';
 const KEY = 'pcp-golf-range-tracker';           // unique key: other apps share this github.io site
@@ -1152,9 +1153,8 @@ let countryListCache = null;
 const countryList = () => countryListCache || (countryListCache = Object.keys(WORLD.countries).map(id => ({id, n:WORLD.countries[id][0]})).sort((a, b) => a.n.localeCompare(b.n)));
 function countriesCard(){
   const names = playedIds().map(countryName).sort((a, b) => a.localeCompare(b));
-  return `<h2 style="margin-top:18px">Countries played</h2>
-    <div class="card">
-      <div class="row between"><div><b style="font-size:20px">${names.length}</b> ${names.length === 1 ? 'country' : 'countries'}
+  return `<div class="card">
+      <div class="row between"><div><b style="font-size:20px">${names.length}</b> ${names.length === 1 ? 'country' : 'countries'} played
         <div class="small muted">Shown in green on the map behind the app</div></div>
         <button class="btn ${names.length ? '' : 'primary'}" data-action="editCountries">${names.length ? 'Edit' : 'Choose countries'}</button></div>
       ${names.length ? `<div class="cchips">${names.map(n => `<span class="cchip">${esc(n)}</span>`).join('')}</div>` : ''}
@@ -1719,11 +1719,12 @@ function clubTable(cid, ev){
 /* ---------- HISTORY ---------- */
 function viewHistory(){
   const f = ui.histFilter || 'all';
+  const chips = `<div class="seg2 block four" style="margin-bottom:12px">${[['all','All'],['range','Range'],['course','Course'],['countries','Countries']].map(([k, l]) => `<button class="${f === k ? 'on' : ''}" data-action="histFilter" data-f="${k}">${l}</button>`).join('')}</div>`;
+  if(f === 'countries') return `<h2>History</h2>${chips}${countriesCard()}`;
   const items = [];
   if(f !== 'course') data.sessions.forEach(x => items.push({ts:x.startedAt, html:sessionRow(x)}));
   if(f !== 'range') data.rounds.forEach(x => items.push({ts:Date.parse(x.date + 'T12:00:00') || x.startedAt, html:roundRow(x)}));
   items.sort((a, b) => b.ts - a.ts);
-  const chips = `<div class="seg2 block" style="margin-bottom:12px">${[['all','All'],['range','Range'],['course','Course']].map(([k, l]) => `<button class="${f === k ? 'on' : ''}" data-action="histFilter" data-f="${k}">${l}</button>`).join('')}</div>`;
   if(!items.length) return `<h2>History</h2>${chips}<div class="card empty-state">${f === 'course' ? 'No rounds yet. Start one from the Course tab.' : f === 'range' ? 'No range sessions yet. Start one from the Range tab.' : 'Nothing logged yet. Start a range session or a round.'}</div>`;
   return `<h2>History</h2>${chips}` + items.map(i => i.html).join('');
 }
@@ -2068,7 +2069,7 @@ function openRoundDetail(id){
 
 /* ---------- BACKUP & SETTINGS ---------- */
 function viewGolfer(){
-  return banners() + `<h2>Golfer</h2>${profileCard()}${countriesCard()}
+  return banners() + `<h2>Golfer</h2>${profileCard()}
     <h2 style="margin-top:18px">My bag</h2>${viewBag()}`;
 }
 function viewBackup(){
